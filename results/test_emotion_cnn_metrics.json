@@ -1,0 +1,71 @@
+{
+  "accuracy": 0.468944099378882,
+  "weighted_f1": 0.4197518460091598,
+  "macro_f1": 0.22021227821354933,
+  "per_class": {
+    "anger": {
+      "precision": 0.42441860465116277,
+      "recall": 0.2166172106824926,
+      "f1": 0.2868369351669941,
+      "support": 337
+    },
+    "disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 68
+    },
+    "fear": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 50
+    },
+    "joy": {
+      "precision": 0.2583732057416268,
+      "recall": 0.135678391959799,
+      "f1": 0.17792421746293247,
+      "support": 398
+    },
+    "neutral": {
+      "precision": 0.5553008595988539,
+      "recall": 0.7820823244552058,
+      "f1": 0.6494638069705094,
+      "support": 1239
+    },
+    "sadness": {
+      "precision": 0.19626168224299065,
+      "recall": 0.10194174757281553,
+      "f1": 0.134185303514377,
+      "support": 206
+    },
+    "surprise": {
+      "precision": 0.2653061224489796,
+      "recall": 0.3273381294964029,
+      "f1": 0.29307568438003223,
+      "support": 278
+    }
+  },
+  "checkpoint": "checkpoints/emotion_cnn.pt",
+  "run": "wce_sqrt_mixup",
+  "epoch": 31,
+  "train_args": {
+    "run_name": "wce_sqrt_mixup",
+    "epochs": 40,
+    "patience": 8,
+    "batch_size": 32,
+    "max_lr": 0.001,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "class_weighting": "sqrt",
+    "mixup_prob": 0.5,
+    "max_frames": 400,
+    "eval_max_frames": 1000,
+    "dropout": 0.5,
+    "seed": 0,
+    "device": "auto",
+    "limit": 0
+  },
+  "split": "test",
+  "n": 2576
+}

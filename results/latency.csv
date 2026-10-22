@@ -1,0 +1,37 @@
+clip,true,pred,clip_s,utt_s,n_utts_in_clip,n_partials,partial_emotion_ms,final_emotion_ms,asr_ms,eos_to_state_ms,eos_to_first_token_ms,eos_to_last_token_ms,tokens,tokens_per_s,transcript,reply
+dia206_utt4,anger,neutral,2.04,1.6,1,1,28.6,55.4,87.4,89.3,178.3,320.7,18,77.8,I'm gonna get this reputation as a dropper.,Sounds like you're ready to take on a challenge. How do you feel about it?
+dia259_utt13,anger,sadness,1.88,1.96,1,2,36.7,53.4,68.4,69.8,162.2,332.0,22,83.9,The joke sucks!,"I see, it sounds like you're feeling pretty upset about the joke. What's made it so bad?"
+dia196_utt12,anger,neutral,3.5,3.04,1,4,29.7,56.9,77.4,78.5,169.8,257.5,11,61.5,Later is not good enough.,"Sounds important. Want to make it clear, though?"
+dia112_utt7,anger,neutral,3.29,2.95,1,4,15.5,53.6,94.7,96.1,186.6,289.0,13,67.4,"When I get up there, I'm gonna kick some ass!",Sounds like you're ready for a challenge. Ready to go?
+dia174_utt13,anger,neutral,1.53,1.12,1,1,17.2,48.9,80.0,81.5,316.4,396.4,10,31.8,"Yeah, got it.","Sounds good, then. How did that go?"
+dia170_utt4,disgust,joy,4.0,4.0,1,6,42.8,56.4,93.5,94.8,186.1,296.1,14,69.6,"Ew, it's all dirty. You should throw this out.","It sounds like it needs cleaning though, let's check and see."
+dia170_utt3,disgust,surprise,2.79,2.88,1,4,14.4,36.4,104.5,106.0,199.2,364.3,21,81.3,I want to see what's in your hand. I want to see the trash.,"I'm not sure you mean to show curiosity or concern. Could you be a bit slower, please?"
+dia205_utt5,disgust,neutral,2.29,2.02,1,2,20.8,43.7,78.5,79.3,180.5,287.0,12,57.8,That is so sick.,"I see, did you mean it in a specific way?"
+dia123_utt13,disgust,neutral,3.92,1.44,1,1,18.6,63.4,76.8,78.0,177.4,281.4,12,59.0,self.,It seems thoughtful. Could you perhaps clarify what you meant?
+dia70_utt9,disgust,anger,4.17,4.07,1,6,17.1,56.1,139.2,140.7,238.7,410.3,20,74.2,"So what do you think you're gonna do, huh? Have sex with her right here on my couch?",It sounds like you're feeling frustrated. Maybe we should talk about this in a calmer place?
+dia119_utt5,fear,anger,2.38,2.5,1,3,16.2,78.4,118.9,120.5,215.7,364.3,17,69.7,"Well, Ben's coming over tonight and he can't see this.",It sounds like Ben's arrival might be causing some frustration. How can I help?
+dia133_utt15,fear,neutral,1.73,1.83,1,2,17.9,50.9,85.7,86.8,178.3,253.8,9,53.9,I can't stay here all night.,"I see, did something specific upset you?"
+dia60_utt0,fear,sadness,4.84,4.45,1,7,21.3,88.4,145.4,146.0,242.5,358.1,14,66.0,"Yeah, but what if it's not? I mean, what if there's a reason we can't have a baby?",I understand your concern. It's okay to feel worried about this.
+dia46_utt4,joy,neutral,2.83,2.82,1,4,18.4,31.3,84.1,85.3,175.3,263.8,11,61.6,My free express friend passed to the end,Sounds like a smooth transition. How did it feel?
+dia171_utt7,joy,neutral,4.63,1.09,1,0,,56.2,74.9,76.4,163.8,276.1,14,70.1,Here!,It seems like something is here. You seem a bit excited though?
+dia72_utt1,joy,anger,3.5,3.14,1,4,41.7,56.6,116.8,118.1,210.1,305.0,12,64.2,"This room's available. Okay, okay, wait, you listen to me.",It seems a bit urgent and angry. Is everything alright?
+dia198_utt6,joy,sadness,1.63,1.67,1,2,15.4,47.6,86.0,88.3,181.7,279.4,12,62.8,Now is when you swoop.,Sounds like they were expecting a different response. What happened?
+dia180_utt6,joy,neutral,1.79,1.73,1,2,15.6,63.6,78.8,80.5,180.1,274.9,10,51.4,Second date.,Sounds interesting. How do you feel about it?
+dia93_utt8,neutral,neutral,2.63,2.66,1,4,16.6,64.0,99.7,100.5,195.5,357.4,18,70.1,Chandler Wayne. Hi. How are you?,"Hi there! I'm good, thanks for asking. How's it going with you?"
+dia221_utt3,neutral,sadness,5.73,0.74,3,3,18.9,89.2,80.4,90.9,181.2,310.3,16,72.9,Um...,That sounds like you're not quite sure about something. How can I help?
+dia221_utt3,neutral,neutral,5.73,2.28,3,3,18.9,45.3,89.7,91.0,198.2,338.9,18,72.6,I'm okay.,It seems like they're not fully expressing how they feel. How can I assist you?
+dia221_utt3,neutral,surprise,5.73,0.87,3,3,18.9,71.6,73.8,75.0,162.5,268.0,13,67.3,You look great.,That's nice to hear! You really seem to think so.
+dia89_utt1,neutral,joy,3.04,3.01,1,4,22.8,32.9,124.2,125.5,219.3,322.0,13,66.2,"This works in any milk carton. Oh, it is easy. Ha ha.",It sounds like it's very straightforward and fun! Enjoy it!
+dia133_utt9,neutral,neutral,1.63,1.7,1,2,18.4,45.8,84.3,86.7,178.7,296.5,15,71.5,I know.,It seems like you're not feeling very confident. How can I help?
+dia74_utt2,neutral,sadness,1.5,1.44,1,1,20.8,25.4,95.8,97.4,191.3,324.0,17,75.0,We just want you to think it through.,"I see, it seems a bit uncertain. Maybe they're worried you're overwhelmed."
+dia199_utt13,sadness,sadness,5.5,4.61,1,7,18.0,78.0,117.7,119.1,209.2,327.1,15,72.1,"I guess I just figured that somewhere down the road, we would be on again.",It sounds like you're feeling a bit lost and uncertain about the future.
+dia207_utt0,sadness,surprise,6.84,1.09,2,0,,31.6,75.1,76.2,169.6,257.2,11,60.8,Oh good.,That sounds like a relief. Is everything okay then?
+dia207_utt0,sadness,neutral,6.84,0.74,2,0,,33.5,74.4,75.6,170.0,288.4,15,70.5,Okay.,It seems they were expecting something. How did that make you feel then?
+dia277_utt0,sadness,neutral,2.67,0.68,2,2,17.5,56.9,89.3,90.2,179.0,297.0,15,72.6,for us.,It seems like there's more to it. Could you tell me more?
+dia277_utt0,sadness,neutral,2.67,1.7,2,2,17.5,25.7,100.2,101.1,205.1,323.1,15,67.6,Kissing is as important as any...,It seems they're emphasizing something important. What did you mean by that?
+dia102_utt5,sadness,sadness,2.96,2.21,1,3,18.5,54.7,106.5,107.4,199.5,339.3,18,77.6,"I'm sorry, I thought you said it was okay.",It seems you're still a bit unsure. Could you slow down and take a moment?
+dia107_utt3,sadness,neutral,2.75,2.76,1,4,18.4,58.7,102.7,103.4,195.2,314.9,15,70.9,"No, I had to turn it to the costume place.",It seems like a bit of a surprise. You sounded worried about it.
+dia49_utt12,surprise,neutral,2.92,2.95,1,4,17.4,32.3,100.0,101.1,192.8,310.5,15,71.6,All weekend? That's a whole lotta naked.,It does sound like a lot of time. How was your weekend then?
+dia190_utt0,surprise,neutral,2.0,2.02,1,2,17.1,26.7,96.7,99.6,191.2,293.8,13,66.9,I can't believe I'm getting my nails done.,That sounds like a change of pace. You seem excited though?
+dia266_utt12,surprise,anger,4.92,4.93,1,8,18.2,74.9,118.4,119.5,211.0,351.0,18,77.8,"Oh, so you weren't trying to entice me just now with your nakedness?","I see, it seems like that phrasing made you uncomfortable. How can I help?"
+dia169_utt11,surprise,anger,2.33,1.76,1,2,19.6,35.6,89.4,91.1,184.1,325.6,18,76.8,It's Joey!,"Oh, I see. Is this about it being Joey? Joey must be feeling upset."

@@ -1,0 +1,15 @@
+[12:04:49] 1/6 prepare MELD (idempotent)
+[12:06:17] 1/6 prepare MELD (idempotent)
+[12:07:09] 1/6 prepare MELD (idempotent)
+[12:09:23] 1/6 prepare MELD (idempotent)
+[12:11:51] 2/6 smoke test (1 epoch on 256 clips)
+[12:12:04] 3/6 train ce_plain --class-weighting none
+[12:28:40] 3/6 train wce_sqrt --class-weighting sqrt
+[12:59:24] 3/6 train wce_sqrt_mixup --class-weighting sqrt --mixup-prob 0.5
+[15:21:08] 1/6 prepare MELD: already done, skipping
+[15:21:08] 3/6 train ce_plain: already finished, skipping
+[15:21:08] 3/6 train wce_sqrt: already finished, skipping
+[15:21:08] 3/6 train wce_sqrt_mixup --class-weighting sqrt --mixup-prob 0.5
+[15:38:07] 4/6 select on dev + promote to checkpoints/emotion_cnn.pt
+[15:38:35] 5/6 final test evaluation (promoted model only)
+[15:38:43] 6/6 done

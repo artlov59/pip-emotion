@@ -1,0 +1,24 @@
+# Tested target: macOS on Apple Silicon (M-series), Python 3.11-3.12.
+# Also needs ffmpeg on PATH:  brew install ffmpeg
+
+# training + emotion model
+torch>=2.4
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+librosa>=0.10.2
+soundfile>=0.12
+tqdm
+tensorboard
+matplotlib
+
+# runtime
+fastapi>=0.110
+uvicorn[standard]>=0.29
+websockets>=12
+python-multipart
+silero-vad>=5.1
+mlx>=0.22
+mlx-lm>=0.21
+mlx-whisper>=0.4
+psutil

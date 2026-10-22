@@ -1,0 +1,71 @@
+{
+  "accuracy": 0.4652014652014652,
+  "weighted_f1": 0.3899138243705943,
+  "macro_f1": 0.21822830628013143,
+  "per_class": {
+    "anger": {
+      "precision": 0.4513888888888889,
+      "recall": 0.436241610738255,
+      "f1": 0.44368600682593856,
+      "support": 149
+    },
+    "disgust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 22
+    },
+    "fear": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 39
+    },
+    "joy": {
+      "precision": 0.2465753424657534,
+      "recall": 0.1111111111111111,
+      "f1": 0.15319148936170213,
+      "support": 162
+    },
+    "neutral": {
+      "precision": 0.5012953367875648,
+      "recall": 0.8358531317494601,
+      "f1": 0.6267206477732794,
+      "support": 463
+    },
+    "sadness": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 110
+    },
+    "surprise": {
+      "precision": 0.36893203883495146,
+      "recall": 0.2585034013605442,
+      "f1": 0.304,
+      "support": 147
+    }
+  },
+  "checkpoint": "checkpoints/ce_plain/best.pt",
+  "run": "ce_plain",
+  "epoch": 30,
+  "train_args": {
+    "run_name": "ce_plain",
+    "epochs": 40,
+    "patience": 8,
+    "batch_size": 32,
+    "max_lr": 0.001,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "class_weighting": "none",
+    "mixup_prob": 0.0,
+    "max_frames": 400,
+    "eval_max_frames": 1000,
+    "dropout": 0.5,
+    "seed": 0,
+    "device": "auto",
+    "limit": 0
+  },
+  "split": "dev",
+  "n": 1092
+}

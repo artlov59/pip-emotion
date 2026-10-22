@@ -1,0 +1,86 @@
+{
+  "hardware": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.15",
+    "macos": "26.6.2",
+    "cpu": "Apple M5 Pro",
+    "ram_gb": 48.0,
+    "cpu_cores": 18,
+    "torch": "2.14.1",
+    "mps_available": true,
+    "mlx": "0.32.4"
+  },
+  "n_clips": 35,
+  "n_utterances": 36,
+  "speed": 1.0,
+  "end_of_turn_silence_ms": 500,
+  "model_load_s_total": 7.1,
+  "model_load_s": {
+    "vad": 0.03,
+    "prosody": 0.95,
+    "emotion_cnn": 0.75,
+    "asr": 0.81,
+    "llm": 4.6
+  },
+  "peak_rss_gb": 3.52,
+  "rss_after_load_gb": 3.16,
+  "mlx_peak_gb": 2.96,
+  "torch_mps_driver_gb": 2.2,
+  "avg_process_cpu_percent": 10.6,
+  "wall_s": 145.6,
+  "latency_ms": {
+    "partial_emotion_ms": {
+      "p50": NaN,
+      "p95": NaN
+    },
+    "final_emotion_ms": {
+      "p50": 54.2,
+      "p95": 80.9
+    },
+    "asr_ms": {
+      "p50": 89.6,
+      "p95": 128.0
+    },
+    "eos_to_state_ms": {
+      "p50": 91.0,
+      "p95": 129.3
+    },
+    "eos_to_first_token_ms": {
+      "p50": 186.3,
+      "p95": 239.6
+    },
+    "eos_to_last_token_ms": {
+      "p50": 310.4,
+      "p95": 372.3
+    },
+    "tokens_per_s": {
+      "p50": 69.9,
+      "p95": 78.7
+    }
+  },
+  "engine": {
+    "emotion_checkpoint": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/emotion_cnn.pt",
+    "emotion_meta": {
+      "run": "wce_sqrt_mixup",
+      "epoch": 31,
+      "dev_metrics": {
+        "loss": 1.6109403924665588,
+        "accuracy": 0.4432234432234432,
+        "weighted_f1": 0.4098088722715167,
+        "macro_f1": 0.25352887434053767
+      },
+      "device": "mps"
+    },
+    "asr": "mlx-community/whisper-small-mlx",
+    "llm": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+    "llm_error": null,
+    "load_times_s": {
+      "vad": 0.03,
+      "prosody": 0.95,
+      "emotion_cnn": 0.75,
+      "asr": 0.81,
+      "llm": 4.6
+    }
+  }
+}

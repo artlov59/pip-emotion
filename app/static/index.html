@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pip · Audio Emotion</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">◉</div>
+      <div>
+        <h1>Pip</h1>
+        <p class="sub">Real-time audio emotion → structured state + spoken-style reply · all local</p>
+      </div>
+    </div>
+    <div class="conn"><span id="connDot" class="dot"></span><span id="connText">connecting…</span></div>
+  </header>
+
+  <section class="controls">
+    <button id="micBtn" class="primary">● Start microphone</button>
+    <div class="group">
+      <select id="clipSelect" aria-label="MELD test clip"><option value="">MELD test clip…</option></select>
+      <button id="clipBtn">▶ Stream clip</button>
+    </div>
+    <label class="filebtn">⇪ Stream a file<input id="fileInput" type="file" accept="audio/*,video/*" hidden /></label>
+    <button id="resetBtn" class="ghost">Reset conversation</button>
+  </section>
+
+  <main>
+    <section class="live card">
+      <div class="live-head">
+        <h2>Now hearing</h2>
+        <span id="vadBadge" class="badge idle">silence</span>
+      </div>
+      <div id="liveEmotion" class="live-emotion">—</div>
+      <div id="liveMeta" class="meta">Speak, or stream a clip. Provisional updates appear every 0.5 s while someone is talking; the final tag lands ~0.5 s after they stop.</div>
+      <div id="bars" class="bars"></div>
+      <details class="engine">
+        <summary>Engine</summary>
+        <pre id="engineInfo">…</pre>
+      </details>
+    </section>
+
+    <section class="turns">
+      <div class="turns-head"><h2>Conversation</h2><span class="meta">newest first</span></div>
+      <div id="turns"></div>
+      <details class="raw card">
+        <summary>Raw events (structured state as sent over the WebSocket)</summary>
+        <pre id="rawEvents"></pre>
+      </details>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

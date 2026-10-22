@@ -1,0 +1,4 @@
+run=_smoke device=mps params=21,281,991
+train=256 dev=1092 class_weights=[1.3140000104904175, 2.2339999675750732, 2.2339999675750732, 0.9670000076293945, 0.6140000224113464, 1.8589999675750732, 1.184999942779541]
+epoch 1/1:   0%|          | 0/8 [00:00<?, ?it/s]epoch 1/1:  12%|█▎        | 1/8 [00:04<00:31,  4.54s/it]epoch 1/1:  38%|███▊      | 3/8 [00:04<00:06,  1.24s/it]epoch 1/1:  62%|██████▎   | 5/8 [00:04<00:01,  1.55it/s]epoch 1/1:  88%|████████▊ | 7/8 [00:05<00:00,  2.47it/s]                                                        epoch  1 | train 2.7344 | dev loss 2.4155 acc 0.111 wF1 0.042 mF1 0.034 | 8s  *best*
+Done. Best dev weighted-F1 0.042 at epoch 1 -> /Users/artemtrefilov/Desktop/audio-cnn/checkpoints/_smoke/best.pt
