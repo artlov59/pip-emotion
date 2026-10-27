@@ -63,6 +63,7 @@ class Engine:
         self.load_times = {}
         self.errors = {}
         self.weights, self.weights_all, self.weights_tuned = fusion.load_weights()
+        self.agreement_calibration = fusion.load_agreement_calibration()
 
     # Purpose: Load and warm up components on their required worker threads.
     # Input: None explicitly; uses injected components and Settings.
@@ -160,6 +161,7 @@ class Engine:
             "text_model": str(self.settings.text_model_dir) if self.text else None,
             "vision_model": getattr(self.vision, "repo", None),
             "fusion_weights": self.weights, "fusion_tuned_on_dev": self.weights_tuned,
+            "agreement_calibrated_on_dev": self.agreement_calibration["calibrated"],
             "errors": self.errors,
             "load_times_s": self.load_times,
             "active_modalities": active,
@@ -570,7 +572,7 @@ class Session:
             available = {m for m, r in readings.items() if r}
             weights = self.e.weights_for(available)
             fused = fusion.fuse(readings, weights)
-            agree = fusion.agreement(words, voice, face)
+            agree = fusion.agreement(words, voice, face, getattr(self.e, "agreement_calibration", None))
 
             prosody.add_speech_rate(pros, asr["text"])
             labels = self.baseline.describe(pros)

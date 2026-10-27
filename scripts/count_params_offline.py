@@ -368,13 +368,23 @@ def main():
     rows.append({"name": "All stored fusion coefficient tables (conservative)", "parameters": fusion_count,
                  "count_kind": "upper bound: includes fixed coefficients and unused gold/subset entries",
                  "source": file_record(args.fusion_weights)})
-    total = neural_upper_bound + fusion_count
-    known_exact = sum(row["parameters"] for row in rows if "ONNX" not in row["count_kind"] and row["name"] != "All stored fusion coefficient tables (conservative)")
+    agreement_path = args.fusion_weights.parent / "agreement_calibration.json"
+    agreement_count = 0
+    if agreement_path.exists():
+        calibration = json.loads(agreement_path.read_text())
+        agreement_count = count_scalar_values({key: calibration[key] for key in ("temperatures", "nonverbal_weights", "margin")})
+        rows.append({"name": "Words-vs-delivery calibration (temperatures, weights, margin)", "parameters": agreement_count,
+                     "count_kind": "dev-fitted scalars used at runtime", "source": file_record(agreement_path)})
+    total = neural_upper_bound + fusion_count + agreement_count
+    scalar_rows = {"All stored fusion coefficient tables (conservative)",
+                   "Words-vs-delivery calibration (temperatures, weights, margin)"}
+    known_exact = sum(row["parameters"] for row in rows if "ONNX" not in row["count_kind"] and row["name"] not in scalar_rows)
     mlx_loaded = any(name == "mlx" or name.startswith("mlx.") for name in sys.modules)
     if mlx_loaded:
         raise RuntimeError("Offline count unexpectedly imported MLX")
     report = {"components": rows, "neural_tensor_parameter_total_or_conservative_ONNX_bound": neural_upper_bound,
-              "fusion_coefficient_upper_bound": fusion_count, "total_parameters": total,
+              "fusion_coefficient_upper_bound": fusion_count, "agreement_calibration_scalars": agreement_count,
+              "total_parameters": total,
               "learned_parameter_bounds": {"lower": known_exact, "upper": total},
               "limit": LIMIT, "within_limit": total <= LIMIT, "headroom_parameters": LIMIT - total,
               "method": {"offline": True, "gpu_required": False, "mlx_imported": mlx_loaded,

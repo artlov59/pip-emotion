@@ -1,0 +1,401 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-27T00:52:05+00:00",
+  "split": "dev",
+  "temperatures": {
+    "audio": 0.6488,
+    "text": 1.3622,
+    "vision": 2.7669
+  },
+  "nonverbal_weights": {
+    "audio": 1.0,
+    "vision": 1.0
+  },
+  "margin": 0.0,
+  "rule": "calibrate each modality with its temperature; delivery = log-linear fusion of calibrated voice and face; when words and delivery disagree, flag the delivery only if its confidence >= words confidence + margin",
+  "selection": "max over dev of (# flagged where delivery matches gold) - (# flagged where words match gold); ties -> larger margin, then vision weight 1.0",
+  "calibration": {
+    "audio": {
+      "temperature": 0.6488,
+      "ece_before": 0.1365,
+      "ece_after": 0.0741,
+      "rows": 1092
+    },
+    "text": {
+      "temperature": 1.3622,
+      "ece_before": 0.1222,
+      "ece_after": 0.0272,
+      "rows": 1071
+    },
+    "vision": {
+      "temperature": 2.7669,
+      "ece_before": 0.168,
+      "ece_after": 0.0487,
+      "rows": 1087
+    }
+  },
+  "dev_selected": {
+    "vision_weight": 1.0,
+    "margin": 0.0,
+    "n": 1092,
+    "kinds": {
+      "agree": 465,
+      "unknown": 373,
+      "words_only": 121,
+      "tone_only": 58,
+      "differ": 52,
+      "conflict": 23
+    },
+    "flagged": 254,
+    "flagged_rate": 0.2326,
+    "flagged_delivery_correct": 90,
+    "flagged_words_correct": 69,
+    "flagged_delivery_correct_rate": 0.3543,
+    "flagged_words_correct_rate": 0.2717,
+    "net_benefit_of_following_delivery": 21
+  },
+  "dev_previous_rule": {
+    "rule": "raw probabilities, voice:face 1:1, both confidences >= 0.4",
+    "n": 1092,
+    "kinds": {
+      "flagged": 413,
+      "agree": 359,
+      "unknown": 320
+    },
+    "flagged": 413,
+    "flagged_rate": 0.3782,
+    "flagged_delivery_correct": 110,
+    "flagged_words_correct": 187,
+    "flagged_delivery_correct_rate": 0.2663,
+    "flagged_words_correct_rate": 0.4528,
+    "net_benefit_of_following_delivery": -77
+  },
+  "sweep": [
+    {
+      "vision_weight": 1.0,
+      "margin": -0.1,
+      "n": 1092,
+      "kinds": {
+        "agree": 465,
+        "unknown": 268,
+        "words_only": 151,
+        "tone_only": 89,
+        "differ": 83,
+        "conflict": 36
+      },
+      "flagged": 359,
+      "flagged_rate": 0.3288,
+      "flagged_delivery_correct": 125,
+      "flagged_words_correct": 107,
+      "flagged_delivery_correct_rate": 0.3482,
+      "flagged_words_correct_rate": 0.2981,
+      "net_benefit_of_following_delivery": 18
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": -0.05,
+      "n": 1092,
+      "kinds": {
+        "agree": 465,
+        "unknown": 317,
+        "words_only": 140,
+        "tone_only": 71,
+        "differ": 67,
+        "conflict": 32
+      },
+      "flagged": 310,
+      "flagged_rate": 0.2839,
+      "flagged_delivery_correct": 108,
+      "flagged_words_correct": 89,
+      "flagged_delivery_correct_rate": 0.3484,
+      "flagged_words_correct_rate": 0.2871,
+      "net_benefit_of_following_delivery": 19
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.0,
+      "n": 1092,
+      "kinds": {
+        "agree": 465,
+        "unknown": 373,
+        "words_only": 121,
+        "tone_only": 58,
+        "differ": 52,
+        "conflict": 23
+      },
+      "flagged": 254,
+      "flagged_rate": 0.2326,
+      "flagged_delivery_correct": 90,
+      "flagged_words_correct": 69,
+      "flagged_delivery_correct_rate": 0.3543,
+      "flagged_words_correct_rate": 0.2717,
+      "net_benefit_of_following_delivery": 21
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.05,
+      "n": 1092,
+      "kinds": {
+        "agree": 465,
+        "unknown": 427,
+        "words_only": 96,
+        "tone_only": 46,
+        "differ": 40,
+        "conflict": 18
+      },
+      "flagged": 200,
+      "flagged_rate": 0.1832,
+      "flagged_delivery_correct": 74,
+      "flagged_words_correct": 54,
+      "flagged_delivery_correct_rate": 0.37,
+      "flagged_words_correct_rate": 0.27,
+      "net_benefit_of_following_delivery": 20
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.1,
+      "n": 1092,
+      "kinds": {
+        "unknown": 496,
+        "agree": 465,
+        "words_only": 55,
+        "tone_only": 36,
+        "differ": 27,
+        "conflict": 13
+      },
+      "flagged": 131,
+      "flagged_rate": 0.12,
+      "flagged_delivery_correct": 49,
+      "flagged_words_correct": 35,
+      "flagged_delivery_correct_rate": 0.374,
+      "flagged_words_correct_rate": 0.2672,
+      "net_benefit_of_following_delivery": 14
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.15,
+      "n": 1092,
+      "kinds": {
+        "unknown": 532,
+        "agree": 465,
+        "words_only": 39,
+        "tone_only": 26,
+        "differ": 19,
+        "conflict": 11
+      },
+      "flagged": 95,
+      "flagged_rate": 0.087,
+      "flagged_delivery_correct": 37,
+      "flagged_words_correct": 23,
+      "flagged_delivery_correct_rate": 0.3895,
+      "flagged_words_correct_rate": 0.2421,
+      "net_benefit_of_following_delivery": 14
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.2,
+      "n": 1092,
+      "kinds": {
+        "unknown": 558,
+        "agree": 465,
+        "words_only": 28,
+        "tone_only": 19,
+        "differ": 13,
+        "conflict": 9
+      },
+      "flagged": 69,
+      "flagged_rate": 0.0632,
+      "flagged_delivery_correct": 28,
+      "flagged_words_correct": 18,
+      "flagged_delivery_correct_rate": 0.4058,
+      "flagged_words_correct_rate": 0.2609,
+      "net_benefit_of_following_delivery": 10
+    },
+    {
+      "vision_weight": 1.0,
+      "margin": 0.3,
+      "n": 1092,
+      "kinds": {
+        "unknown": 604,
+        "agree": 465,
+        "tone_only": 7,
+        "differ": 7,
+        "words_only": 5,
+        "conflict": 4
+      },
+      "flagged": 23,
+      "flagged_rate": 0.0211,
+      "flagged_delivery_correct": 12,
+      "flagged_words_correct": 5,
+      "flagged_delivery_correct_rate": 0.5217,
+      "flagged_words_correct_rate": 0.2174,
+      "net_benefit_of_following_delivery": 7
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": -0.1,
+      "n": 1092,
+      "kinds": {
+        "agree": 464,
+        "unknown": 304,
+        "words_only": 150,
+        "tone_only": 79,
+        "differ": 66,
+        "conflict": 29
+      },
+      "flagged": 324,
+      "flagged_rate": 0.2967,
+      "flagged_delivery_correct": 107,
+      "flagged_words_correct": 99,
+      "flagged_delivery_correct_rate": 0.3302,
+      "flagged_words_correct_rate": 0.3056,
+      "net_benefit_of_following_delivery": 8
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": -0.05,
+      "n": 1092,
+      "kinds": {
+        "agree": 464,
+        "unknown": 365,
+        "words_only": 125,
+        "tone_only": 61,
+        "differ": 51,
+        "conflict": 26
+      },
+      "flagged": 263,
+      "flagged_rate": 0.2408,
+      "flagged_delivery_correct": 86,
+      "flagged_words_correct": 76,
+      "flagged_delivery_correct_rate": 0.327,
+      "flagged_words_correct_rate": 0.289,
+      "net_benefit_of_following_delivery": 10
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.0,
+      "n": 1092,
+      "kinds": {
+        "agree": 464,
+        "unknown": 435,
+        "words_only": 95,
+        "tone_only": 43,
+        "differ": 39,
+        "conflict": 16
+      },
+      "flagged": 193,
+      "flagged_rate": 0.1767,
+      "flagged_delivery_correct": 66,
+      "flagged_words_correct": 54,
+      "flagged_delivery_correct_rate": 0.342,
+      "flagged_words_correct_rate": 0.2798,
+      "net_benefit_of_following_delivery": 12
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.05,
+      "n": 1092,
+      "kinds": {
+        "unknown": 489,
+        "agree": 464,
+        "words_only": 63,
+        "differ": 33,
+        "tone_only": 31,
+        "conflict": 12
+      },
+      "flagged": 139,
+      "flagged_rate": 0.1273,
+      "flagged_delivery_correct": 45,
+      "flagged_words_correct": 39,
+      "flagged_delivery_correct_rate": 0.3237,
+      "flagged_words_correct_rate": 0.2806,
+      "net_benefit_of_following_delivery": 6
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.1,
+      "n": 1092,
+      "kinds": {
+        "unknown": 538,
+        "agree": 464,
+        "words_only": 34,
+        "differ": 27,
+        "tone_only": 21,
+        "conflict": 8
+      },
+      "flagged": 90,
+      "flagged_rate": 0.0824,
+      "flagged_delivery_correct": 31,
+      "flagged_words_correct": 21,
+      "flagged_delivery_correct_rate": 0.3444,
+      "flagged_words_correct_rate": 0.2333,
+      "net_benefit_of_following_delivery": 10
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.15,
+      "n": 1092,
+      "kinds": {
+        "unknown": 574,
+        "agree": 464,
+        "words_only": 18,
+        "tone_only": 16,
+        "differ": 13,
+        "conflict": 7
+      },
+      "flagged": 54,
+      "flagged_rate": 0.0495,
+      "flagged_delivery_correct": 19,
+      "flagged_words_correct": 12,
+      "flagged_delivery_correct_rate": 0.3519,
+      "flagged_words_correct_rate": 0.2222,
+      "net_benefit_of_following_delivery": 7
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.2,
+      "n": 1092,
+      "kinds": {
+        "unknown": 589,
+        "agree": 464,
+        "words_only": 12,
+        "differ": 11,
+        "tone_only": 9,
+        "conflict": 7
+      },
+      "flagged": 39,
+      "flagged_rate": 0.0357,
+      "flagged_delivery_correct": 16,
+      "flagged_words_correct": 6,
+      "flagged_delivery_correct_rate": 0.4103,
+      "flagged_words_correct_rate": 0.1538,
+      "net_benefit_of_following_delivery": 10
+    },
+    {
+      "vision_weight": 0.2,
+      "margin": 0.3,
+      "n": 1092,
+      "kinds": {
+        "unknown": 612,
+        "agree": 464,
+        "differ": 6,
+        "tone_only": 4,
+        "words_only": 3,
+        "conflict": 3
+      },
+      "flagged": 16,
+      "flagged_rate": 0.0147,
+      "flagged_delivery_correct": 5,
+      "flagged_words_correct": 4,
+      "flagged_delivery_correct_rate": 0.3125,
+      "flagged_words_correct_rate": 0.25,
+      "net_benefit_of_following_delivery": 1
+    }
+  ],
+  "sources": {
+    "results/runtime_dev/dev_runtime_audio_predictions.csv": "c4002ae279e9ea88a2e31cd227a5fc5619daa5446a0cc54e7905a9dba5e7e5ab",
+    "results/retraining_20261023/text_selected/text_dev_whisper_predictions.csv": "b18fe3e3b7bde4d2c8d1ca16b554c45184fada2158f97c2f7ffda2b55465086d",
+    "data/meld/vision_dev.csv": "42b1e3df1a1b8374549290c165eb331bb311d87ad71c82eac980bb3cabb68bd7"
+  },
+  "note": "Does not change fusion.fuse or the reported emotion; only the agreement note/tags and the prompt."
+}

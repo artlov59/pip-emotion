@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-27T00:52:12+00:00",
+  "split": "test",
+  "calibration_file": "results/agreement_calibration.json",
+  "calibration_sha256": "93370ad9459b3d73a46aa8e53d03b32127930c8dac7d1db4601662ef590265d0",
+  "selected": {
+    "n": 2576,
+    "kinds": {
+      "agree": 1071,
+      "unknown": 941,
+      "words_only": 292,
+      "tone_only": 119,
+      "differ": 111,
+      "conflict": 42
+    },
+    "flagged": 564,
+    "flagged_rate": 0.2189,
+    "flagged_delivery_correct": 216,
+    "flagged_words_correct": 151,
+    "flagged_delivery_correct_rate": 0.383,
+    "flagged_words_correct_rate": 0.2677,
+    "net_benefit_of_following_delivery": 65
+  },
+  "previous_rule": {
+    "rule": "raw probabilities, voice:face 1:1, both confidences >= 0.4",
+    "n": 2576,
+    "kinds": {
+      "flagged": 941,
+      "agree": 859,
+      "unknown": 776
+    },
+    "flagged": 941,
+    "flagged_rate": 0.3653,
+    "flagged_delivery_correct": 239,
+    "flagged_words_correct": 426,
+    "flagged_delivery_correct_rate": 0.254,
+    "flagged_words_correct_rate": 0.4527,
+    "net_benefit_of_following_delivery": -187
+  },
+  "delivery_minus_words_rate_ci95_dialogue_bootstrap": [
+    0.049,
+    0.1854
+  ],
+  "sources": {
+    "results/retraining_20261023/final_test/test_frozen_predictions.csv": "e6831214d49713780bc4ef1de8aaa80a9771c0db2a55863c5caf3795b080ee96",
+    "data/meld/vision_test.csv": "856b8b1fa66a360209e81c62458bdfa4797245fc5df9e9b066547a679542f574"
+  },
+  "note": "Rule locked on dev before this report; nothing here is fitted on test."
+}
