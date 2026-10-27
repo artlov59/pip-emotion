@@ -49,7 +49,7 @@ class Settings:
     # Submission/demo mode: fail startup instead of silently dropping required models.
     require_multimodal: bool = _env("REQUIRE_MULTIMODAL", "0") == "1"
 
-    # streaming / turn-taking (see README "Definition of real-time")
+    # streaming / turn-taking (see the README section 'What "real-time" means here')
     chunk_ms: int = 100                 # client sends 100 ms PCM chunks
     vad_threshold: float = 0.5          # speech starts when P(speech) >= this
     vad_neg_threshold: float = 0.35     # silence counted when P(speech) < this
