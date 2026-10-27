@@ -1,0 +1,201 @@
+{
+  "dev": {
+    "always neutral": {
+      "weighted_f1": 0.2525,
+      "macro_f1": 0.0851,
+      "accuracy": 0.424,
+      "per_class_f1": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 0.5955,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "never_predicted": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise"
+      ],
+      "n": 1092
+    },
+    "audio CNN": {
+      "weighted_f1": 0.4065,
+      "macro_f1": 0.2572,
+      "accuracy": 0.4295,
+      "per_class_f1": {
+        "anger": 0.412,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.2508,
+        "neutral": 0.5818,
+        "sadness": 0.2475,
+        "surprise": 0.3082
+      },
+      "never_predicted": [
+        "fear"
+      ],
+      "n": 1092
+    },
+    "text (Whisper transcript)": {
+      "weighted_f1": 0.4902,
+      "macro_f1": 0.3568,
+      "accuracy": 0.4954,
+      "per_class_f1": {
+        "anger": 0.3636,
+        "disgust": 0.0714,
+        "fear": 0.2,
+        "joy": 0.4138,
+        "neutral": 0.6401,
+        "sadness": 0.2843,
+        "surprise": 0.5243
+      },
+      "never_predicted": [],
+      "n": 1092
+    },
+    "text (MELD gold transcript)": {
+      "weighted_f1": 0.564,
+      "macro_f1": 0.4183,
+      "accuracy": 0.5632,
+      "per_class_f1": {
+        "anger": 0.3357,
+        "disgust": 0.1455,
+        "fear": 0.2169,
+        "joy": 0.4986,
+        "neutral": 0.7371,
+        "sadness": 0.3789,
+        "surprise": 0.6158
+      },
+      "never_predicted": [],
+      "n": 1092
+    },
+    "audio + text + face (deployed fusion)": {
+      "weighted_f1": 0.5321,
+      "macro_f1": 0.3907,
+      "accuracy": 0.5476,
+      "per_class_f1": {
+        "anger": 0.4714,
+        "disgust": 0.05,
+        "fear": 0.2373,
+        "joy": 0.4714,
+        "neutral": 0.6801,
+        "sadness": 0.3249,
+        "surprise": 0.5
+      },
+      "never_predicted": [],
+      "n": 1092
+    }
+  },
+  "test": {
+    "always neutral": {
+      "weighted_f1": 0.3124,
+      "macro_f1": 0.0928,
+      "accuracy": 0.481,
+      "per_class_f1": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 0.6495,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "never_predicted": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "sadness",
+        "surprise"
+      ],
+      "n": 2576
+    },
+    "audio CNN": {
+      "weighted_f1": 0.4215,
+      "macro_f1": 0.225,
+      "accuracy": 0.4581,
+      "per_class_f1": {
+        "anger": 0.2862,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.2036,
+        "neutral": 0.6429,
+        "sadness": 0.1555,
+        "surprise": 0.2867
+      },
+      "never_predicted": [
+        "disgust",
+        "fear"
+      ],
+      "n": 2576
+    },
+    "text (Whisper transcript)": {
+      "weighted_f1": 0.5089,
+      "macro_f1": 0.3498,
+      "accuracy": 0.5089,
+      "per_class_f1": {
+        "anger": 0.3292,
+        "disgust": 0.1625,
+        "fear": 0.0709,
+        "joy": 0.4311,
+        "neutral": 0.659,
+        "sadness": 0.3342,
+        "surprise": 0.462
+      },
+      "never_predicted": [],
+      "n": 2576
+    },
+    "audio + text": {
+      "weighted_f1": 0.5321,
+      "macro_f1": 0.3629,
+      "accuracy": 0.545,
+      "per_class_f1": {
+        "anger": 0.3789,
+        "disgust": 0.1527,
+        "fear": 0.0632,
+        "joy": 0.4146,
+        "neutral": 0.6913,
+        "sadness": 0.3558,
+        "surprise": 0.484
+      },
+      "never_predicted": [],
+      "n": 2576
+    },
+    "audio + text + face (deployed fusion)": {
+      "weighted_f1": 0.5372,
+      "macro_f1": 0.3654,
+      "accuracy": 0.554,
+      "per_class_f1": {
+        "anger": 0.3993,
+        "disgust": 0.1417,
+        "fear": 0.0789,
+        "joy": 0.4269,
+        "neutral": 0.6978,
+        "sadness": 0.3446,
+        "surprise": 0.4685
+      },
+      "never_predicted": [],
+      "n": 2576
+    }
+  },
+  "test_increments": {
+    "voice on top of words": {
+      "delta_weighted_f1": 0.0232,
+      "ci95": [
+        0.0114,
+        0.0359
+      ]
+    },
+    "face on top of words + voice": {
+      "delta_weighted_f1": 0.0052,
+      "ci95": [
+        -0.0047,
+        0.0158
+      ]
+    }
+  }
+}
