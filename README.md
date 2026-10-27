@@ -30,8 +30,8 @@ not frame-by-frame output. My assumptions:
 - **Input is processed as it arrives.** The browser sends 100 ms chunks of 16 kHz audio and about
   5 camera frames per second. Nothing waits for a whole file.
 - **While the person talks**, a provisional emotion (`partial_state`) updates every 0.5 s from the
-  last 3 s of voice plus face. One update costs ~15 ms of CNN compute, so it never falls behind.
-  Face readings stream continuously (~12 ms per frame; frames are dropped, not queued, if busy).
+  last 3 s of voice plus face. One update costs 15-25 ms of CNN compute, so it never falls behind.
+  Face readings stream continuously (12-20 ms per frame; frames are dropped, not queued, if busy).
 - **A turn ends after 500 ms of silence** (voice activity detection, Silero VAD). From that moment
   my targets are: structured state within ~0.5 s and the first reply words within ~1 s, with the
   rest of the reply streamed as it's generated.
@@ -43,16 +43,19 @@ not frame-by-frame output. My assumptions:
 Measured latency (35 MELD test clips streamed at 1x, all three inputs, times after the end of
 speech is detected, so add the 500 ms silence window for the user's wait):
 
-| stage | target | CPU backend p50 | CPU backend p95 |
-|---|---:|---:|---:|
-| structured state (`final_state`) | ~0.5 s | 0.48 s | 0.82 s |
-| first reply words | ~1 s | 1.46 s | 2.45 s |
-| full reply | streamed | 3.40 s | 4.82 s |
+| stage | target | MLX (default) p50 | MLX p95 | CPU backend p50 | CPU p95 |
+|---|---:|---:|---:|---:|---:|
+| Whisper transcript (inside the state time) | | 0.09 s | 0.13 s | 0.47 s | 0.57 s |
+| structured state (`final_state`) | ~0.5 s | **0.11 s** | 0.14 s | 0.48 s | 0.82 s |
+| first reply words | ~1 s | **0.23 s** | 0.27 s | 1.46 s | 2.45 s |
+| full reply | streamed | 0.37 s | 0.43 s | 3.40 s | 4.82 s |
 
-<!-- MLX backend row: python -m scripts.benchmark_latency --n 35 --output-dir results/benchmark_mlx -->
-
-The CPU backend meets the state target at the median and misses the first-words target, mostly
-because the 3B reply model generates ~6 visible chunks per second on CPU. Details:
+On the default MLX backend (Apple M5 Pro GPU) both targets are met with room to spare: counting the
+500 ms silence window, the person waits about 0.7 s from their last word to Pip's first word.
+The CPU fallback meets the state target only at the median and misses the first-words target,
+because the 3B reply model streams ~6 chunks per second on CPU versus ~68 on MLX. All 35 clips ran
+with no errors and no dropped camera frames; 3 clips had no detected speech. Details:
+[`results/benchmark_mlx/benchmark_multimodal.md`](results/benchmark_mlx/benchmark_multimodal.md) and
 [`results/retraining_20261023/benchmark_multimodal_cpu.md`](results/retraining_20261023/benchmark_multimodal_cpu.md).
 The benchmark runs in-process, so it excludes browser and WebSocket overhead.
 
@@ -83,8 +86,8 @@ JPEG ~5 fps -> YuNet face detector -> HSEmotion ------------------ face ---+    
   worker thread, face analysis has its own, and Whisper and Qwen share a third, so live updates keep
   flowing while a reply is being generated. A reset cancels in-flight work and drops stale results.
 
-Example `final_state` from a real run (MELD clip `dia17_utt8`, labelled anger; probabilities
-trimmed, full trace in [`results/example_trace_multimodal.json`](results/example_trace_multimodal.json)):
+Example `final_state` from a real run on the CPU backend (MELD clip `dia17_utt8`, labelled anger;
+probabilities trimmed, full trace in [`results/example_trace_multimodal.json`](results/example_trace_multimodal.json)):
 
 ```json
 {
@@ -194,11 +197,19 @@ a fact. The fused emotion itself is unchanged by this.
 
 ## Hardware, resources and parameter budget
 
-Measured on an Apple Silicon Mac with 48 GB unified memory and 18 logical CPU cores (macOS 26.6.2,
-Python 3.12.15, PyTorch 2.14.1). CPU backend, 4 threads: models load in 8.0 s, peak resident
-memory is 14.6 GiB and mean process CPU is ~96% of one core. The CPU backend expands the 4-bit
-Qwen weights to 32-bit floats, which accounts for most of that memory; the MLX backend keeps them
-in 4-bit.
+Measured on a MacBook Pro with an Apple M5 Pro, 48 GB unified memory and 18 logical CPU cores
+(macOS 26.6.2, Python 3.12.15, PyTorch 2.14.1, MLX 0.32.4), during the 35-clip benchmark above:
+
+| resource | MLX (default) | CPU backend, 4 threads |
+|---|---:|---:|
+| model load | 12.2 s | 8.0 s |
+| peak process memory (RSS) | 3.9 GiB | 14.6 GiB |
+| peak MLX GPU allocation | 3.0 GiB | - |
+| mean process CPU (100% = one core) | 71% | 96% |
+
+The CPU backend expands the 4-bit Qwen weights to 32-bit floats, which accounts for most of its
+memory; MLX keeps them in 4-bit. RSS and GPU allocations share unified memory and overlap, so
+don't add them.
 
 | component (all required at inference) | learned parameters |
 |---|---:|
@@ -222,7 +233,7 @@ ONNX files are counted conservatively (every initializer). Re-check with
   tuned on dev. A learned fusion layer didn't beat it on dev. The cost: no cross-modal
   interactions beyond the agreement check.
 - **A from-scratch audio CNN instead of a pretrained speech encoder.** I adapted a CNN I'd built
-  earlier for environmental sounds (ESC-50): I know it end to end and it runs in ~15 ms. It
+  earlier for environmental sounds (ESC-50): I know it end to end and it runs in 15-25 ms. It
   is clearly weaker than pretrained encoders. Since Pip already runs Whisper, the cheapest upgrade
   is a linear head on Whisper's encoder states (5,383 extra parameters).
   [`training/probe_whisper_encoder.py`](training/probe_whisper_encoder.py) tests that on dev.
@@ -233,8 +244,8 @@ ONNX files are counted conservatively (every initializer). Re-check with
   spare. It is still the slowest stage.
 - **Two backends.** MLX on the Apple GPU is the default. The CPU backend loads the same cached
   Whisper and Qwen weights into PyTorch so the whole system can run and be benchmarked without a
-  GPU. It is slower and uses much more memory, and its outputs aren't guaranteed to match MLX
-  exactly.
+  GPU. It is about 6x slower to the first reply word, uses about 4x the memory, and its outputs
+  aren't guaranteed to match MLX exactly.
 - **Evaluation discipline over extra experiments.** Selection on dev, hash-locked test,
   dialogue-level bootstrap intervals, and every claim in this README traceable to a file in
   `results/`.
