@@ -15,3 +15,7 @@ checkpoints/*
 runs/
 dist/
 results/traces/
+
+# personal Claude Code files (shared ones live in .claude/)
+CLAUDE.local.md
+.claude/settings.local.json

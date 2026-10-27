@@ -79,9 +79,14 @@ JPEG ~5 fps -> YuNet face detector -> HSEmotion ------------------ face ---+    
   are comparable. If the words and voice+face disagree, the delivery is flagged only when it is
   the more confident side. Only then does the reply prompt tell Pip to respond to how the person
   sounded rather than the literal words.
-- **Reply.** Qwen sees the transcript, the top readings from each input, the fused read, a
-  plain-language delivery description ("speaking fast, animated") and the agreement note, plus the
-  last three turns.
+- **Reply.** Qwen sees the transcript, the top readings from each input as hints, the fused read,
+  a plain-language delivery description ("speaking fast, animated") and the agreement note, plus
+  the last three turns. It is told to speak to the person as "you" and never to repeat the readings.
+  If a transcript fails Whisper's own repetition check (compression ratio above 2.4, e.g. "No, no,
+  no, ..." or "Sssss..."; 0.5% of dev clips), the state gets an `asr:repetitive` tag and the prompt
+  says the words were garbled instead of quoting them. The emotion path still uses the transcript:
+  dropping those clips' words didn't help on dev (weighted F1 0.5321 -> 0.5308;
+  [`results/asr_repetition_dev.md`](results/asr_repetition_dev.md)).
 - **Concurrency.** The asyncio loop only runs VAD and bookkeeping. The CNN and text model share one
   worker thread, face analysis has its own, and Whisper and Qwen share a third, so live updates keep
   flowing while a reply is being generated. A reset cancels in-flight work and drops stale results.
@@ -248,11 +253,17 @@ ONNX files are counted conservatively (every initializer). Re-check with
   aren't guaranteed to match MLX exactly.
 - **Evaluation discipline over extra experiments.** Selection on dev, hash-locked test,
   dialogue-level bootstrap intervals, and every claim in this README traceable to a file in
-  `results/`.
+  `results/`. Offline scoring calls the runtime code: rebuilding the fusion from saved per-input dev
+  predictions reproduces all 1,092 deployed dev predictions (`tests/test_fusion_parity.py`).
 
 ## Limitations
 
+- **MELD scores are speaker-dependent.** About 96% of dev and test lines come from speakers the
+  models heard in training (82-86% from the six main Friends characters). A new, live voice will
+  likely score lower than the tables above suggest.
 - The face model picks the largest face, which in a TV shot is often a listener, not the speaker.
+- The face model merges HSEmotion's "contempt" into "disgust", so a neutral webcam face often reads
+  as disgust. Face has a fusion weight of only 0.3, which limits the damage.
 - Emotion confidences in the state are uncalibrated (only the agreement check uses calibrated
   values).
 - MELD is acted TV dialogue with laugh tracks. A live user at a laptop sounds and looks different,
@@ -289,7 +300,8 @@ app/          runtime: pipeline.py (sessions, workers), fusion.py (fusion + agre
 model.py      AudioCNN
 training/     MELD preparation, audio and text training, transcription, locked evaluation
 scripts/      latency benchmark, parameter audit, model download and cache, calibration, baselines
-tests/        unit, session-regression and frontend tests
+tests/        unit, session-regression, fusion-parity and frontend tests
+.claude/      instructions for the AI assistant: rules, skills, specs
 results/      every number in this README
 ```
 
@@ -310,4 +322,7 @@ training, the text fine-tuning, the streaming pipeline, fusion, calibration, pro
 this project's own components.
 
 I used an AI coding assistant for parts of the implementation, review, experiments and
-documentation. I'm responsible for the code, the results and the decisions described here.
+documentation. I'm responsible for the code, the results and the decisions described here. The
+instructions it works from live in [`.claude/`](.claude/): project rules (`CLAUDE.md`, `rules/`), the
+dev/test protocol as step-by-step skills (`skills/`), and an ML-practice checklist mapped to this
+repo ([`.claude/specs/ml-practices.md`](.claude/specs/ml-practices.md)).
