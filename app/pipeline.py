@@ -26,6 +26,7 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 
 from app import fusion, prosody
+from app.asr import REPETITIVE_COMPRESSION_RATIO, compression_ratio
 from app.config import SAMPLE_RATE, Settings
 from app.llm import TemplateResponder, build_messages
 
@@ -574,6 +575,10 @@ class Session:
             fused = fusion.fuse(readings, weights)
             agree = fusion.agreement(words, voice, face, getattr(self.e, "agreement_calibration", None))
 
+            # Emotion still uses the raw transcript (dropping loops did not help on dev); the reply
+            # prompt is told the words were garbled instead of quoting a repetition loop.
+            ratio = compression_ratio(asr["text"])
+            asr_quality = {"compression_ratio": round(ratio, 2), "repetitive": ratio > REPETITIVE_COMPRESSION_RATIO}
             prosody.add_speech_rate(pros, asr["text"])
             labels = self.baseline.describe(pros)
             self.baseline.update(pros)
@@ -582,6 +587,7 @@ class Session:
             tags += [f"words:{words['emotion']}"] if words else []
             tags += [f"face:{face['emotion']}"] if face else []
             tags += [f"agreement:{agree['kind']}"] if agree["kind"] != "unknown" else []
+            tags += ["asr:repetitive"] if asr_quality["repetitive"] else []
             tags += [f"{k}:{v}" for k, v in labels.items() if v and v != "normal"]
             state = {
                 "type": "final_state",
@@ -596,6 +602,7 @@ class Session:
                            "tuned_on_dev": self.e.weights_tuned},
                 "agreement": agree,
                 "transcript": asr["text"],
+                "asr": asr_quality,
                 "tags": tags,
                 "prosody": {**pros, "labels": labels},
                 "delivery": delivery,
@@ -632,7 +639,8 @@ class Session:
                        "tokens": n, "tokens_per_s": round(n / gen_s, 1) if gen_s > 0 else None,
                        "token_count_source": "visible_stream_deltas", "stream_deltas": n,
                        "stream_deltas_per_s": round(n / gen_s, 1) if gen_s > 0 else None})
-            self.history.append({"transcript": state["transcript"], "emotion": state["emotion"], "reply": reply})
+            self.history.append({"transcript": state["transcript"], "repetitive": asr_quality["repetitive"],
+                                 "emotion": state["emotion"], "reply": reply})
             del self.history[:max(0, len(self.history) - history_limit)]
 
     # Purpose: Wait for scheduled session work to finish within a timeout.

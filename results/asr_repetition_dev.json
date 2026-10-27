@@ -1,0 +1,19 @@
+{
+  "threshold": 2.4,
+  "dev_clips": 1092,
+  "dev_repetitive": 5,
+  "dev_deployed": {
+    "weighted_f1": 0.5321,
+    "macro_f1": 0.3907,
+    "accuracy": 0.5476
+  },
+  "dev_words_dropped": {
+    "weighted_f1": 0.5308,
+    "macro_f1": 0.3906,
+    "accuracy": 0.5467
+  },
+  "adopt_for_emotion": false,
+  "test_repetitive_count_descriptive": 21,
+  "test_clips": 2576,
+  "decision": "keep words for emotion; mark transcript as garbled in the reply prompt only"
+}

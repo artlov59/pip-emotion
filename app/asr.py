@@ -3,8 +3,22 @@
 All calls must happen on the single "mlx" worker thread owned by the Engine.
 """
 import time
+import zlib
 
 import numpy as np
+
+# Whisper's own decode-failure check (openai/whisper `compression_ratio_threshold`): text that
+# compresses this well is a repetition loop such as "No, no, no, ..." or "Sssss...". With greedy
+# decoding and no temperature fallback such loops reach the transcript (~0.5% of MELD dev clips).
+REPETITIVE_COMPRESSION_RATIO = 2.4
+
+
+# Purpose: Measure how repetitive a transcript is, exactly as Whisper does.
+# Input: text: transcript string.
+# Output: UTF-8 length divided by zlib-compressed length; 0.0 for empty text.
+def compression_ratio(text: str) -> float:
+    data = text.encode("utf-8")
+    return len(data) / len(zlib.compress(data)) if data else 0.0
 
 
 class WhisperASR:

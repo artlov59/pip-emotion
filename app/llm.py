@@ -7,15 +7,16 @@ two sentences. All calls must run on the Engine's "mlx" thread.
 from typing import Iterator
 
 SYSTEM_PROMPT = (
-    "You are Pip, a small, warm character robot having a face-to-face conversation. "
+    "You are Pip, a small, warm character robot talking face to face with one person. "
+    "Speak directly to them as \"you\"; never describe them as \"they\" or \"the person\". "
     "Reply with one or two short spoken sentences (under 30 words). No emojis, lists or stage directions. "
-    "React to what the person said AND how they came across. You get readings from separate models for "
-    "their voice, their words and their face, plus an overall read. Each model is often unsure, so treat "
-    "readings as hints, not facts. A note appears only when their voice and face point somewhere other than "
-    "their words and read more strongly (for example 'great' said angrily, or with a frown); then gently "
-    "respond to how they came across rather than the literal words, without insisting you know how they feel. "
-    "Without a note, go with what they said. "
-    "Never mention models, percentages or labels."
+    "Answer what they said, and let how they came across set your tone. You get rough hints about their "
+    "voice, words and face; each is often wrong, so never repeat them, never list emotion names, and never "
+    "mention models, readings or percentages. A note appears only when their voice and face point somewhere "
+    "other than their words and read more strongly (for example 'great' said angrily, or with a frown); then "
+    "gently respond to how they came across rather than the literal words, without insisting you know how "
+    "they feel. Without a note, go with what they said. If the transcript was garbled, say you didn't "
+    "quite catch that."
 )
 
 TEMPLATES = {
@@ -37,13 +38,22 @@ def _top(r, k=2):
     return ", ".join(f"{e} {p:.0%}" for e, p in probs)
 
 
+# Purpose: Quote the transcript for the prompt, or describe it when it carries no usable words.
+# Input: transcript: Whisper text; repetitive: True when Whisper's compression-ratio check failed.
+# Output: Quoted transcript, or a short description of unclear or missing speech.
+def _said(transcript: str, repetitive: bool = False) -> str:
+    if repetitive:
+        return "(unclear speech; the transcript was garbled)"
+    return f'"{transcript}"' if transcript else "(no clear words, maybe a laugh, sigh or noise)"
+
+
 # Purpose: Ground the robot's next reply in recognized words and multimodal state.
 # Input: state: final emotion/transcript/prosody/agreement data; history: prior role/content messages.
 # Output: Chat message list containing system instructions, retained history, and the current input.
 def build_messages(state: dict, history: list) -> list:
-    said = f'"{state["transcript"]}"' if state["transcript"] else "(no clear words, maybe a laugh, sigh or noise)"
+    said = _said(state["transcript"], (state.get("asr") or {}).get("repetitive", False))
     mods = state.get("modalities") or {"voice": {"probs": state["probs"]}}
-    lines = [f"They said: {said}", "How it came across:"]
+    lines = [f"You heard: {said}", "Hints about how they came across (often wrong):"]
     lines.append(f"- voice: {_top(mods['voice'])}")
     if mods.get("words"):
         lines.append(f"- words: {_top(mods['words'])}")
@@ -54,10 +64,11 @@ def build_messages(state: dict, history: list) -> list:
     agree = state.get("agreement") or {}
     if agree.get("kind") in ("conflict", "tone_only", "words_only", "differ"):
         lines.append(f"- note: {agree['note']}")
-    lines.append("Your reply:")
+    lines.append("Your reply, spoken to them:")
     msgs = [{"role": "system", "content": SYSTEM_PROMPT}]
     for turn in history:
-        msgs.append({"role": "user", "content": f'"{turn["transcript"]}" (came across as {turn["emotion"]})'})
+        said = _said(turn["transcript"], turn.get("repetitive", False))
+        msgs.append({"role": "user", "content": f"{said} (came across as {turn['emotion']})"})
         msgs.append({"role": "assistant", "content": turn["reply"]})
     msgs.append({"role": "user", "content": "\n".join(lines)})
     return msgs

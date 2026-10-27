@@ -197,6 +197,7 @@ async def main():
     assert set(finals[0]["fusion"]["used"]) == {"audio", "text"}
     assert finals[0]["agreement"]["kind"] == "conflict", finals[0]["agreement"]
     assert "agreement:conflict" in finals[0]["tags"] and "voice:anger" in finals[0]["tags"]
+    assert finals[0]["asr"]["repetitive"] is False and "asr:repetitive" not in finals[0]["tags"]
     # utterance 2: camera on -> all three modalities used, face frames counted
     assert set(finals[1]["fusion"]["used"]) == {"audio", "text", "vision"}
     assert finals[1]["modalities"]["face"]["frames"] >= 5, finals[1]["modalities"]["face"]
