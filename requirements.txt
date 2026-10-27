@@ -16,9 +16,19 @@ matplotlib
 fastapi>=0.110
 uvicorn[standard]>=0.29
 websockets>=12
-python-multipart
 silero-vad>=5.1
 mlx>=0.22
 mlx-lm>=0.21
 mlx-whisper>=0.4
 psutil
+
+# Default multimodal runtime + ONNX parameter accounting
+transformers>=4.46,<6
+opencv-python>=4.10,<6
+hsemotion-onnx==0.3.1
+onnxruntime>=1.20,<2
+onnx>=1.17,<2
+
+# Local snapshot resolution and packed checkpoint readers
+huggingface-hub>=0.24,<3
+safetensors>=0.4
