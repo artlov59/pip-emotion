@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-23T18:19:54.329132+00:00",
+  "scope": "bounded CPU adaptation, no test-based selection",
+  "baseline_audio_sha256": "89324f5e12a885c5c0f389d46f9aaf6edea4fdce43fc597ee6fcdbe4328f00f1",
+  "baseline_text_sha256": "a1f8a542be632856bbe1f29575a38cf66a620dd4b7568254e14fb525f0325b32",
+  "audio_candidates": [
+    {
+      "name": "audio_corrected_v2_20261023",
+      "warm_start": true,
+      "epochs_max": 5,
+      "patience": 2,
+      "initial_lr": 0.0001,
+      "pooling": "exact",
+      "mixup_probability": 0.5
+    },
+    {
+      "name": "audio_corrected_low_lr_20261023",
+      "conditional": "run only if initial candidate has no eligible improvement",
+      "warm_start": true,
+      "epochs_max": 2,
+      "patience": 2,
+      "initial_lr": 1e-05,
+      "pooling": "exact",
+      "mixup_probability": 0.5
+    }
+  ],
+  "text_candidate": {
+    "name": "text_asr_mixed_20261023",
+    "warm_start": true,
+    "epochs": 2,
+    "lr": 1e-05,
+    "source": "one gold/CPU-ASR sample per utterance each epoch",
+    "selection_text": "existing MLX Whisper dev transcripts",
+    "empty_asr": "gold fallback"
+  },
+  "selection": "highest development weighted F1 subject to macro F1 >= same-path baseline; compare frozen-weight multimodal recipes before deployment",
+  "test": "no reads for fitting or candidate selection; at most one final comparison after recipe locked",
+  "backend_caveat": "CPU ASR uses converted cached weights and different greedy no-timestamp decoding; separate provenance and cache namespace; no claim of MLX numerical parity",
+  "gpu_benchmark": "blocked in this execution environment because no Metal device is exposed"
+}

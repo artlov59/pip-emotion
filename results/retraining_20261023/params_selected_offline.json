@@ -1,0 +1,4255 @@
+{
+  "components": [
+    {
+      "name": "Silero VAD (voice activity)",
+      "parameters": 462594,
+      "count_kind": "exact TorchScript learned parameter tensors",
+      "source": {
+        "path": "/Users/artemtrefilov/Desktop/audio-cnn/.venv/lib/python3.12/site-packages/silero_vad/data/silero_vad.jit",
+        "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/.venv/lib/python3.12/site-packages/silero_vad/data/silero_vad.jit",
+        "bytes": 2272526,
+        "sha256": "e1122837f4154c511485fe0b9c64455f7b929c96fbb8d79fbdb336383ebd3720"
+      }
+    },
+    {
+      "name": "AudioCNN emotion classifier (ours)",
+      "parameters": 21281991,
+      "count_kind": "exact CPU model parameters, buffers excluded",
+      "source": {
+        "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/emotion_cnn.pt",
+        "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/emotion_cnn.pt",
+        "bytes": 85253995,
+        "sha256": "89324f5e12a885c5c0f389d46f9aaf6edea4fdce43fc597ee6fcdbe4328f00f1"
+      },
+      "checkpoint_run": "wce_sqrt_mixup",
+      "checkpoint_epoch": 31,
+      "pooling_mode": "legacy"
+    },
+    {
+      "name": "Whisper small (speech-to-text)",
+      "parameters": 240582912,
+      "tensor_count": 479,
+      "quantized_layers": 0,
+      "quantized_weights": [],
+      "excluded_quantization_metadata_elements": 0,
+      "excluded_nonlearned_tensors": [
+        {
+          "name": "alignment_heads",
+          "shape": [
+            10,
+            2
+          ],
+          "elements": 20,
+          "dtype": "I64"
+        }
+      ],
+      "files": [
+        {
+          "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/snapshots/45f3915923c7a79a5a5b5a7d909d39aeb0e5630e/weights.npz",
+          "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/blobs/8e/8e09a7989a6b592df00316a83bdbf748e5869e40e9cd8ff60ec87bd60a64b2d4",
+          "bytes": 481307592,
+          "sha256": "55b6674c9b339702d486e2b1573839a66f8ec8f821ed2886993ef717a86b09f5"
+        }
+      ],
+      "stored_tensor_elements_including_nonlearned": 240582932,
+      "note": "alignment_heads is an integer list of decoder attention-head indices, not learned weights. The old MLX counter included its20 elements; fixed encoder sinusoids are not present in this weight file.",
+      "count_kind": "logical learned tensors from local weight headers",
+      "source": {
+        "requested_source": "mlx-community/whisper-small-mlx",
+        "requested_revision": "main",
+        "resolved_revision": "45f3915923c7a79a5a5b5a7d909d39aeb0e5630e",
+        "directory": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/snapshots/45f3915923c7a79a5a5b5a7d909d39aeb0e5630e",
+        "cache_root": "/Users/artemtrefilov/.cache/huggingface/hub",
+        "resolution": "local Hugging Face cache only",
+        "reference_file": {
+          "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/refs/main",
+          "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/refs/main",
+          "bytes": 40,
+          "sha256": "03a9e6068056d10812a26109d784056ce00fd55393d8cb5c92fc59b24ed88804"
+        }
+      },
+      "config": {
+        "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/snapshots/45f3915923c7a79a5a5b5a7d909d39aeb0e5630e/config.json",
+        "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--whisper-small-mlx/blobs/df4c65c442a30e50034ee63422b31bde60c3d407",
+        "bytes": 266,
+        "sha256": "e8f58e638208af66d5d5d67801259dc7a12d199e971967a9f9d33a8e3635668e"
+      }
+    },
+    {
+      "name": "Qwen2.5-3B-Instruct (reply generator)",
+      "parameters": 3085938688,
+      "tensor_count": 940,
+      "quantized_layers": 253,
+      "quantized_weights": [
+        {
+          "name": "model.embed_tokens.weight",
+          "stored_shape": [
+            151936,
+            256
+          ],
+          "logical_shape": [
+            151936,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 311164928
+        },
+        {
+          "name": "model.layers.0.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.0.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.0.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.0.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.0.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.0.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.0.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.1.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.1.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.1.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.1.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.1.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.1.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.1.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.10.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.10.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.10.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.10.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.10.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.10.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.10.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.11.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.11.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.11.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.11.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.11.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.11.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.11.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.12.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.12.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.12.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.12.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.12.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.12.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.12.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.13.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.13.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.13.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.13.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.13.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.13.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.13.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.14.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.14.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.14.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.14.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.14.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.14.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.14.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.15.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.15.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.15.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.15.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.15.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.15.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.15.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.16.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.16.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.16.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.16.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.16.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.16.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.16.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.17.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.17.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.17.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.17.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.17.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.17.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.17.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.18.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.18.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.18.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.18.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.18.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.18.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.18.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.19.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.19.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.19.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.19.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.19.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.19.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.19.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.2.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.2.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.2.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.2.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.2.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.2.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.2.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.20.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.20.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.20.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.20.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.20.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.20.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.20.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.21.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.21.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.21.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.21.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.21.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.21.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.21.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.22.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.22.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.22.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.22.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.22.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.22.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.22.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.23.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.23.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.23.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.23.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.23.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.23.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.23.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.24.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.24.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.24.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.24.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.24.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.24.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.24.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.25.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.25.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.25.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.25.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.25.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.25.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.25.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.26.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.26.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.26.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.26.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.26.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.26.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.26.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.27.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.27.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.27.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.27.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.27.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.27.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.27.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.28.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.28.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.28.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.28.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.28.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.28.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.28.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.29.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.29.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.29.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.29.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.29.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.29.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.29.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.3.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.3.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.3.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.3.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.3.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.3.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.3.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.30.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.30.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.30.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.30.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.30.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.30.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.30.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.31.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.31.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.31.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.31.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.31.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.31.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.31.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.32.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.32.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.32.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.32.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.32.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.32.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.32.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.33.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.33.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.33.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.33.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.33.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.33.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.33.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.34.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.34.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.34.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.34.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.34.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.34.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.34.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.35.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.35.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.35.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.35.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.35.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.35.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.35.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.4.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.4.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.4.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.4.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.4.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.4.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.4.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.5.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.5.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.5.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.5.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.5.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.5.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.5.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.6.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.6.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.6.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.6.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.6.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.6.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.6.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.7.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.7.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.7.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.7.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.7.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.7.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.7.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.8.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.8.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.8.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.8.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.8.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.8.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.8.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.9.mlp.down_proj.weight",
+          "stored_shape": [
+            2048,
+            1376
+          ],
+          "logical_shape": [
+            2048,
+            11008
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.9.mlp.gate_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.9.mlp.up_proj.weight",
+          "stored_shape": [
+            11008,
+            256
+          ],
+          "logical_shape": [
+            11008,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 22544384
+        },
+        {
+          "name": "model.layers.9.self_attn.k_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        },
+        {
+          "name": "model.layers.9.self_attn.o_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.9.self_attn.q_proj.weight",
+          "stored_shape": [
+            2048,
+            256
+          ],
+          "logical_shape": [
+            2048,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 4194304
+        },
+        {
+          "name": "model.layers.9.self_attn.v_proj.weight",
+          "stored_shape": [
+            256,
+            256
+          ],
+          "logical_shape": [
+            256,
+            2048
+          ],
+          "bits": 4,
+          "group_size": 64,
+          "parameters": 524288
+        }
+      ],
+      "excluded_quantization_metadata_elements": 96428032,
+      "excluded_nonlearned_tensors": [],
+      "files": [
+        {
+          "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457/model.safetensors",
+          "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/blobs/91/91c9d975b25f6c3b6d7fbcce3154518aa721acea5d724931064eff657d808dc4",
+          "bytes": 1736293090,
+          "sha256": "f212cf6fb9923281a09c135e05d43a052ee5ef7121f5b1dc0b0fb2de80f97cfd"
+        }
+      ],
+      "shard_index": {
+        "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457/model.safetensors.index.json",
+        "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/blobs/89782d927f12268bc0b4df90e22cb686a017fb22",
+        "bytes": 66290,
+        "sha256": "7edb73f1af3c860b1344ece4abe04b258246afdfeba4cb39d3b84a0459890bee"
+      },
+      "count_kind": "logical unpacked learned weights; tied embeddings counted once when stored once",
+      "source": {
+        "requested_source": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+        "requested_revision": "main",
+        "resolved_revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "directory": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "cache_root": "/Users/artemtrefilov/.cache/huggingface/hub",
+        "resolution": "local Hugging Face cache only",
+        "reference_file": {
+          "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/refs/main",
+          "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/refs/main",
+          "bytes": 40,
+          "sha256": "3bb5304dd64ae8f9d49a6008a1a692652196409ecfc13761aa2007c0768c5928"
+        }
+      },
+      "config": {
+        "path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457/config.json",
+        "resolved_path": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/blobs/52de1c37b6e5c5f74d43973c65779cea39b4b7a7",
+        "bytes": 785,
+        "sha256": "ceb97c46fe17f523ac42c0f0254fd18d9589f8725f0bbbe0bef541f8ef84547a"
+      },
+      "quantization": {
+        "group_size": 64,
+        "bits": 4
+      },
+      "tie_word_embeddings": true
+    },
+    {
+      "name": "DistilRoBERTa text emotion (ours, fine-tuned)",
+      "parameters": 82123783,
+      "tensor_count": 105,
+      "quantized_layers": 0,
+      "quantized_weights": [],
+      "excluded_quantization_metadata_elements": 0,
+      "excluded_nonlearned_tensors": [],
+      "files": [
+        {
+          "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion/model.safetensors",
+          "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion/model.safetensors",
+          "bytes": 328507660,
+          "sha256": "f9c9b8585c9227e77752b23b1f6dd6e0d0a801111126a255d2d6bf8dd55e2bff"
+        }
+      ],
+      "count_kind": "exact floating learned weight headers",
+      "source": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion",
+      "config": {
+        "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion/config.json",
+        "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion/config.json",
+        "bytes": 979,
+        "sha256": "62a0c5e29003e0d8c6329e8e9e7c0075814845fc87cb8357626ec2bfe1e24eca"
+      }
+    },
+    {
+      "name": "YuNet face detector + HSEmotion face emotion",
+      "parameters": 4049910,
+      "count_kind": "conservative ONNX initializer upper bound",
+      "source": "hsemotion-onnx:enet_b0_8_best_vgaf + YuNet",
+      "models": [
+        {
+          "parameters": 53121,
+          "count_kind": "conservative initializer-element upper bound",
+          "initializer_count": 112,
+          "file": {
+            "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/face_detection_yunet_2023mar.onnx",
+            "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/face_detection_yunet_2023mar.onnx",
+            "bytes": 232589,
+            "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+          },
+          "external_initializer_files": [],
+          "excluded_structural_constants": [],
+          "note": "All static initializers count, even buffers/constants. Structural/index and zero/one activation Constant nodes are excluded; no model execution or ONNX Runtime is needed."
+        },
+        {
+          "parameters": 3996789,
+          "count_kind": "conservative initializer-element upper bound",
+          "initializer_count": 165,
+          "file": {
+            "path": "/Users/artemtrefilov/.hsemotion/enet_b0_8_best_vgaf.onnx",
+            "resolved_path": "/Users/artemtrefilov/.hsemotion/enet_b0_8_best_vgaf.onnx",
+            "bytes": 16039595,
+            "sha256": "fa07e841fd06c7a67ee651ea4e6e4a3a2bb5695f47b37a7da50492526f59c898"
+          },
+          "external_initializer_files": [],
+          "excluded_structural_constants": [
+            {
+              "node": "Constant_5",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_8",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_10",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_12",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_14",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_18",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_23",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_27",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_42",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_49",
+              "elements": 2,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_51",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_52",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_53",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_54",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_57",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_60",
+              "elements": 1,
+              "dtype": "float32",
+              "classification": "fixed zero padding"
+            },
+            {
+              "node": "Constant_80",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_83",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_85",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_87",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_89",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_93",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_98",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_102",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_117",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_124",
+              "elements": 2,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_126",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_127",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_128",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_129",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_132",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_135",
+              "elements": 1,
+              "dtype": "float32",
+              "classification": "fixed zero padding"
+            },
+            {
+              "node": "Constant_167",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_170",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_172",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_174",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_176",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_180",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_185",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_189",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_204",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_211",
+              "elements": 2,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_213",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_214",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_215",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_216",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_219",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_222",
+              "elements": 1,
+              "dtype": "float32",
+              "classification": "fixed zero padding"
+            },
+            {
+              "node": "Constant_254",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_257",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_259",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_261",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_263",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_267",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_272",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_276",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_291",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_298",
+              "elements": 2,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_300",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_301",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_302",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_303",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_306",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_309",
+              "elements": 1,
+              "dtype": "float32",
+              "classification": "fixed zero padding"
+            },
+            {
+              "node": "Constant_400",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_403",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_405",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_407",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_409",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_413",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_418",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_422",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_437",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_444",
+              "elements": 2,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_446",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_447",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_448",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_449",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_452",
+              "elements": 1,
+              "dtype": "int64",
+              "classification": "small integer shape/index"
+            },
+            {
+              "node": "Constant_455",
+              "elements": 1,
+              "dtype": "float32",
+              "classification": "fixed zero padding"
+            }
+          ],
+          "note": "All static initializers count, even buffers/constants. Structural/index and zero/one activation Constant nodes are excluded; no model execution or ONNX Runtime is needed."
+        }
+      ]
+    },
+    {
+      "name": "Prosody features (librosa YIN/RMS)",
+      "parameters": 0,
+      "count_kind": "handwritten DSP"
+    },
+    {
+      "name": "All stored fusion coefficient tables (conservative)",
+      "parameters": 17,
+      "count_kind": "upper bound: includes fixed coefficients and unused gold/subset entries",
+      "source": {
+        "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/fusion_weights.json",
+        "resolved_path": "/Users/artemtrefilov/Desktop/audio-cnn/results/fusion_weights.json",
+        "bytes": 709,
+        "sha256": "10339e91487ba6ea8e7e432a428b7aa51d7c34af22598454b4389d486237ec4e"
+      }
+    }
+  ],
+  "neural_tensor_parameter_total_or_conservative_ONNX_bound": 3434439878,
+  "fusion_coefficient_upper_bound": 17,
+  "total_parameters": 3434439895,
+  "learned_parameter_bounds": {
+    "lower": 3430389968,
+    "upper": 3434439895
+  },
+  "limit": 6000000000,
+  "within_limit": true,
+  "headroom_parameters": 2565560105,
+  "method": {
+    "offline": true,
+    "gpu_required": false,
+    "mlx_imported": false,
+    "downloads": false,
+    "missing_required_model_policy": "fail; no architecture substitution",
+    "frozen_parameters": "counted in full",
+    "quantized_weights": "logical unpacked values, never packed-storage element counts",
+    "ONNX": "every initializer included conservatively; structural Constant nodes separately classified",
+    "settings_enabled": {
+      "text": true,
+      "vision": true,
+      "llm": true
+    },
+    "old_report_difference": "Whisper alignment_heads has20 nonlearned integer indices. Neural subtotal excludes those20; conservative fusion-table scalars are then added separately. ONNX bounds may include fixed buffers."
+  }
+}

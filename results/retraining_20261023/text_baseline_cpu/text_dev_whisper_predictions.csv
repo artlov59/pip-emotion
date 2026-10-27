@@ -1,0 +1,1093 @@
+id,emotion,text,pred,p_anger,p_disgust,p_fear,p_joy,p_neutral,p_sadness,p_surprise
+dia0_utt0,sadness,"Oh my God, he's lost it, he's totally lost it.",sadness,0.0459,0.0427,0.0642,0.0711,0.0111,0.6795,0.0854
+dia0_utt1,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia1_utt0,neutral,"Or we could go to the bank, close our accounts, and cut them off at the source.",neutral,0.0888,0.081,0.0121,0.0415,0.6904,0.0832,0.0031
+dia1_utt1,joy,You're a genius.,joy,0.0532,0.0291,0.0026,0.6811,0.0628,0.0178,0.1533
+dia1_utt2,sadness,"Aw man, but then we won't be back, buddies.",neutral,0.0909,0.1669,0.0054,0.078,0.3494,0.3044,0.0051
+dia1_utt3,neutral,Now there's two reasons.,neutral,0.0214,0.0099,0.0059,0.014,0.9073,0.032,0.0096
+dia1_utt4,neutral,"Hey, hey.",neutral,0.0144,0.0068,0.0035,0.0914,0.8562,0.0105,0.0171
+dia1_utt5,joy,Hey!,joy,0.0485,0.0037,0.0038,0.649,0.0663,0.0082,0.2206
+dia1_utt6,neutral,"Oh, you guys. Remember that cute client I told you about? I bit him.",joy,0.1275,0.1179,0.0078,0.54,0.062,0.0548,0.09
+dia1_utt7,surprise,Where? On the tushy.,neutral,0.0201,0.0135,0.0048,0.0252,0.8218,0.0297,0.0848
+dia1_utt8,neutral,,,,,,,,,
+dia1_utt9,neutral,And that's not against your oath.,neutral,0.1752,0.3227,0.0253,0.0325,0.3741,0.0588,0.0115
+dia1_utt10,surprise,"No, I know. I'm sorry, but the mom-",sadness,0.0092,0.007,0.0306,0.0167,0.046,0.8827,0.0077
+dia1_utt11,anger,"No, I know. I'm sorry, but the moment I touch him, I just want to throw out my all-doth and take a new dirty one. Well, next time you're massaging him, you should try to distract yourself.",disgust,0.1887,0.5024,0.0174,0.055,0.1164,0.1174,0.0027
+dia1_utt12,neutral,"Well, next time you're massaging him, you should try to distract yourself. Yeah, yeah, yeah. Like, when I'm doing something exciting and I don't want to get too...",neutral,0.1134,0.0808,0.1062,0.0639,0.5646,0.0684,0.0027
+dia1_utt13,joy,"Yeah, yeah, yeah, like when I'm doing something exciting and I don't want to get too excited.",neutral,0.0964,0.0339,0.0417,0.1724,0.6102,0.0425,0.003
+dia1_utt14,neutral,Thank you Joey.,neutral,0.0218,0.0069,0.0017,0.3058,0.6433,0.0128,0.0077
+dia1_utt15,neutral,"Oh no, thank you.",neutral,0.0237,0.0148,0.004,0.3815,0.5443,0.0234,0.0084
+dia2_utt0,neutral,"Hey, Stella, listen. Well, well, well.",neutral,0.0149,0.0114,0.0049,0.0325,0.908,0.0223,0.006
+dia2_utt1,surprise,"Hey, Stella, listen. Well, well, well. Joey Trebiani, so you came back, huh?",neutral,0.0247,0.0098,0.0071,0.0503,0.8111,0.0308,0.0663
+dia2_utt2,surprise,What are you talking about? I never left you. You've always been my agent.,surprise,0.1578,0.0265,0.0267,0.0252,0.18,0.1405,0.4433
+dia2_utt3,surprise,Really?,surprise,0.0061,0.0026,0.0023,0.0097,0.0069,0.0051,0.9673
+dia2_utt4,joy,Give me that!,anger,0.5723,0.0171,0.0078,0.3174,0.0284,0.0213,0.0356
+dia2_utt5,neutral,"Oh well, no harm, no foul.",fear,0.1094,0.106,0.283,0.1553,0.2823,0.0582,0.0058
+dia3_utt0,neutral,"Okay, you guys free tonight?",neutral,0.0984,0.0127,0.0145,0.1032,0.5854,0.0365,0.1493
+dia3_utt1,joy,See ya!,joy,0.0342,0.0036,0.0029,0.8557,0.0698,0.007,0.0268
+dia3_utt2,surprise,Tonight you didn't say it was going to be a night time.,neutral,0.0748,0.0183,0.0184,0.1468,0.4828,0.2345,0.0244
+dia4_utt0,neutral,Yes? Yes? How can I help you?,neutral,0.0674,0.0054,0.1055,0.2145,0.4214,0.0585,0.1272
+dia4_utt1,neutral,We were just looking around.,neutral,0.0377,0.0357,0.0159,0.0388,0.7645,0.0494,0.058
+dia4_utt2,surprise,"Oh, oh, you're fellow scholars.",neutral,0.0373,0.0274,0.0069,0.2753,0.5232,0.0441,0.0858
+dia4_utt3,neutral,What exactly were you looking for?,surprise,0.0278,0.0069,0.0179,0.0194,0.2485,0.0192,0.6603
+dia4_utt4,neutral,"Perhaps Dr. Chester Stotz Musings on the Smilodon, California.",neutral,0.0191,0.0185,0.0054,0.0456,0.8692,0.0361,0.0061
+dia4_utt5,neutral,,,,,,,,,
+dia4_utt6,anger,"Uh... Uh, uh, uh, get outta here! Uh, meeting someone? Or are you just here to brush up on Merriam's views on evolution?",anger,0.3393,0.0546,0.1564,0.0511,0.106,0.1142,0.1783
+dia4_utt7,neutral,"Um, actually, I find Merriam's views far too progressionist.",disgust,0.1172,0.3647,0.0168,0.0456,0.3207,0.1288,0.0063
+dia4_utt8,neutral,I find Merriam's view is far too progressionist.,neutral,0.119,0.2656,0.0124,0.0486,0.4613,0.0867,0.0065
+dia4_utt9,surprise,I'm sorry. Who are you?,surprise,0.021,0.0084,0.025,0.0193,0.0937,0.2073,0.6253
+dia4_utt10,neutral,"Professor here, Ross Deller.",neutral,0.015,0.0112,0.0026,0.0267,0.92,0.0166,0.0078
+dia4_utt11,surprise,"Roskelo, why do I know that name? It's a... Wait. Did you write this?",surprise,0.0169,0.0059,0.0122,0.0104,0.0606,0.023,0.8711
+dia4_utt12,surprise,Yes. You are the person who checked out my book?,surprise,0.0259,0.0055,0.0083,0.0107,0.0876,0.0179,0.8441
+dia4_utt13,surprise,You're so young.,surprise,0.032,0.0274,0.01,0.1225,0.0543,0.0333,0.7206
+dia4_utt14,neutral,"Well, I, uh, I skipped fourth grade.",sadness,0.069,0.0595,0.0355,0.0494,0.2975,0.4624,0.0268
+dia5_utt0,anger,You had no right to tell me you ever had feelings for me.,sadness,0.2356,0.0336,0.0389,0.0582,0.1414,0.4554,0.037
+dia5_utt1,surprise,What? I was doing great with...,surprise,0.0182,0.0023,0.0076,0.0454,0.0191,0.0149,0.8925
+dia5_utt2,anger,What? I was doing great with Julie before I found out about you.,surprise,0.017,0.003,0.0051,0.016,0.0131,0.0154,0.9305
+dia5_utt3,anger,"Hey, I was doing great before I found out about you. You think it's easy for me to see you with Julie?",surprise,0.0772,0.0199,0.0167,0.0508,0.1786,0.0805,0.5763
+dia5_utt4,anger,The point is I...,neutral,0.0973,0.0199,0.0212,0.0488,0.6831,0.1024,0.0273
+dia5_utt5,anger,I don't need this right now.,neutral,0.1235,0.0343,0.0055,0.0511,0.6821,0.0933,0.0102
+dia5_utt6,anger,"Okay, it's it's too late. I'm with somebody else. I'm happy this ship has saved",sadness,0.1273,0.0109,0.0112,0.3294,0.176,0.3391,0.0062
+dia5_utt7,anger,I'm with somebody else. I'm happy. This ship has saved...,joy,0.067,0.0069,0.0073,0.5814,0.1367,0.1914,0.0093
+dia5_utt8,anger,"All right, fine. You go ahead and you do that. All right, Ross?",neutral,0.1095,0.0196,0.0157,0.068,0.7527,0.0264,0.0081
+dia5_utt10,anger,I don't need your stupid shi-,anger,0.4964,0.3276,0.0141,0.07,0.0537,0.0327,0.0055
+dia5_utt11,anger,Good!,joy,0.0323,0.0038,0.0015,0.908,0.0362,0.0042,0.0141
+dia5_utt12,anger,,,,,,,,,
+dia6_utt0,joy,"You know, it's so romantic to send people off on their honeymoon.",joy,0.0251,0.0102,0.0033,0.8287,0.0654,0.0397,0.0276
+dia6_utt1,neutral,"You know, Monica and Chandler married. Ross and Rachel are having a baby. Maybe you and I should do something. All in good time, my love. All in good time.",joy,0.0381,0.0115,0.0038,0.6211,0.2292,0.0874,0.0088
+dia6_utt2,neutral,"Maybe you and I should do something. All in good time, my love.",joy,0.0649,0.0166,0.0058,0.4127,0.377,0.1192,0.0038
+dia6_utt3,neutral,"Oh, and good time.",joy,0.0249,0.0087,0.0028,0.7299,0.2055,0.0171,0.0111
+dia6_utt4,surprise,"Oh, shit.",disgust,0.0613,0.849,0.0076,0.0182,0.0255,0.0314,0.007
+dia6_utt5,sadness,I left my guitar in their apartment.,neutral,0.0607,0.0413,0.0082,0.0256,0.5691,0.2874,0.0077
+dia6_utt6,neutral,"Well, you can let me in later, right?",neutral,0.023,0.0048,0.0159,0.0275,0.8998,0.0171,0.0118
+dia6_utt7,neutral,"No, I don't have a key. That took mine to give to you.",neutral,0.0566,0.0103,0.0046,0.0431,0.8353,0.0434,0.0068
+dia6_utt9,surprise,What? They took mine to give to you! Why would they take away our keys?,surprise,0.0609,0.0073,0.0063,0.0087,0.0162,0.0213,0.8793
+dia7_utt0,joy,"Wow, looks like we got a lot of good stuff.",surprise,0.0171,0.0064,0.0036,0.2756,0.0191,0.0122,0.666
+dia7_utt1,joy,"Oh, we did, but my mom got us the greatest gift of all.",joy,0.042,0.0113,0.0022,0.7588,0.092,0.0663,0.0275
+dia7_utt2,neutral,A Play Doh Barbershop?,neutral,0.0617,0.0255,0.0095,0.108,0.6303,0.0494,0.1156
+dia7_utt3,neutral,She's going to live with us for eight weeks.,sadness,0.0364,0.0273,0.0096,0.0457,0.3689,0.5056,0.0065
+dia7_utt4,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia7_utt5,joy,"Yes, she's gonna help us take care of the baby! Listen!",joy,0.1706,0.0053,0.0098,0.7169,0.0393,0.0292,0.0289
+dia7_utt6,surprise,"You know, it's serious.",neutral,0.0346,0.124,0.0585,0.0872,0.6143,0.0384,0.043
+dia7_utt7,anger,"I mean, she's a very nice woman, but there's no way we can take eight weeks of f-",disgust,0.2452,0.2609,0.0199,0.0503,0.1588,0.2573,0.0075
+dia7_utt8,disgust,So drive is totally crazy.,anger,0.4072,0.2234,0.0264,0.2223,0.0384,0.0622,0.0201
+dia7_utt9,joy,,,,,,,,,
+dia7_utt10,joy,"Hey, roomie!",joy,0.0443,0.0042,0.0026,0.724,0.0408,0.0084,0.1758
+dia8_utt0,neutral,"Hey, won't you decide to go back to movie?",neutral,0.0245,0.0088,0.0049,0.1107,0.8206,0.0241,0.0064
+dia8_utt1,neutral,I don't know.,neutral,0.0094,0.0043,0.0299,0.0339,0.883,0.0219,0.0176
+dia8_utt2,neutral,It's not like it's corn.,neutral,0.061,0.1185,0.0062,0.0404,0.6687,0.0787,0.0265
+dia8_utt3,neutral,"This is a serious, legitimate movie.",neutral,0.052,0.0641,0.0125,0.1206,0.6563,0.0487,0.0459
+dia8_utt4,neutral,and the nudity is really important to the story.,neutral,0.0569,0.0329,0.0104,0.2532,0.5756,0.062,0.009
+dia8_utt5,neutral,That's what you say about porn.,neutral,0.0748,0.1462,0.0079,0.0344,0.6742,0.0362,0.0263
+dia8_utt6,neutral,"Yeah, right. Maybe I shouldn't even go on the call back.",neutral,0.043,0.0282,0.0093,0.0338,0.7923,0.0912,0.0021
+dia8_utt7,joy,"No, no you should! A lot of major actors do nude scenes. When the chance to start in a movie, come on!",anger,0.3517,0.0947,0.0191,0.2978,0.0885,0.0713,0.0769
+dia8_utt8,neutral,That's true.,neutral,0.0254,0.0154,0.0048,0.041,0.8753,0.0298,0.0082
+dia8_utt9,neutral,And I am only naked in one scene.,neutral,0.061,0.051,0.0088,0.0328,0.7083,0.0988,0.0394
+dia8_utt10,neutral,Plus it sounds...,neutral,0.0302,0.0238,0.0179,0.1129,0.7684,0.0333,0.0135
+dia8_utt11,neutral,great my characters Catholic he falls in love with this Jewish,neutral,0.0794,0.0249,0.0077,0.1756,0.566,0.1235,0.0228
+dia8_utt12,neutral,We've run away together and caught this big rainstorm.,sadness,0.1329,0.0844,0.017,0.0969,0.3002,0.3305,0.0379
+dia8_utt13,neutral,So we go into this barn and undress each other and hold each other.,neutral,0.0342,0.052,0.0092,0.2457,0.585,0.0667,0.0072
+dia8_utt14,joy,that's really sweet and tender.,joy,0.0163,0.0108,0.0038,0.8278,0.1088,0.0216,0.0109
+dia9_utt0,neutral,What's up?,neutral,0.0169,0.0039,0.0061,0.0378,0.8745,0.0123,0.0486
+dia9_utt1,sadness,Nothing Monica and I had a stupid fight,anger,0.5443,0.1087,0.0148,0.0846,0.1242,0.1179,0.0054
+dia9_utt2,neutral,"But you're still moving in together, right? Because my ad came out today.",neutral,0.0923,0.0164,0.0072,0.1803,0.5012,0.0986,0.1039
+dia9_utt3,joy,"Wanted female roommate, non-smoker, non-ugly.",neutral,0.0578,0.277,0.0581,0.0562,0.3801,0.1606,0.0102
+dia9_utt4,neutral,Nice.,joy,0.0528,0.0646,0.0047,0.5604,0.2843,0.0254,0.0079
+dia9_utt5,neutral,"I just figured, you know, after living with you, it'd be an interesting change of pace to have a female roommate.",neutral,0.0411,0.0503,0.0053,0.1017,0.7309,0.0485,0.0222
+dia9_utt6,neutral,"You know, someone I could learn from, someone who's different than me.",neutral,0.0458,0.0367,0.007,0.2703,0.5563,0.0657,0.0181
+dia9_utt7,neutral,And what's more different than me? A guy who's not 19.,neutral,0.1141,0.1623,0.0147,0.0741,0.268,0.1057,0.2611
+dia10_utt0,neutral,What are we going next?,neutral,0.0372,0.0072,0.067,0.04,0.6961,0.0619,0.0906
+dia10_utt1,neutral,"This witness won't return my call, so we're going to see if we can surprise him coming home.",neutral,0.0635,0.0303,0.0153,0.0524,0.7765,0.0569,0.005
+dia10_utt2,fear,"Surprise them. We're not gonna make anybody mad, are we?",anger,0.3158,0.0657,0.1283,0.1473,0.2575,0.0616,0.0237
+dia10_utt3,joy,"Come on man, this is how you're gonna squeeze the perp shoes a little bit before you lawyers up",neutral,0.1012,0.104,0.0087,0.0581,0.6867,0.0368,0.0045
+dia10_utt4,anger,to witness not a purpose. No one talks like that.,neutral,0.2491,0.3086,0.0123,0.0309,0.3195,0.0597,0.0199
+dia10_utt6,anger,"Oh what, like you're Mr. Cop?",surprise,0.0484,0.0251,0.0089,0.065,0.1107,0.0334,0.7085
+dia10_utt7,anger,"Hey, I'm more cop than you two!",anger,0.5755,0.0701,0.0058,0.1469,0.031,0.0372,0.1335
+dia10_utt8,neutral,How do you figure that? Hello?,neutral,0.0444,0.0079,0.009,0.0514,0.5617,0.017,0.3086
+dia10_utt9,neutral,"I'm in the front seat, okay? I'm Gary's partner.",neutral,0.0388,0.0107,0.01,0.0608,0.807,0.0368,0.036
+dia11_utt0,neutral,I guess so.,neutral,0.0209,0.0118,0.0051,0.0488,0.8678,0.0406,0.005
+dia11_utt1,neutral,"There you go. Thank you. Wait, Rich, where's-",neutral,0.0304,0.0055,0.0128,0.0334,0.8663,0.0169,0.0347
+dia11_utt3,surprise,"Oh wait, you want both of them?",surprise,0.0124,0.005,0.0099,0.0098,0.0511,0.0174,0.8943
+dia11_utt4,anger,"Rachel Karen Green, where's the other earring?",neutral,0.0136,0.0054,0.0039,0.0084,0.9332,0.0148,0.0206
+dia11_utt5,fear,"Okay, okay, okay, look, just don't freak out, but I kinda lost.",sadness,0.0647,0.0274,0.2541,0.0414,0.12,0.4864,0.0059
+dia11_utt6,neutral,"I know it's in the apartment, but I definitely lost it.",sadness,0.0272,0.0212,0.0321,0.0225,0.098,0.7932,0.0057
+dia11_utt7,fear,What am I gonna tell Monica? She wants to wear them tonight.,neutral,0.1358,0.0179,0.0305,0.2532,0.3091,0.2256,0.028
+dia11_utt8,anger,I don't want to tell her to wear her own earrings. These are for her earrings.,neutral,0.0383,0.0305,0.0061,0.0211,0.8079,0.0919,0.0042
+dia11_utt10,anger,"No, no! You let me, Monica's earrings, I'm not allowed to borrow her stuff!",anger,0.7878,0.0692,0.0203,0.0256,0.0172,0.0602,0.0196
+dia11_utt11,neutral,Why not?,neutral,0.038,0.0063,0.0099,0.0639,0.5836,0.0361,0.2623
+dia11_utt12,anger,Because I lose her stuff!,anger,0.6847,0.0374,0.0213,0.0443,0.0198,0.1743,0.0183
+dia12_utt0,neutral,Can I see you for a second?,neutral,0.0174,0.0048,0.0073,0.02,0.9221,0.0159,0.0126
+dia12_utt1,neutral,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia12_utt2,neutral,What's going on? The channel is gone.,surprise,0.1012,0.0293,0.036,0.0166,0.1116,0.0927,0.6127
+dia12_utt3,surprise,again.,neutral,0.0326,0.0222,0.0066,0.0146,0.8944,0.021,0.0086
+dia12_utt4,sadness,"Oh my god, why would you play hide and seek with someone you know as a flight risk?",surprise,0.0598,0.1062,0.0166,0.0089,0.0102,0.0399,0.7585
+dia13_utt0,neutral,"Okay, you ready to push again?",neutral,0.0446,0.0077,0.0119,0.0533,0.8573,0.0078,0.0175
+dia13_utt1,anger,I already had a baby. Leave me alone.,sadness,0.1774,0.0246,0.0294,0.0944,0.1134,0.554,0.0068
+dia13_utt2,joy,"Okay, okay, come on, you can do it, you can do it!",joy,0.189,0.0073,0.0113,0.6834,0.0836,0.0142,0.0112
+dia13_utt3,joy,Yeah!,joy,0.0728,0.0091,0.0021,0.8338,0.0355,0.0103,0.0364
+dia13_utt4,joy,Who lets these here? We got another one!,surprise,0.1741,0.0087,0.004,0.094,0.0155,0.0245,0.6793
+dia13_utt5,surprise,,,,,,,,,
+dia13_utt6,surprise,"Oh my god, I can't believe I have two children.",surprise,0.0303,0.0276,0.0246,0.027,0.004,0.1315,0.755
+dia13_utt7,surprise,How scary is that?,surprise,0.0138,0.0417,0.2884,0.0324,0.0723,0.0366,0.5148
+dia13_utt8,joy,"Come on little Chandler, it's time to be born. Come on little Chandler.",joy,0.0693,0.0133,0.0058,0.6985,0.1456,0.0537,0.0137
+dia13_utt9,joy,He's coming. He's coming. He's coming.,joy,0.0756,0.0144,0.1508,0.4412,0.2035,0.0457,0.0688
+dia13_utt10,surprise,"Hey, where's his thing?",neutral,0.0273,0.0144,0.0041,0.022,0.864,0.0124,0.0558
+dia13_utt11,surprise,JAN LERES A GIRL!,anger,0.6318,0.0388,0.015,0.1053,0.03,0.1014,0.0777
+dia13_utt12,surprise,"Oh god, kindergarten flashback.",surprise,0.032,0.089,0.0353,0.0556,0.1037,0.2877,0.3967
+dia13_utt13,surprise,"Well, they must have read the sonogram wrong, because they thought it was a...",neutral,0.0574,0.0377,0.0689,0.0501,0.4214,0.2375,0.1271
+dia13_utt14,surprise,"Well, they must have read the sonogram wrong because they thought it was a boy, but Chandler's a girl! Chandler's a girl!",surprise,0.278,0.0391,0.0165,0.0377,0.0145,0.0828,0.5313
+dia13_utt15,surprise,But Chandler's a girl!,surprise,0.0597,0.0073,0.007,0.0782,0.0259,0.0375,0.7844
+dia13_utt16,joy,"Okay, keep saying!",anger,0.6763,0.0237,0.0136,0.1589,0.0864,0.0251,0.0159
+dia13_utt17,neutral,"Are you too late? No, no, no, everything's okay. Everybody's healthy.",neutral,0.1654,0.0128,0.0569,0.1734,0.4431,0.1381,0.0103
+dia13_utt18,joy,There's 30 fingers and 30 toes.,neutral,0.0248,0.0403,0.0054,0.0661,0.8231,0.0299,0.0104
+dia13_utt19,surprise,We have our baby.,joy,0.0386,0.0106,0.0049,0.741,0.1084,0.0592,0.0373
+dia13_utt20,joy,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia13_utt21,joy,"We have heart, babe.",joy,0.0256,0.0068,0.0029,0.7268,0.1789,0.0525,0.0065
+dia14_utt0,joy,"Hey, Toe!",joy,0.0449,0.0067,0.0019,0.7764,0.0669,0.0088,0.0944
+dia14_utt1,neutral,"Hey, buddy.",neutral,0.0103,0.0077,0.0022,0.0384,0.9272,0.0086,0.0056
+dia14_utt2,neutral,"It's Bob, actually. And you work up here. Can you tell me where this Chandler Bean's office is?",neutral,0.0183,0.0134,0.0037,0.0272,0.879,0.0221,0.0364
+dia14_utt3,neutral,"Uh, yeah. Yeah, it's... It's right... right... right down... Right there. Let me ask you why.",neutral,0.016,0.0068,0.0188,0.0388,0.884,0.0322,0.0033
+dia14_utt4,anger,I wanna talk to that bastard and see what his problem is.,disgust,0.28,0.3923,0.0132,0.0377,0.1744,0.0969,0.0054
+dia14_utt5,sadness,"Listen, uh... I'm the reason you get the job up here.",neutral,0.0641,0.0188,0.0521,0.0701,0.669,0.1142,0.0117
+dia14_utt6,sadness,"Toby, don't.",neutral,0.0431,0.0342,0.1826,0.0598,0.5914,0.0779,0.011
+dia14_utt7,sadness,BAM,neutral,0.0554,0.0226,0.0127,0.0781,0.7839,0.021,0.0264
+dia14_utt8,anger,"Toby, I'm not gonna let you cover for him. Anything you say right now will just give me more upset with Chandler.",anger,0.4548,0.1798,0.0519,0.0342,0.0895,0.1871,0.0027
+dia15_utt0,joy,"I want me to stay too. Oh. Thank you. Oh, Joey, look at this grab. It's so cute.",joy,0.0153,0.0063,0.0019,0.8966,0.0381,0.0197,0.0222
+dia15_utt1,joy,"I know, I found it on the street.",neutral,0.0183,0.011,0.0114,0.0238,0.8762,0.0238,0.0355
+dia15_utt2,surprise,Are you s- really? It's- it's such good condition!,surprise,0.061,0.0109,0.0042,0.1381,0.0114,0.0325,0.742
+dia15_utt3,neutral,It's such good condition.,neutral,0.0297,0.0263,0.0042,0.3948,0.4736,0.0576,0.0138
+dia15_utt4,surprise,"Wow! Whoa, whoa, what's under the cover?",surprise,0.0073,0.0051,0.0027,0.0082,0.0029,0.0049,0.9689
+dia15_utt5,neutral,Hello.,neutral,0.0058,0.0032,0.002,0.0132,0.9666,0.0057,0.0035
+dia15_utt7,disgust,Oh.,neutral,0.0158,0.0191,0.0245,0.0979,0.6508,0.1482,0.0438
+dia15_utt8,fear,"Oh, it's gonna tail, get out of here!",anger,0.5824,0.0368,0.0482,0.2517,0.0229,0.039,0.0189
+dia15_utt9,fear,,,,,,,,,
+dia16_utt0,neutral,"Well, I went over to Kyle's last night to pick up a few things, and we got to reminiscing.",neutral,0.033,0.021,0.0034,0.2024,0.69,0.0424,0.0078
+dia16_utt1,sadness,We talk through most of the night and we realize that the reason we're so angry with each other is because there are still feelings there.,neutral,0.096,0.0888,0.0118,0.0512,0.5613,0.1868,0.0041
+dia16_utt2,surprise,"Oh, just say it, Kyle!",anger,0.4548,0.0327,0.0138,0.3981,0.0429,0.0338,0.0239
+dia16_utt3,joy,We're gonna give it another try.,neutral,0.0241,0.0115,0.0049,0.1787,0.7605,0.0168,0.0035
+dia16_utt4,anger,What about her whining and her constant need for attention?,anger,0.509,0.1929,0.0146,0.0257,0.1504,0.059,0.0484
+dia16_utt5,neutral,I'm gonna work on that.,neutral,0.0198,0.0116,0.0044,0.0735,0.8734,0.0151,0.0022
+dia16_utt6,anger,"Oh, right, because you're so capable of change.",neutral,0.0598,0.0504,0.006,0.2282,0.6043,0.0412,0.0101
+dia16_utt7,anger,"You know, he hums when he pees.",neutral,0.1184,0.225,0.0129,0.1954,0.4045,0.0328,0.0109
+dia16_utt8,neutral,I do know.,neutral,0.0082,0.0065,0.0086,0.0187,0.9372,0.0132,0.0077
+dia16_utt9,disgust,"Makes him miss the bowl, but whatever",neutral,0.0768,0.0743,0.0121,0.0539,0.4634,0.3164,0.0033
+dia16_utt10,sadness,We're so sorry.,sadness,0.009,0.0092,0.0111,0.0423,0.0371,0.8846,0.0068
+dia16_utt11,anger,"That's alright, we don't need you. Alright, in fact, hey, I'm over it already.",neutral,0.1981,0.0665,0.0044,0.2565,0.406,0.0646,0.0039
+dia16_utt12,anger,"And you know what, I don't even give a tiny rat's ass.",disgust,0.233,0.5075,0.0124,0.0499,0.1584,0.0364,0.0024
+dia16_utt13,neutral,"Yeah, we're gonna go.",neutral,0.0203,0.0144,0.0106,0.0585,0.8774,0.0169,0.0019
+dia16_utt14,sadness,"I'm sorry. Thebes, you were right about her.",sadness,0.045,0.0155,0.0141,0.0471,0.2957,0.5785,0.0041
+dia16_utt15,neutral,"He hums well, he does other stuff too.",neutral,0.0529,0.056,0.0087,0.1672,0.6616,0.0483,0.0054
+dia16_utt16,anger,"Yeah, well, we're better off without them.",neutral,0.0557,0.1029,0.0082,0.0555,0.6181,0.1574,0.0023
+dia16_utt17,anger,"And you know, even if they break up again, you better not let him in your sad men's club.",disgust,0.2062,0.3844,0.0104,0.0402,0.1937,0.1627,0.0025
+dia16_utt18,sadness,"Divorced Men's Club. Potato, potato.",neutral,0.0534,0.1487,0.0042,0.1043,0.6302,0.0505,0.0087
+dia17_utt0,anger,Why isn't that ballet back with my Porsche?,neutral,0.1415,0.0498,0.0047,0.132,0.4087,0.0756,0.1877
+dia17_utt1,anger,Maybe because you've got the keys.,neutral,0.0115,0.004,0.0035,0.0238,0.9432,0.0087,0.0053
+dia17_utt2,anger,That's totally your fault.,sadness,0.0824,0.0352,0.0144,0.0494,0.238,0.5712,0.0095
+dia17_utt3,anger,"My fault, you threatened the job.",sadness,0.2007,0.1323,0.0285,0.0326,0.1003,0.4847,0.0208
+dia17_utt4,anger,"Look, you ripped the paper out of the court reporter's machine!",anger,0.5303,0.2373,0.0051,0.0435,0.0121,0.0281,0.1436
+dia18_utt0,neutral,,,,,,,,,
+dia18_utt1,neutral,you,neutral,0.0188,0.0078,0.0021,0.019,0.9321,0.0107,0.0094
+dia18_utt2,neutral,Have you seen Chandler?,neutral,0.0191,0.0083,0.0092,0.0279,0.8727,0.0185,0.0442
+dia18_utt3,neutral,"No, what?",surprise,0.0175,0.0088,0.0137,0.0076,0.0814,0.013,0.8579
+dia18_utt4,fear,the woman from the museum called and said that there was a cancellation and that we could move up our wedding and Chandler heard,neutral,0.0562,0.0096,0.0259,0.0395,0.6898,0.157,0.0219
+dia18_utt5,fear,,,,,,,,,
+dia18_utt6,fear,How bad is this?,sadness,0.076,0.242,0.0583,0.0738,0.0967,0.4106,0.0426
+dia18_utt7,fear,"Well, for the regular guy, it's bad. With Chandler? Oh dear God!",sadness,0.1147,0.234,0.0551,0.0203,0.0109,0.5178,0.0472
+dia18_utt8,fear,"No, I know, and he totally freaked out, and I can't find him anywhere.",sadness,0.1835,0.0441,0.0804,0.1379,0.1937,0.3373,0.0231
+dia18_utt9,neutral,What are you gonna do?,fear,0.1075,0.0215,0.4242,0.0364,0.0902,0.1158,0.2045
+dia18_utt10,anger,"I'm never going to listen to you again, that's for sure!",anger,0.6929,0.098,0.0183,0.0373,0.0246,0.1197,0.0092
+dia18_utt11,neutral,And what harm could it do if you know you put your name down?,sadness,0.1728,0.2619,0.0861,0.0454,0.1152,0.3053,0.0133
+dia18_utt12,surprise,Rachel said that.,neutral,0.0249,0.0079,0.0033,0.0213,0.9097,0.0224,0.0105
+dia18_utt13,anger,"Well, Rachel's not here!",anger,0.6462,0.0197,0.0106,0.0544,0.0223,0.0863,0.1604
+dia19_utt0,neutral,"Come on, come on.",neutral,0.048,0.022,0.0194,0.0553,0.8224,0.0298,0.003
+dia19_utt1,anger,Damn it! Damn it! Damn it! Damn it!,joy,0.1777,0.0175,0.0052,0.7608,0.0149,0.0092,0.0148
+dia19_utt2,anger,It's all your fault!,anger,0.4964,0.035,0.0193,0.1052,0.0282,0.2638,0.0522
+dia19_utt3,anger,This is supposed to be like the greatest day of my life.,joy,0.0597,0.0094,0.0024,0.7937,0.0642,0.0549,0.0158
+dia19_utt4,anger,"My son is being born and I should be in there, you know, instead of stuck in a closet with you.",joy,0.1494,0.0543,0.0053,0.3134,0.2703,0.1979,0.0094
+dia19_utt5,anger,The woman I love is having a baby today. I've been waiting for this just as much as you have.,joy,0.0452,0.0069,0.0033,0.8134,0.0438,0.0607,0.0267
+dia19_utt6,anger,"Believe me, no one has-",neutral,0.0931,0.027,0.0592,0.072,0.4686,0.0757,0.2043
+dia19_utt7,anger,has been waiting for this as much as I have.,neutral,0.089,0.0129,0.0137,0.1532,0.5623,0.1461,0.0228
+dia19_utt8,neutral,And you know what the funny thing is?,neutral,0.0977,0.0402,0.006,0.2637,0.5211,0.0397,0.0316
+dia19_utt9,anger,This day is over. You get to go home with the baby. Okay?,neutral,0.1138,0.0188,0.0072,0.1768,0.5385,0.1303,0.0146
+dia19_utt10,sadness,Leave me,neutral,0.1621,0.0274,0.0152,0.0613,0.6511,0.065,0.018
+dia19_utt11,neutral,You get to be the baby's father!,joy,0.1126,0.0052,0.0056,0.6999,0.0188,0.0343,0.1237
+dia19_utt12,neutral,Anyone knows who you are?,neutral,0.0341,0.0135,0.0149,0.0357,0.5657,0.0218,0.3144
+dia19_utt13,anger,"Who am I? If this father stay, this mother stay?",sadness,0.2451,0.0373,0.0734,0.0532,0.1743,0.2755,0.1413
+dia19_utt14,sadness,There's no lesbian lover day.,neutral,0.1801,0.0729,0.0035,0.0928,0.4605,0.1781,0.012
+dia19_utt15,neutral,Every day is lesbian love a day.,joy,0.0629,0.0199,0.0018,0.4853,0.3786,0.0456,0.0058
+dia19_utt16,joy,This is so great!,joy,0.013,0.0023,0.0013,0.9428,0.0109,0.0058,0.0239
+dia19_utt17,neutral,You want to explain that?,surprise,0.0317,0.011,0.0168,0.0132,0.2304,0.028,0.6689
+dia19_utt18,sadness,"I mean, well, because when I was growing up, you know, my dad left and my mother died and my stepfather went to jail. So I barely had enough pieces of parents to make one home with.",sadness,0.0772,0.0951,0.0102,0.0386,0.2367,0.5352,0.007
+dia19_utt19,joy,Here's this little baby who has like three whole parents who care about it so much that they're fighting over who gets to love it the most. And it's not even born yet. It's just...,joy,0.0975,0.0351,0.0067,0.3345,0.2498,0.2555,0.0208
+dia19_utt20,sadness,It's not even born yet. It's just...,neutral,0.0249,0.0069,0.0526,0.1644,0.635,0.0808,0.0353
+dia19_utt21,joy,It's just the luckiest baby in the whole world.,joy,0.0274,0.0071,0.0024,0.8071,0.0643,0.0816,0.0101
+dia19_utt22,sadness,"I'm sorry, you were fighting.",sadness,0.0147,0.0138,0.0186,0.0144,0.0555,0.8719,0.011
+dia20_utt0,neutral,"Okay, it's a typical New York City apartment. Two girls are just hanging out.",neutral,0.0145,0.018,0.0035,0.0147,0.9167,0.0239,0.0085
+dia20_utt1,neutral,"Hi, how are you doing, Kelly? I'm doing just fine.",neutral,0.0305,0.0077,0.0076,0.3207,0.5483,0.0574,0.0278
+dia20_utt2,joy,"God Tiffany, you smell so great!",joy,0.0132,0.0045,0.0016,0.916,0.0081,0.0089,0.0477
+dia20_utt3,neutral,It's my new perfume. Why don't you come closer where you can really appreciate it?,joy,0.0399,0.0108,0.0029,0.6689,0.211,0.03,0.0364
+dia20_utt4,disgust,"Oh, you know, Joey, you are sick.",disgust,0.1011,0.6304,0.0106,0.0328,0.0475,0.1702,0.0075
+dia20_utt5,disgust,This is just...,neutral,0.1449,0.0638,0.0284,0.0327,0.4833,0.1507,0.0962
+dia20_utt6,disgust,Don't regret it.,sadness,0.0451,0.058,0.0107,0.073,0.2984,0.5118,0.0031
+dia20_utt7,surprise,"Wait, wait, wait, wait, the handsome man was about to enter!",surprise,0.0251,0.0053,0.0125,0.0508,0.0126,0.0178,0.876
+dia21_utt0,neutral,"All right, I'll give you this. Mr. Peanut is a better dresser.",neutral,0.0218,0.0365,0.0023,0.0859,0.827,0.0237,0.0029
+dia21_utt1,neutral,"I mean, he's got the monocle, he's got the top hat.",neutral,0.0651,0.122,0.0097,0.1521,0.5666,0.0635,0.0211
+dia21_utt2,neutral,You know he's gay?,surprise,0.0169,0.0101,0.0181,0.0184,0.1175,0.0291,0.7898
+dia21_utt3,neutral,I just want to clarify this. Are you outing Mr. Peanut?,neutral,0.0433,0.0204,0.0106,0.0242,0.6622,0.0378,0.2014
+dia21_utt4,neutral,Chandler Danielle hi everybody this is Danielle Danielle everybody,joy,0.0248,0.0076,0.0066,0.6535,0.2484,0.0186,0.0406
+dia21_utt5,neutral,Bye.,neutral,0.0114,0.0062,0.0046,0.0712,0.8811,0.0213,0.0042
+dia21_utt6,surprise,"What are you doing here? Well, I've been calling...",surprise,0.0393,0.0071,0.0245,0.0154,0.2031,0.0368,0.6738
+dia22_utt0,neutral,What? What?,surprise,0.0111,0.0042,0.0263,0.0097,0.0525,0.013,0.8831
+dia22_utt1,neutral,one,neutral,0.0101,0.004,0.0031,0.0112,0.9575,0.011,0.0031
+dia22_utt2,neutral,Is it?,neutral,0.0222,0.005,0.0189,0.0447,0.771,0.0242,0.1141
+dia22_utt3,surprise,She left you.,neutral,0.0902,0.0158,0.0048,0.0437,0.7413,0.0848,0.0193
+dia22_utt4,neutral,that she liked.,neutral,0.0323,0.0383,0.0101,0.0928,0.73,0.0815,0.0149
+dia22_utt5,neutral,women that she left you for another woman that likes women.,disgust,0.2691,0.3787,0.0066,0.0414,0.1681,0.1259,0.0101
+dia22_utt6,anger,"a little louder, okay? I think there's a man on the 12th floor in a coma who didn't quite hear you. I'm sorry.",sadness,0.0432,0.0299,0.0428,0.026,0.1597,0.6732,0.0252
+dia22_utt7,neutral,than what?,surprise,0.0275,0.0064,0.0103,0.0191,0.136,0.0192,0.7814
+dia22_utt8,neutral,"My first time with Carol, was...",neutral,0.0309,0.0127,0.0074,0.1083,0.7404,0.068,0.0323
+dia22_utt9,neutral,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia22_utt10,neutral,It was my first.,neutral,0.0192,0.0101,0.0087,0.066,0.7536,0.0471,0.0953
+dia22_utt11,surprise,With cattle?,surprise,0.0249,0.0108,0.0188,0.0092,0.19,0.0291,0.7172
+dia22_utt12,surprise,"So, in your whole life, you've only been with one...",neutral,0.0587,0.0156,0.0147,0.0387,0.5805,0.1055,0.1863
+dia22_utt13,surprise,"Oh boy, hockey was a big mistake. There's a whole bunch of stuff we could have done tonight.",sadness,0.045,0.0544,0.0161,0.0629,0.057,0.7546,0.01
+dia23_utt0,neutral,Where is everybody?,neutral,0.0327,0.0063,0.0037,0.0508,0.7949,0.032,0.0796
+dia23_utt1,sadness,"Oh, it's already closed. Chris gave me the keys to lock it. What is wrong?",neutral,0.0698,0.0093,0.0194,0.0285,0.5257,0.0676,0.2797
+dia23_utt2,sadness,I'm married. I think my marriage is kind of over. Oh no! Why?,surprise,0.0813,0.0137,0.0154,0.0873,0.019,0.1363,0.647
+dia23_utt3,surprise,"Oh no, why?",surprise,0.0133,0.008,0.0164,0.0104,0.0708,0.0225,0.8586
+dia23_utt4,sadness,Because Carol's a lesbian. And I'm not one. And apparently it's not a mix and match situation.,neutral,0.097,0.0798,0.0256,0.0396,0.5197,0.2247,0.0137
+dia23_utt5,surprise,"Oh, God! I don't believe it! Oh, you poor bunny!",disgust,0.3077,0.3248,0.0098,0.0687,0.0048,0.0569,0.2272
+dia23_utt6,disgust,I'm an idiot.,anger,0.4329,0.4025,0.0086,0.0532,0.0389,0.0473,0.0166
+dia23_utt7,sadness,"And Carol and I would be out and she would see some beautiful woman and she would be Ross, you know, look at her. And I think.",neutral,0.0615,0.1223,0.0097,0.268,0.3904,0.1268,0.0213
+dia23_utt8,neutral,"Hey, do you think that Susan Person is her lover?",neutral,0.0443,0.0178,0.01,0.0413,0.6744,0.0501,0.1622
+dia23_utt9,surprise,Well now I do.,neutral,0.0462,0.0111,0.0035,0.1818,0.6956,0.0346,0.0273
+dia23_utt10,sadness,I'm sorry.,sadness,0.0075,0.0057,0.016,0.0166,0.0371,0.9106,0.0065
+dia23_utt11,sadness,Seven years!,surprise,0.3226,0.018,0.0132,0.145,0.067,0.0859,0.3484
+dia23_utt12,sadness,"I mean, we've been together seven years. She's the only woman who's ever loved me. She's the only woman I've ever...",joy,0.0768,0.0273,0.0126,0.4267,0.2005,0.2373,0.0188
+dia23_utt13,sadness,Ross.,neutral,0.0088,0.0069,0.0024,0.013,0.9497,0.0149,0.0043
+dia24_utt0,neutral,"I'll do it. No, you won't.",neutral,0.1357,0.0283,0.0131,0.1764,0.5822,0.061,0.0033
+dia24_utt2,sadness,"Look, he knows he did a terrible thing and I believe him. He's sorry. But you got one more apology to make.",sadness,0.0811,0.1382,0.0189,0.0372,0.158,0.5637,0.0029
+dia24_utt3,neutral,"I'm sorry, but you got one more apology to make. All right, you gotta apologize to Mary Angela.",sadness,0.0777,0.1023,0.0101,0.0699,0.2405,0.4958,0.0037
+dia24_utt4,joy,"Okay, absolutely.",neutral,0.0275,0.0205,0.0116,0.0945,0.8262,0.0169,0.0027
+dia24_utt5,neutral,All right.,neutral,0.0125,0.0088,0.0049,0.0283,0.9254,0.0176,0.0026
+dia24_utt6,neutral,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia24_utt7,anger,Now you can punch him.,neutral,0.2106,0.1061,0.0219,0.1257,0.496,0.0257,0.014
+dia24_utt8,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia25_utt0,anger,"All right, that's it. I quit.",anger,0.3448,0.23,0.0127,0.0854,0.1619,0.1611,0.0041
+dia25_utt1,surprise,What? I didn't say anything!,surprise,0.0652,0.0052,0.0249,0.0161,0.0117,0.0143,0.8626
+dia25_utt2,anger,"Yeah, but this isn't the face of a person who trusts a person.",neutral,0.0939,0.2502,0.0123,0.0297,0.5541,0.0449,0.0149
+dia25_utt3,anger,"Okay, this is the face of a person who, you know, doesn't trust a person.",neutral,0.0699,0.2276,0.0146,0.0255,0.5989,0.0489,0.0145
+dia25_utt4,sadness,"I'm sorry. Sorry, Phoebe, it's just, well, just a little shorter than what we had discussed.",sadness,0.0094,0.011,0.0117,0.0181,0.0823,0.8605,0.0071
+dia25_utt5,anger,Would you relax? I know what I am doing. This is how he wears it.,neutral,0.0919,0.0536,0.0083,0.1291,0.6623,0.0524,0.0024
+dia26_utt0,neutral,Julie?,surprise,0.0205,0.0043,0.0268,0.0174,0.2643,0.0323,0.6343
+dia26_utt1,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia26_utt2,surprise,Jody?,surprise,0.0216,0.0044,0.0266,0.0162,0.4134,0.0284,0.4895
+dia26_utt3,neutral,"You were with Julie? Oh, look.",surprise,0.009,0.0159,0.0061,0.018,0.0155,0.0107,0.9249
+dia26_utt4,neutral,"When it started, I was just trying to be nice to her because she was my brother's girlfriend.",neutral,0.1027,0.0567,0.0144,0.0746,0.3716,0.3649,0.015
+dia26_utt5,neutral,"And then one thing led to another and before I knew it, we were...",neutral,0.0499,0.0113,0.0504,0.1386,0.5314,0.0967,0.1217
+dia26_utt6,surprise,Oh my god.,surprise,0.0125,0.0465,0.0318,0.0178,0.0046,0.0517,0.835
+dia26_utt7,sadness,"Wait, we only did it once. It didn't mean anything to me.",surprise,0.1096,0.0123,0.0361,0.0705,0.2151,0.1182,0.4382
+dia26_utt8,anger,"Yeah, right. Really? Sure.",surprise,0.0236,0.0125,0.0101,0.1914,0.1434,0.0175,0.6015
+dia26_utt9,sadness,"Rachel, I was thinking of you the whole time.",neutral,0.1807,0.0531,0.018,0.1427,0.3419,0.2097,0.0539
+dia26_utt10,sadness,"Look, I'm sorry, alright?",sadness,0.0542,0.0114,0.115,0.032,0.173,0.5322,0.0823
+dia26_utt11,sadness,I never meant for you to find-,neutral,0.0865,0.0093,0.1069,0.0785,0.4456,0.2242,0.0489
+dia26_utt12,anger,"Oh, please! Please, you wanted to get caught!",fear,0.1671,0.0453,0.535,0.0339,0.0138,0.1309,0.0739
+dia26_utt13,anger,That is not true!,anger,0.4234,0.0652,0.0322,0.0781,0.0353,0.1038,0.2619
+dia26_utt14,anger,So you just sort of happened to leave it in here?,surprise,0.0357,0.0065,0.0186,0.0344,0.2771,0.0445,0.5832
+dia26_utt15,anger,Did it ever occur to you that I might just be that stupid?,anger,0.4332,0.1723,0.0415,0.0475,0.0516,0.1976,0.0563
+dia26_utt16,sadness,"Okay, Monica, I just have to know one thing. Did you go with her to Bloomingdale's?",neutral,0.0169,0.0074,0.0104,0.0202,0.9034,0.0294,0.0123
+dia27_utt0,surprise,Where's the father? Yeah!,surprise,0.1625,0.0168,0.0071,0.0531,0.1052,0.0564,0.599
+dia27_utt1,neutral,I can't say.,neutral,0.0164,0.0055,0.0246,0.1038,0.7469,0.0722,0.0306
+dia27_utt2,surprise,All right.,neutral,0.0125,0.0088,0.0049,0.0283,0.9254,0.0176,0.0026
+dia27_utt3,sadness,Why not?,neutral,0.038,0.0063,0.0099,0.0639,0.5836,0.0361,0.2623
+dia27_utt4,neutral,I can't say because he's famous,neutral,0.0556,0.0634,0.0196,0.2115,0.4875,0.1039,0.0584
+dia27_utt5,surprise,"Oh my god, who is it?",surprise,0.018,0.0254,0.0036,0.0076,0.0045,0.0134,0.9276
+dia27_utt6,anger,"Phoebe, come on, you have to tell us.",neutral,0.0201,0.0055,0.0517,0.0407,0.8421,0.0334,0.0065
+dia27_utt7,neutral,"Okay, okay. It's James Brolin. James Brolin is the father of my baby.",neutral,0.0367,0.017,0.0104,0.0908,0.6986,0.1311,0.0155
+dia27_utt8,surprise,"As in Barbara Streisand's husband, James Brown?",neutral,0.0566,0.0224,0.0224,0.0587,0.3989,0.0886,0.3524
+dia27_utt9,surprise,"What? Well, he never said that to me.",surprise,0.0144,0.0063,0.0138,0.0067,0.0345,0.0168,0.9074
+dia28_utt0,neutral,in this life Phoebe.,neutral,0.0475,0.0114,0.005,0.1615,0.4479,0.3196,0.0071
+dia28_utt1,sadness,"Oh, this life! Oh, okay, no, channelers is worse.",sadness,0.2094,0.2947,0.011,0.0399,0.0298,0.4055,0.0097
+dia28_utt2,joy,"Man, it must be so cool remembering stuff like that. I don't have any past life memories.",joy,0.0202,0.0136,0.0025,0.8449,0.0727,0.0226,0.0234
+dia28_utt3,neutral,"Of course you don't, sweetie. You're brand new.",neutral,0.0302,0.0163,0.0051,0.1504,0.656,0.0568,0.0852
+dia28_utt4,neutral,I know Monica's worst Thanksgiving.,sadness,0.0283,0.0749,0.0108,0.0523,0.1095,0.7216,0.0027
+dia28_utt5,sadness,"Oh, let's not tell the story.",neutral,0.1062,0.0524,0.062,0.0556,0.4836,0.2353,0.0048
+dia28_utt6,sadness,"Oh, come on!",anger,0.4533,0.0207,0.0222,0.2841,0.0325,0.0453,0.1418
+dia28_utt7,joy,"Oh no, I know, I know. It's the one where Joey got Monica's turkey stuck on his head.",neutral,0.1044,0.2645,0.0174,0.0884,0.3594,0.1431,0.0228
+dia28_utt8,surprise,What? What? Joey got a turgis stuck on his head?,surprise,0.0113,0.0056,0.0063,0.0049,0.0127,0.0092,0.9502
+dia28_utt9,neutral,It's not like it's...,neutral,0.0849,0.0184,0.0442,0.0708,0.4185,0.3154,0.0479
+dia28_utt10,neutral,sound.,neutral,0.0171,0.0109,0.0097,0.0302,0.9124,0.0147,0.005
+dia29_utt0,anger,"Wendy, we had a deal. Yeah, you promised.",neutral,0.0205,0.0068,0.0103,0.0555,0.8761,0.0251,0.0058
+dia29_utt1,neutral,Who's that?,surprise,0.017,0.0076,0.0097,0.0347,0.4258,0.0129,0.4923
+dia29_utt2,sadness,Wendy Bales. I have no waitress.,neutral,0.0554,0.0469,0.0102,0.0282,0.6461,0.1963,0.017
+dia29_utt3,sadness,That's too bad. Bye-bye.,sadness,0.0132,0.0138,0.0126,0.0324,0.0422,0.8824,0.0034
+dia29_utt4,neutral,$10 an hour.,neutral,0.0172,0.0149,0.0065,0.0219,0.9016,0.0272,0.0106
+dia29_utt5,neutral,Nope.,neutral,0.0352,0.0453,0.008,0.0204,0.8417,0.0447,0.0048
+dia29_utt6,neutral,$12 an hour.,neutral,0.0222,0.0168,0.0073,0.0225,0.8833,0.0339,0.014
+dia29_utt7,neutral,"Come on, I wish I could, but I've made plans to walk around.",neutral,0.0454,0.0121,0.0139,0.0622,0.5373,0.3213,0.0078
+dia29_utt8,anger,"Well, when you ran out in your wedding, I was there for you.",neutral,0.0848,0.0261,0.0039,0.1822,0.5989,0.0975,0.0066
+dia29_utt9,anger,"I put a roof over your head and if that means nothing to you, $20 an hour.",anger,0.3284,0.3006,0.0136,0.0403,0.241,0.0726,0.0036
+dia29_utt10,joy,Done.,neutral,0.0317,0.0144,0.0056,0.0823,0.8498,0.0121,0.0042
+dia30_utt0,fear,We've got three minutes till the reactor blows. We're never gonna make it.,neutral,0.1596,0.1406,0.0379,0.0841,0.2903,0.2812,0.0064
+dia30_utt1,fear,You've got to get out of here! Save yourself!,anger,0.641,0.0268,0.062,0.1363,0.0304,0.0571,0.0465
+dia30_utt2,fear,"No, I won't leave you.",neutral,0.1247,0.0178,0.0295,0.0347,0.6993,0.091,0.003
+dia30_utt3,sadness,Don't worry about me. I'm a robot. I'm just a machine!,anger,0.4466,0.0196,0.0435,0.2529,0.1287,0.0702,0.0385
+dia30_utt4,anger,"No, you're not. Not to me.",neutral,0.0922,0.0261,0.0164,0.0857,0.6069,0.1201,0.0526
+dia30_utt5,surprise,Oh my God.,surprise,0.0084,0.0254,0.0227,0.0154,0.0052,0.0319,0.891
+dia30_utt6,neutral,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia30_utt7,neutral,I am extremely talented.,joy,0.0317,0.014,0.0053,0.8016,0.0984,0.0244,0.0245
+dia30_utt8,joy,"Yeah, you're great. Okay, let's take a film out. No, I mean, I was really acting my ass off.",joy,0.0444,0.034,0.0062,0.5534,0.3198,0.0327,0.0095
+dia30_utt9,joy,"Okay, let's take it through my mind. No, I mean, I was really acting my ass off.",neutral,0.2536,0.2204,0.0167,0.115,0.3106,0.0796,0.0041
+dia30_utt10,joy,I thought I was pretty good too.,neutral,0.0396,0.0122,0.0082,0.3542,0.4814,0.0719,0.0325
+dia30_utt11,neutral,"Oh yeah, you're solid. Yeah, you're just, no, me.",neutral,0.0476,0.086,0.0382,0.1012,0.6643,0.0575,0.0052
+dia30_utt12,neutral,"You know what? I think that's enough for now. Yeah, I don't want to be over rehearsed",neutral,0.1167,0.0441,0.0222,0.0549,0.6383,0.1206,0.0033
+dia30_utt13,anger,Bye.,neutral,0.0114,0.0062,0.0046,0.0712,0.8811,0.0213,0.0042
+dia30_utt14,anger,I'll do it without you.,neutral,0.0817,0.0456,0.0091,0.0396,0.6549,0.1641,0.005
+dia30_utt15,anger,I don't need you or anybody else!,anger,0.6066,0.0131,0.0164,0.2249,0.0428,0.0394,0.0569
+dia30_utt16,anger,I'm gonna make it on my own!,joy,0.2455,0.0074,0.0177,0.6168,0.0419,0.0426,0.0281
+dia30_utt17,anger,You'll see! You'll all see!,joy,0.0887,0.0051,0.0083,0.7925,0.0584,0.0099,0.0372
+dia31_utt0,sadness,I can't believe that Ross is gone. It is just so sad.,sadness,0.0182,0.0104,0.0096,0.1041,0.0176,0.8165,0.0237
+dia31_utt1,surprise,I didn't know Ross and you were so close.,surprise,0.0369,0.0133,0.0128,0.1794,0.1091,0.0601,0.5883
+dia31_utt2,sadness,"No, we weren't, but we had one class together. He was such a great guy. And he talked so passionately about science. I always remembered him. I'm sure that would mean a lot to him.",joy,0.0396,0.0282,0.0042,0.6978,0.1532,0.0666,0.0105
+dia31_utt3,neutral,I always remembered him. I'm sure that would mean a lot to him.,joy,0.0323,0.0148,0.0052,0.3865,0.2793,0.272,0.01
+dia31_utt4,neutral,"And if heaven has a door, I'm sure he's pressing his ear up against it and listening intently.",neutral,0.0677,0.0853,0.0127,0.0589,0.7282,0.0414,0.0058
+dia31_utt5,sadness,I thought so many times about calling him and asking him out. I guess I really missed my chance.,sadness,0.2228,0.0356,0.0144,0.2254,0.0742,0.3815,0.0462
+dia31_utt6,joy,"Oh, you did it!",surprise,0.0808,0.0077,0.0031,0.2164,0.0073,0.012,0.6727
+dia31_utt7,joy,I'm still alive!,surprise,0.2037,0.0102,0.005,0.1627,0.0326,0.0397,0.546
+dia31_utt8,joy,"Cory, I know this is a big surprise for you.",joy,0.0401,0.0121,0.0108,0.5464,0.1451,0.0705,0.175
+dia31_utt9,joy,"It's a long story, but the things you just said really made my...",joy,0.0449,0.0075,0.0082,0.7495,0.1033,0.0568,0.0297
+dia31_utt10,joy,I mean the fact that you are here means more to me than if this room were filled with people,neutral,0.1338,0.0372,0.0092,0.2016,0.4462,0.1507,0.0213
+dia31_utt11,anger,"You sick freak, who does that? I can't believe I had a crush on you.",disgust,0.1691,0.4629,0.0159,0.0333,0.0095,0.043,0.2663
+dia31_utt12,joy,Did you hear that? Corey Weston had a crush on me!,surprise,0.1813,0.0172,0.0192,0.2219,0.0103,0.0484,0.5017
+dia32_utt0,neutral,We'll do a quick check.,neutral,0.0109,0.0073,0.012,0.0168,0.9425,0.008,0.0025
+dia32_utt1,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia32_utt2,surprise,"So, eight days late, huh?",surprise,0.0354,0.0129,0.0111,0.0176,0.1205,0.0283,0.7742
+dia32_utt3,neutral,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia32_utt4,neutral,You must be getting a little uncomfortable.,neutral,0.0556,0.2837,0.155,0.0549,0.308,0.1352,0.0076
+dia32_utt5,neutral,"Yeah, just a tad.",neutral,0.0155,0.0265,0.0116,0.0522,0.8572,0.0346,0.0025
+dia32_utt6,neutral,"about 80% of face, so you're on your way.",neutral,0.0192,0.0166,0.0037,0.0223,0.9218,0.0132,0.0032
+dia32_utt7,neutral,It still could last a little while long.,neutral,0.0241,0.012,0.0067,0.043,0.8634,0.0455,0.0054
+dia32_utt8,neutral,"about 80% of face so you're on your way. It still could last a little while longer. If you're anxious, there are a few ways to help things along. Do them.",neutral,0.0272,0.0149,0.0069,0.0554,0.8691,0.0244,0.0021
+dia32_utt9,anger,"If you're anxious, there are a few ways to help things along. Do them.",neutral,0.0268,0.0121,0.0136,0.0947,0.815,0.0353,0.0026
+dia32_utt10,neutral,But actually there are things that you can do. Just some home remedies. But in my experience I found that some of them are very effective.,neutral,0.0167,0.0143,0.0048,0.1067,0.8248,0.0264,0.0062
+dia32_utt11,neutral,"Well, we are ready to try anything.",neutral,0.0327,0.0165,0.0077,0.1435,0.7814,0.013,0.0052
+dia32_utt12,neutral,"Okay, there's an novelty.",neutral,0.0124,0.0077,0.0024,0.0461,0.9139,0.0091,0.0084
+dia32_utt13,neutral,drink.,neutral,0.0422,0.0647,0.0348,0.2136,0.5952,0.0422,0.0073
+dia33_utt0,sadness,"What is wrong with them? Oh, she misunderstood.",surprise,0.1946,0.1058,0.0086,0.0407,0.0856,0.1651,0.3997
+dia33_utt1,neutral,"What is wrong with them? Oh, she misunderstood. She thought she was moving to Tulsa.",surprise,0.0621,0.028,0.0092,0.0185,0.0495,0.0863,0.7463
+dia34_utt0,neutral,Anytime you're ready.,neutral,0.01,0.0052,0.0042,0.0193,0.9537,0.0055,0.0022
+dia34_utt1,neutral,"Okay. Okay, here we go.",neutral,0.0226,0.012,0.0071,0.0478,0.8976,0.0095,0.0033
+dia34_utt2,neutral,"Okay, where am I talking to here? I mean, uh...",surprise,0.0281,0.011,0.0475,0.0182,0.3643,0.0461,0.4848
+dia34_utt3,neutral,"Well, there is one way that seems to offer a certain acoustical advantage, but...",neutral,0.0243,0.022,0.0145,0.0441,0.8401,0.0431,0.0118
+dia34_utt4,neutral,Just saying for the bump.,neutral,0.0327,0.0191,0.0032,0.0795,0.827,0.0348,0.0037
+dia34_utt5,neutral,Okay. Okay. Okay. Okay. Here goes.,neutral,0.0321,0.0166,0.0186,0.0717,0.8447,0.0118,0.0044
+dia34_utt6,fear,"No, I, you know, I can't do this.",sadness,0.0748,0.0357,0.0788,0.0353,0.0493,0.7199,0.0063
+dia34_utt7,disgust,This is... it's too weird.,neutral,0.0975,0.1686,0.0227,0.1129,0.2723,0.2612,0.0649
+dia34_utt8,sadness,I feel stupid.,disgust,0.336,0.5052,0.0227,0.0381,0.028,0.0671,0.003
+dia34_utt9,neutral,So don't do it. It's fine. You don't have to do it just because Susan does it,neutral,0.1062,0.0553,0.0237,0.0893,0.6331,0.0909,0.0016
+dia34_utt10,joy,"Oh, baby. Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello? Hello?",joy,0.0701,0.0106,0.026,0.5685,0.0939,0.0315,0.1993
+dia35_utt0,neutral,"Oh, hi. It's Mark.",neutral,0.0068,0.0037,0.0036,0.0378,0.9143,0.0084,0.0254
+dia36_utt0,fear,"Easy, easy. You have to go to the hospital, okay?",neutral,0.0402,0.0124,0.1591,0.0264,0.6266,0.0725,0.0628
+dia36_utt1,neutral,"Okay, I do.",neutral,0.0314,0.0113,0.0047,0.091,0.8416,0.0165,0.0037
+dia36_utt2,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia36_utt3,neutral,Really? OK.,surprise,0.0085,0.0033,0.0031,0.0141,0.0127,0.0069,0.9515
+dia36_utt4,neutral,"get your coat and then I'll put you in a cab, okay?",neutral,0.0304,0.0105,0.0222,0.0147,0.892,0.0179,0.0123
+dia36_utt5,sadness,"Oh, wait, boy, you're not gonna come with me?",surprise,0.024,0.0085,0.0247,0.0136,0.0114,0.0389,0.8788
+dia36_utt6,surprise,Of course I am. I just have to make a call.,neutral,0.0177,0.0031,0.0159,0.0375,0.8966,0.0228,0.0063
+dia36_utt7,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia36_utt8,neutral,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia36_utt9,surprise,Thank you. Ow! Ah!,joy,0.1044,0.0323,0.003,0.591,0.0168,0.0159,0.2367
+dia36_utt10,fear,What's wrong?,neutral,0.1132,0.0945,0.088,0.0298,0.2814,0.165,0.2282
+dia36_utt11,disgust,"Sorry, I just can't go to the hospital looking like this. Thank you.",sadness,0.0221,0.0094,0.0074,0.1233,0.0904,0.7397,0.0077
+dia37_utt0,neutral,"Pete Becker is circling the ring now. Looks like he's just trying to feel him out. Oh, Bruza is judging!",anger,0.4576,0.0869,0.0137,0.196,0.0454,0.0509,0.1495
+dia37_utt1,fear,"Run, you crazy rich freak!",anger,0.7058,0.1178,0.0086,0.1088,0.0152,0.0213,0.0225
+dia37_utt2,fear,I can't watch this.,sadness,0.1251,0.0465,0.051,0.0491,0.1274,0.5572,0.0437
+dia37_utt3,surprise,"Look it out, he's winning, he's winning.",joy,0.1656,0.0377,0.0201,0.5395,0.1934,0.0387,0.0049
+dia37_utt4,surprise,No!,anger,0.4426,0.1831,0.0144,0.0532,0.0142,0.0489,0.2436
+dia37_utt5,fear,,,,,,,,,
+dia37_utt6,fear,"Uh-oh, Bruza has Becker on the canvas and is going for his favorite area. Oh!",surprise,0.0877,0.0389,0.1156,0.2079,0.1413,0.1259,0.2826
+dia37_utt7,disgust,,,,,,,,,
+dia37_utt8,surprise,"Wait, if that's his favorite area, why is he being so mean to it?",surprise,0.0672,0.0213,0.0132,0.009,0.0752,0.0397,0.7745
+dia37_utt9,surprise,This is ironic.,disgust,0.0921,0.4018,0.0092,0.0754,0.136,0.0737,0.2118
+dia37_utt10,neutral,"your last two boyfriends, Richard didn't want to have kids, and from the looks of it, now Pete can't.",sadness,0.1488,0.0666,0.016,0.0376,0.1769,0.5445,0.0096
+dia38_utt0,anger,"Dude, you don't have to brag. We got nothing here.",neutral,0.3485,0.1105,0.0145,0.1137,0.3608,0.0431,0.009
+dia39_utt0,neutral,Should we tell Rachel there's an empty private room right next door to hers?,neutral,0.0277,0.007,0.0177,0.0162,0.8799,0.0294,0.022
+dia39_utt1,joy,We could. Or we could have sex in it.,neutral,0.0399,0.0226,0.0105,0.3109,0.5575,0.0481,0.0105
+dia39_utt2,joy,Only think about that while I remove my pants.,neutral,0.07,0.1309,0.0379,0.0437,0.6537,0.059,0.005
+dia40_utt0,surprise,"The photo is a complete idiot! Hey, I'm with you.",anger,0.4481,0.4169,0.0043,0.0505,0.0209,0.0314,0.0279
+dia40_utt1,neutral,"The photo is a complete idiot. Hey, I'm with you. He even asked me if I thought you'd go out with him. Oh.",disgust,0.2527,0.6087,0.0045,0.0371,0.0278,0.0375,0.0317
+dia40_utt2,disgust,"Oh, I think I'm gonna throw up a little bit. What did you say? I said no.",sadness,0.0635,0.0764,0.2168,0.0406,0.0294,0.5651,0.0083
+dia40_utt3,neutral,What did you say? I said no.,surprise,0.1134,0.033,0.1773,0.0281,0.1997,0.0412,0.4074
+dia40_utt4,surprise,,,,,,,,,
+dia40_utt5,surprise,What? What? I just figured since you're pregnant you're not going to be seeing people.,surprise,0.0113,0.0048,0.0096,0.0073,0.018,0.0119,0.9371
+dia40_utt6,anger,"Okay, Joey?",neutral,0.0426,0.0059,0.01,0.0313,0.8438,0.0115,0.0548
+dia40_utt7,neutral,I didn't tell them. I didn't know a few talent people. This is back when I thought cash was still people.,surprise,0.07,0.0287,0.0196,0.0391,0.2546,0.059,0.529
+dia40_utt8,fear,"Don't tell him, don't tell him, just tell him to call me, okay?",fear,0.1041,0.0148,0.5943,0.0302,0.1799,0.0563,0.0204
+dia40_utt9,sadness,But I really don't think that's such a...,surprise,0.061,0.0569,0.0187,0.074,0.3314,0.0883,0.3698
+dia40_utt10,joy,"Okay, you go do it. I'll come back to that set. I will meet more actors. I'll meet them all. Yep.",neutral,0.0333,0.0166,0.005,0.0901,0.838,0.0141,0.0028
+dia41_utt0,neutral,"Oh, there you are. I was looking for you before. Joshua's gone, so you and Emily are free to go.",neutral,0.0201,0.0052,0.0046,0.0469,0.9004,0.0189,0.004
+dia41_utt1,neutral,It's okay.,neutral,0.0133,0.0071,0.0053,0.0317,0.9179,0.023,0.0017
+dia41_utt2,neutral,She's still in there enjoying her fake party and it's too late to do any of the stuff I had planned.,anger,0.3734,0.1023,0.0089,0.1195,0.2112,0.1769,0.0077
+dia42_utt0,anger,Ah! Ah! I forgot my jack...,surprise,0.0733,0.013,0.0067,0.165,0.0202,0.0276,0.6942
+dia42_utt1,anger,"Wait, wait, wait. You tell him to wait. Okay.",neutral,0.0959,0.0192,0.1309,0.1047,0.3943,0.0834,0.1716
+dia42_utt2,neutral,Wait! Okay. Wait! Wait! Wait!,surprise,0.083,0.0087,0.0422,0.1155,0.0429,0.0391,0.6687
+dia42_utt3,neutral,Emily.,neutral,0.0082,0.0056,0.0023,0.0115,0.9491,0.0202,0.0031
+dia42_utt4,anger,"No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no",neutral,0.0777,0.1321,0.2425,0.0535,0.38,0.1059,0.0083
+dia43_utt0,neutral,Call me when you get there. Okay.,neutral,0.0108,0.0045,0.0074,0.0155,0.9537,0.006,0.0021
+dia43_utt1,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia44_utt0,sadness,I know. You're the guy who wouldn't chip in for the handyman.,neutral,0.0671,0.0872,0.0054,0.1006,0.665,0.0413,0.0334
+dia44_utt1,anger,Never mind.,neutral,0.0278,0.0228,0.0082,0.0297,0.881,0.0269,0.0037
+dia44_utt2,neutral,"I actually thought it was really unfair the way everyone reacted. I mean, you had just moved in.",anger,0.2465,0.1509,0.0079,0.1305,0.1807,0.2012,0.0823
+dia44_utt3,neutral,Jen.,neutral,0.0076,0.0058,0.0021,0.0147,0.9456,0.0183,0.0059
+dia44_utt4,neutral,Jen. Jen. I know this may sound a little... But would you maybe want to grab a cup of coffee sometime?,neutral,0.0112,0.0063,0.0239,0.0658,0.8067,0.0747,0.0114
+dia44_utt5,joy,"Sure, that would be nice.",neutral,0.0174,0.0181,0.0041,0.1299,0.7985,0.0275,0.0046
+dia44_utt6,neutral,Um...,neutral,0.023,0.0147,0.2495,0.0354,0.5067,0.1477,0.0232
+dia44_utt7,joy,My number's on there. Give me a call.,neutral,0.0172,0.0056,0.0105,0.0205,0.9342,0.0069,0.0051
+dia44_utt8,neutral,I will give you a call.,neutral,0.0094,0.0042,0.0052,0.0092,0.9654,0.0046,0.002
+dia44_utt9,neutral,I'll see you later.,neutral,0.0088,0.007,0.0037,0.0233,0.9398,0.014,0.0033
+dia44_utt10,joy,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia44_utt11,neutral,I forgot my paper.,neutral,0.0497,0.0164,0.0196,0.0316,0.6475,0.1452,0.0899
+dia45_utt0,neutral,"Here we go. Okay, brace yourself. What?",surprise,0.0324,0.0107,0.0732,0.0303,0.2813,0.0382,0.5339
+dia45_utt1,neutral,"Okay, brace yourself, what?",fear,0.0463,0.0151,0.315,0.038,0.2602,0.0771,0.2482
+dia45_utt2,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia45_utt3,surprise,How's it going?,neutral,0.0222,0.006,0.0147,0.1491,0.7377,0.0317,0.0386
+dia45_utt4,neutral,Where are you gonna go?,neutral,0.0674,0.0082,0.1245,0.0461,0.5907,0.0896,0.0735
+dia45_utt5,neutral,"No, thank you.",neutral,0.0204,0.0104,0.0028,0.1822,0.7642,0.0143,0.0057
+dia45_utt6,neutral,"No, Rachel, never peace in public restrooms.",neutral,0.0929,0.1667,0.0246,0.0458,0.5638,0.1014,0.0047
+dia45_utt7,neutral,"Well, they never have any paper in there, you know? So my rule is no tissue, no tissue. LAUGHTER Well, if everybody's going...",neutral,0.191,0.2209,0.0526,0.0521,0.391,0.0801,0.0121
+dia45_utt8,neutral,"Oh, you know what? Don't close the door! The keys are in there!",anger,0.6174,0.045,0.1681,0.0526,0.0318,0.0377,0.0474
+dia45_utt9,fear,Oh no no no no no!,fear,0.1063,0.1181,0.6295,0.0504,0.0193,0.0439,0.0325
+dia45_utt10,neutral,What's going on?,surprise,0.0269,0.0108,0.0683,0.0186,0.1901,0.0385,0.6469
+dia45_utt11,fear,My light is in there!,joy,0.2107,0.0193,0.0077,0.4351,0.0484,0.0225,0.2563
+dia46_utt0,neutral,I promise.,neutral,0.0594,0.011,0.0523,0.1267,0.6885,0.0549,0.0073
+dia46_utt1,neutral,although don't feel like you can't visit.,neutral,0.0624,0.0129,0.0086,0.1153,0.6203,0.1721,0.0084
+dia46_utt2,neutral,"Hey, is Chandler here?",neutral,0.0214,0.0056,0.0073,0.0305,0.8357,0.0126,0.0869
+dia46_utt3,neutral,"No, no he's not.",neutral,0.0544,0.0418,0.0177,0.0348,0.775,0.0683,0.008
+dia46_utt4,surprise,"Guys, Joey just saw Janice kissing her ex-husband.",disgust,0.2199,0.2956,0.0231,0.0664,0.1001,0.1454,0.1494
+dia46_utt5,surprise,What? So what are you gonna do? I mean how are you gonna tell channel?,surprise,0.0418,0.0054,0.054,0.0272,0.0719,0.0317,0.7679
+dia46_utt6,neutral,"I was thinking about that, and I think the best way would be to not.",sadness,0.0412,0.0402,0.0206,0.0431,0.3666,0.4796,0.0087
+dia46_utt7,neutral,"No, you can't keep this to yourself. If you know about this, you have to tell him.",neutral,0.0904,0.0507,0.0343,0.0318,0.7227,0.0679,0.0023
+dia46_utt8,fear,"It'll kill him. I mean, it'll just kill him.",fear,0.1611,0.0719,0.276,0.1394,0.0817,0.2633,0.0067
+dia46_utt9,neutral,"Well, you could wait till I go to the dentist. Maybe I'll kill him.",sadness,0.1556,0.2063,0.0307,0.0902,0.1626,0.3514,0.0031
+dia47_utt0,neutral,"Hi, what are you doing here?",surprise,0.0167,0.0063,0.0041,0.0129,0.0804,0.0128,0.8668
+dia47_utt1,neutral,"I was just wondering, when you and I split up, did you get the tape that was half the last episode of my...",neutral,0.054,0.0104,0.0209,0.037,0.6862,0.0765,0.115
+dia47_utt2,neutral,Now it's Susan and me in Mexico and the hostage is coming home.,neutral,0.0643,0.015,0.0094,0.0325,0.7864,0.0805,0.0119
+dia47_utt3,neutral,What is that?,surprise,0.0154,0.0059,0.0082,0.0163,0.2284,0.0131,0.7126
+dia47_utt4,neutral,He's sleeping.,neutral,0.0101,0.0101,0.004,0.014,0.9385,0.0191,0.0042
+dia47_utt5,surprise,sleeping? Does this say here's this bedtime?,surprise,0.1082,0.0201,0.0244,0.0193,0.0938,0.0552,0.679
+dia47_utt6,joy,"Yeah, actually, Susan's gonna be here any minute. It's kind of an anniversary. Oh.",neutral,0.0241,0.0126,0.0049,0.1264,0.7349,0.0891,0.0079
+dia47_utt7,surprise,I thought you guys got married in January.,neutral,0.024,0.0083,0.0127,0.0947,0.5907,0.0575,0.212
+dia47_utt8,neutral,Different kind of anniversary.,neutral,0.0304,0.0173,0.0039,0.0886,0.7732,0.071,0.0155
+dia47_utt9,surprise,So... Oh.,neutral,0.0199,0.0139,0.0299,0.1334,0.4686,0.0727,0.2615
+dia47_utt10,neutral,"So, anyway...",neutral,0.0549,0.0126,0.0174,0.0527,0.7696,0.0792,0.0137
+dia48_utt0,neutral,A hat. Yes! We need a hat. Where are we going to find a tiny little hat?,neutral,0.0932,0.0125,0.0048,0.3331,0.4395,0.0198,0.0971
+dia48_utt1,joy,"Whoa, whoa, whoa, get ready, Dave Bear!",surprise,0.0143,0.0058,0.0031,0.0345,0.0041,0.0065,0.9317
+dia48_utt2,joy,"I guess he'll know what to do. Oh my God, you're a genius!",surprise,0.0435,0.0138,0.0034,0.4055,0.008,0.0163,0.5094
+dia48_utt3,fear,"Oh, God, it's kind of sewn on.",surprise,0.021,0.0747,0.0245,0.0471,0.1169,0.2073,0.5085
+dia48_utt4,neutral,"Give it, give it to me.",neutral,0.1792,0.0379,0.0191,0.2426,0.437,0.0802,0.004
+dia48_utt5,neutral,Get back to you.,neutral,0.0199,0.006,0.0054,0.0181,0.941,0.0059,0.0037
+dia48_utt6,surprise,Oh!,surprise,0.0085,0.0041,0.0034,0.0279,0.0047,0.0084,0.943
+dia48_utt7,sadness,"Oh, it's just like a blood bath in here today.",disgust,0.0902,0.3585,0.0115,0.1191,0.327,0.0886,0.0051
+dia49_utt0,anger,"Oh please, this is so your fault! How? How is this my fault?",sadness,0.2421,0.1077,0.0337,0.0298,0.0114,0.4539,0.1214
+dia49_utt2,anger,Kell never threw me out of a room before you came along. Yeah.,neutral,0.2257,0.1197,0.0147,0.1224,0.4172,0.0936,0.0068
+dia49_utt3,anger,"Well, there's a lot of things Carol never did before I came along.",neutral,0.0441,0.0139,0.0074,0.1999,0.5037,0.1553,0.0756
+dia49_utt6,anger,"I'm afraid by you, what are you doing? That's it, get in here!",anger,0.6676,0.1166,0.0898,0.0262,0.0154,0.0523,0.0321
+dia49_utt7,anger,"That's it, get in here, come on.",neutral,0.1178,0.0417,0.0302,0.0737,0.707,0.0269,0.0028
+dia49_utt8,neutral,Come on!,anger,0.4897,0.0132,0.0114,0.3534,0.0336,0.0243,0.0744
+dia49_utt9,anger,"Oh my god, you guys! I don't believe you!",surprise,0.1259,0.1048,0.0166,0.0251,0.0033,0.0364,0.6879
+dia49_utt10,anger,"There are children coming into the world in this very building, and your negative fighting noises are not the first thing they should be hearing.",disgust,0.1113,0.708,0.014,0.0198,0.0906,0.053,0.0033
+dia49_utt11,anger,So just stop all the yelling! Just stop it!,anger,0.7515,0.058,0.0676,0.0584,0.0167,0.0382,0.0096
+dia49_utt12,neutral,That's Susan.,neutral,0.0097,0.0082,0.0022,0.0155,0.9367,0.0154,0.0123
+dia49_utt13,anger,Don't make me do this again! I don't like my voice like this!,anger,0.7035,0.1237,0.0658,0.0241,0.0114,0.0654,0.0061
+dia49_utt14,neutral,"Okay, who wants to hear something ironic?",neutral,0.2422,0.259,0.0046,0.1445,0.2827,0.0423,0.0247
+dia50_utt0,surprise,"Oh, here it is! Oh, Joey, why did you sign it, son of a bitch?",surprise,0.3126,0.0927,0.0045,0.0404,0.014,0.0334,0.5023
+dia50_utt1,surprise,"I didn't do that, who would have done that?",surprise,0.0671,0.0161,0.0127,0.0293,0.0391,0.034,0.8017
+dia50_utt2,anger,Son of a bitch!,disgust,0.4089,0.4866,0.0061,0.0391,0.0104,0.0255,0.0234
+dia50_utt3,neutral,"Okay, maybe ask this guy.",neutral,0.0093,0.0093,0.0118,0.0142,0.9433,0.007,0.0051
+dia51_utt0,neutral,"Oh, did I not mention? Carl is a guy I hired to be my identical twin for a medical research project.",neutral,0.0438,0.0217,0.0071,0.1262,0.6223,0.0801,0.0987
+dia51_utt1,joy,"You know, sometimes the good ideas are just right in front of you, aren't they?",neutral,0.1109,0.0265,0.008,0.2283,0.5933,0.028,0.005
+dia51_utt2,neutral,"I know it sounds crazy, but I think it might work, you know, but the only problem is, it calls the act angus.",disgust,0.111,0.6552,0.015,0.0349,0.1003,0.0801,0.0035
+dia51_utt3,neutral,The only problem?,neutral,0.0714,0.0135,0.0444,0.0348,0.4173,0.1169,0.3018
+dia51_utt4,neutral,"Yeah, he's the reason I didn't get that big minute man commercial a couple years ago, remember?",neutral,0.1233,0.0268,0.0115,0.0651,0.5195,0.1231,0.1307
+dia51_utt5,neutral,"Hey, can I get a little piece of that cake?",neutral,0.0325,0.0137,0.0038,0.2907,0.6222,0.0254,0.0117
+dia51_utt6,anger,Pizza! We like pizza! Get out!,joy,0.0542,0.0059,0.0031,0.8844,0.0218,0.0068,0.0238
+dia52_utt0,neutral,"Hey Monica, there's a customer who wants to come from at the chef. Shall I let him in?",neutral,0.0137,0.0062,0.0033,0.0398,0.9173,0.0146,0.005
+dia52_utt1,joy,"Sure, I love this part.",joy,0.0111,0.0035,0.0015,0.929,0.0349,0.0103,0.0097
+dia52_utt2,neutral,Come on in. Bye.,neutral,0.0314,0.0171,0.007,0.1382,0.7788,0.0227,0.0047
+dia53_utt0,joy,"Really? In a moment, I really want to kiss you too. Me in a moment.",surprise,0.0282,0.0057,0.0087,0.2488,0.0162,0.037,0.6555
+dia53_utt1,neutral,in my life.,sadness,0.1655,0.0427,0.0078,0.0833,0.2151,0.4744,0.0111
+dia53_utt2,joy,"I don't know what I'm doing at the moment. So do you, uh, want to kiss again?",neutral,0.0605,0.0098,0.1042,0.0777,0.4719,0.2457,0.0301
+dia53_utt3,neutral,"Sure, New Year's Eve is only two weeks away. Can you wait?",neutral,0.0606,0.0103,0.0072,0.2757,0.5308,0.0537,0.0616
+dia53_utt4,neutral,No.,neutral,0.0087,0.0048,0.0036,0.0092,0.9587,0.0114,0.0036
+dia53_utt5,neutral,Me neither.,neutral,0.0186,0.0107,0.0026,0.0603,0.8436,0.0547,0.0094
+dia53_utt6,neutral,three,neutral,0.0089,0.0033,0.0028,0.0118,0.9564,0.0115,0.0052
+dia53_utt7,joy,"Joey, you don't have to count down every time you kiss.",neutral,0.0563,0.0162,0.0039,0.1656,0.7076,0.0444,0.006
+dia53_utt8,joy,Okay. Except that I sort of felt like I needed a couple seconds to get ready.,neutral,0.057,0.0172,0.022,0.1454,0.6434,0.1023,0.0127
+dia54_utt0,neutral,"Oh, baby.",sadness,0.0226,0.0156,0.0208,0.191,0.3289,0.3546,0.0665
+dia54_utt1,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia54_utt2,joy,"If I were omnipotent for a day, I would want world peace, no more hunger, good things for the rainforest, and bigger boobs.",disgust,0.2575,0.26,0.0075,0.1342,0.2387,0.0988,0.0033
+dia54_utt3,neutral,"Well, so you took mine. I'm sorry. Chandler, what about you? I...",sadness,0.0287,0.0104,0.0352,0.0212,0.0901,0.7759,0.0386
+dia54_utt4,neutral,I'd make myself omnipotent for it.,neutral,0.1925,0.1479,0.0086,0.1275,0.4323,0.0864,0.0048
+dia54_utt5,disgust,"See, there's always one guy. If I had a wish, I'd wish for three more wishes.",neutral,0.0603,0.0196,0.0047,0.1842,0.5581,0.1645,0.0085
+dia54_utt6,neutral,Joey?,surprise,0.0316,0.0062,0.028,0.0135,0.2063,0.0297,0.6846
+dia54_utt7,neutral,"Hey Joey, what would you do if you were omnipotent?",neutral,0.0828,0.024,0.0278,0.1033,0.5639,0.0497,0.1485
+dia54_utt8,sadness,Probably kill myself.,sadness,0.1251,0.0862,0.1716,0.0517,0.0402,0.5115,0.0138
+dia54_utt9,surprise,Excuse me?,surprise,0.0658,0.008,0.0269,0.0161,0.0391,0.0208,0.8233
+dia54_utt10,sadness,"Hey, if little Joey's dead, then I got no reason to live.",sadness,0.2521,0.0733,0.0072,0.0421,0.2741,0.3455,0.0057
+dia54_utt11,surprise,"Joey, I'm nipotent.",neutral,0.0677,0.0222,0.0163,0.0353,0.8076,0.0442,0.0066
+dia54_utt12,neutral,You are?,surprise,0.0108,0.0028,0.0078,0.0124,0.0845,0.0104,0.8712
+dia55_utt0,sadness,"Mmm, Joey I'm so sorry.",sadness,0.0077,0.0056,0.0134,0.0238,0.0222,0.921,0.0063
+dia56_utt0,anger,Joey on stage,neutral,0.0335,0.0322,0.0055,0.1438,0.7327,0.0336,0.0187
+dia56_utt1,sadness,Can you at least stay to the end of the pl-,neutral,0.0233,0.0081,0.0125,0.0164,0.9137,0.0233,0.0027
+dia56_utt2,sadness,"I mean, I'll go to the airport with you. I want to say goodbye.",sadness,0.0322,0.0179,0.0083,0.1355,0.1671,0.6322,0.0069
+dia56_utt3,neutral,Where are you Vic?,neutral,0.0188,0.0059,0.0048,0.0305,0.8217,0.0167,0.1016
+dia56_utt4,sadness,I've got to go.,neutral,0.0236,0.0163,0.0892,0.0416,0.6694,0.1556,0.0043
+dia56_utt5,anger,,,,,,,,,
+dia56_utt6,anger,In a minute!,surprise,0.3231,0.017,0.0144,0.1713,0.1135,0.0333,0.3274
+dia56_utt7,sadness,"So this is it, Victor.",neutral,0.0427,0.0122,0.0032,0.0438,0.8658,0.0273,0.0051
+dia56_utt8,sadness,"Yeah, I guess it is.",neutral,0.0141,0.0101,0.0037,0.0247,0.9146,0.0307,0.002
+dia56_utt9,sadness,"Listen, I gotta say goodbye and I gotta say it quick because this is killing me.",sadness,0.1089,0.0595,0.1373,0.029,0.0324,0.6297,0.0032
+dia56_utt10,sadness,One thing you gotta know is that I will never forget you.,joy,0.0424,0.0079,0.0073,0.4391,0.3789,0.1201,0.0044
+dia56_utt11,sadness,"But you got things you have to do now, and so do I.",neutral,0.0509,0.0091,0.0072,0.156,0.7482,0.0255,0.0031
+dia56_utt12,sadness,And so... I'm gonna get on this spaceship... And I'm gonna go to Blargon 7 in search of alternative fuels.,neutral,0.0376,0.0112,0.0273,0.0745,0.8026,0.0427,0.004
+dia56_utt13,sadness,"But when I return 200 years from now, you'll be long gone.",neutral,0.0777,0.0556,0.0059,0.0307,0.6642,0.16,0.0059
+dia56_utt14,neutral,But I won't be aged at all.,neutral,0.062,0.0305,0.0065,0.0803,0.5597,0.2477,0.0133
+dia56_utt15,neutral,"So you tell your great, great granddaughter to look me up. Because Adrian, baby, I'm gonna wanna meet her.",joy,0.0482,0.0166,0.0073,0.5627,0.2498,0.1068,0.0087
+dia56_utt16,sadness,"So long, Vic!",joy,0.2047,0.0269,0.0024,0.4996,0.066,0.0703,0.1302
+dia57_utt0,neutral,No way. The most romantic song ever was the way we were.,joy,0.0657,0.0241,0.0037,0.5927,0.1759,0.1109,0.027
+dia57_utt1,neutral,"See, I think the one that Elton John wrote for that guy on Who's the Boss.",neutral,0.0278,0.0263,0.0029,0.043,0.846,0.0286,0.0254
+dia57_utt2,neutral,"What song is that, Phoebe?",surprise,0.055,0.011,0.0053,0.165,0.2642,0.0359,0.4636
+dia57_utt3,joy,I'm on a come come,neutral,0.0438,0.0085,0.0132,0.1029,0.7746,0.0497,0.0073
+dia57_utt4,joy,Bye bye.,neutral,0.0173,0.0122,0.004,0.1057,0.7999,0.0569,0.004
+dia57_utt5,joy,,,,,,,,,
+dia57_utt6,surprise,Oh my god. Has she slept at all? Nope.,surprise,0.0126,0.0237,0.0087,0.0096,0.0061,0.0286,0.9109
+dia57_utt7,neutral,Has she slept at all? Nope.,neutral,0.0485,0.0575,0.0234,0.0223,0.7203,0.0805,0.0475
+dia57_utt8,neutral,"No, it's been three nights in a row.",neutral,0.0645,0.0456,0.0039,0.0271,0.7335,0.1157,0.0097
+dia57_utt9,neutral,"Yeah, she finally stopped crying yesterday, but then she found one of Richard's cigar butts out on the terrace.",neutral,0.0715,0.101,0.0061,0.095,0.5405,0.1712,0.0147
+dia57_utt10,neutral,"Okay, that explains it. I got a call at two in the morning.",neutral,0.0171,0.0089,0.0055,0.019,0.9315,0.0138,0.0041
+dia57_utt11,neutral,"Okay, that explains it. I got a call at two in the morning and all I could hear was like this high squeaky sound So I thought oh, okay, so it's like a mass or a possum",neutral,0.0329,0.0969,0.0458,0.0499,0.7151,0.0456,0.0139
+dia57_utt12,joy,"Then I realized, like, okay, where would a mouse or a possum get the money to make the phone call?",neutral,0.0977,0.0681,0.011,0.0452,0.7034,0.0549,0.0196
+dia58_utt0,neutral,"So, uh, man, are you gonna go see the play with me tonight?",neutral,0.0266,0.0118,0.0162,0.0823,0.7845,0.0649,0.0138
+dia58_utt1,disgust,You know what? I don't know how comfortable I am. I'm gonna see how hot the sex is between some guy and your girl.,anger,0.3003,0.2146,0.0322,0.2144,0.1148,0.1005,0.0232
+dia58_utt2,neutral,"Yeah, I know.",neutral,0.0076,0.0123,0.0133,0.0245,0.9109,0.0251,0.0063
+dia58_utt3,neutral,"Oh, I'm there.",neutral,0.0254,0.0098,0.0229,0.0829,0.7817,0.0255,0.0518
+dia58_utt4,surprise,"Hey. Hey, man.",neutral,0.009,0.0089,0.004,0.0329,0.9164,0.0091,0.0197
+dia58_utt5,joy,"Hey. Hey, man. Want some pancakes? You made pancakes?",neutral,0.0149,0.0064,0.0072,0.0386,0.8388,0.0146,0.0796
+dia58_utt6,surprise,Lots of pancakes. You made pancakes?,surprise,0.0161,0.0065,0.0124,0.0118,0.2085,0.0197,0.7249
+dia58_utt7,joy,"Yep, grab a plate.",neutral,0.0199,0.022,0.0071,0.0323,0.908,0.0087,0.002
+dia58_utt8,neutral,"No, no, stay right there. Get in closer.",neutral,0.0357,0.0193,0.0607,0.0314,0.8348,0.0166,0.0015
+dia58_utt9,neutral,"Okay, okay, but don't worry because we also have cereals, muffins, waffles and...",neutral,0.0153,0.0079,0.0165,0.0462,0.8773,0.0336,0.0033
+dia58_utt10,neutral,"Listen, also we're watching the game here Saturday night if people want to come over.",neutral,0.0162,0.0088,0.0052,0.0307,0.9179,0.018,0.0033
+dia58_utt11,joy,Oh yeah!,joy,0.0543,0.0096,0.0049,0.7174,0.0251,0.0135,0.1752
+dia59_utt0,neutral,if the foxhole was lined with sandwiches.,neutral,0.0153,0.0171,0.0038,0.0176,0.922,0.0199,0.0044
+dia59_utt1,neutral,"Yeah, hero sandwiches.",neutral,0.0124,0.0118,0.0027,0.0551,0.8976,0.0181,0.0023
+dia59_utt2,neutral,"Well, you all know that I am a pacifist, so I'm not interested in war in any way.",neutral,0.1406,0.1888,0.0162,0.0452,0.5346,0.0719,0.0027
+dia59_utt3,neutral,"But you know what? When the revolution comes, I will have to destroy you all.",anger,0.3426,0.0726,0.1095,0.16,0.123,0.1808,0.0114
+dia59_utt4,neutral,not YouTube.,neutral,0.024,0.0206,0.0051,0.0169,0.8972,0.0306,0.0055
+dia60_utt0,surprise,Oh my good God.,surprise,0.0172,0.0603,0.039,0.0352,0.0059,0.1089,0.7335
+dia60_utt1,neutral,"Hey. Continuing the countdown of your favorite meals. Tonight, number three. Macaroni and cheese with cut up hot dogs.",neutral,0.0422,0.0219,0.0052,0.1406,0.7549,0.0235,0.0116
+dia60_utt2,anger,"Look, you have done enough, okay? You have to stop this now.",anger,0.5789,0.0755,0.0412,0.0555,0.1624,0.075,0.0115
+dia60_utt3,joy,"I will, but not tonight. For dinner music, I thought we could listen to that tape that you made me.",neutral,0.0262,0.015,0.0037,0.1807,0.7312,0.037,0.0063
+dia60_utt4,neutral,"Oh, the mixtape.",neutral,0.0191,0.0142,0.0078,0.1492,0.7352,0.0468,0.0277
+dia60_utt5,joy,,,,,,,,,
+dia60_utt6,joy,You are just the sweetest.,joy,0.02,0.0093,0.0015,0.8477,0.0923,0.0228,0.0064
+dia61_utt0,joy,Hey!,joy,0.0485,0.0037,0.0038,0.649,0.0663,0.0082,0.2206
+dia61_utt1,joy,Hey!,joy,0.0485,0.0037,0.0038,0.649,0.0663,0.0082,0.2206
+dia61_utt2,neutral,"Yes, and I'm doing tonight. What?",surprise,0.0222,0.0038,0.0079,0.0325,0.2056,0.0168,0.7113
+dia61_utt3,neutral,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia61_utt4,neutral,I'm checking out the restaurant with Pete.,neutral,0.0221,0.0221,0.0049,0.1218,0.7916,0.0273,0.0101
+dia61_utt5,joy,"Monica, I am so excited for you.",joy,0.0109,0.0018,0.0024,0.943,0.0167,0.0074,0.0179
+dia62_utt0,neutral,"So honey, this, uh, this threesome thing, I mean, how are we even gonna start to f-",sadness,0.0339,0.0541,0.1547,0.031,0.2787,0.4045,0.0432
+dia62_utt1,joy,"Actually, I've been making a list of all the women I know who might be into doing them.",neutral,0.032,0.0289,0.0038,0.0326,0.8735,0.026,0.0033
+dia62_utt2,surprise,"Oh, wow. Huh. Boy. Someone's been doing their homework.",surprise,0.0179,0.0319,0.0034,0.0296,0.0055,0.0114,0.9003
+dia62_utt3,neutral,"Yeah. Oh, and I know Gil Rostin is in there twice, but she is so...",neutral,0.0525,0.0564,0.0142,0.2357,0.419,0.1274,0.0948
+dia62_utt4,neutral,"Oh, I know, huh? You know, just talking about it is getting me kind of...",surprise,0.1735,0.0744,0.0301,0.0733,0.1036,0.0819,0.4631
+dia62_utt5,neutral,"Yeah, me too. Yeah, why?",neutral,0.0434,0.0098,0.0114,0.0466,0.4903,0.0581,0.3404
+dia63_utt0,joy,And then we could have gone from the ceremony to the reception with you in the sidecar.,neutral,0.0529,0.0252,0.0037,0.2941,0.5446,0.0591,0.0204
+dia63_utt1,neutral,It just wouldn't have been feasible.,neutral,0.1006,0.0306,0.0087,0.2801,0.3153,0.0957,0.169
+dia63_utt2,anger,But having a dove place the ring on your finger would have been no problem.,neutral,0.0744,0.0698,0.0054,0.12,0.6721,0.0537,0.0046
+dia63_utt3,joy,It was really fun being married to you tonight.,joy,0.0162,0.0031,0.0016,0.9307,0.0207,0.0122,0.0153
+dia63_utt4,joy,And it was the easiest 400 bucks I ever made.,joy,0.1146,0.0512,0.0033,0.3987,0.317,0.068,0.0472
+dia63_utt5,sadness,"Ross, can I ask you something?",neutral,0.0267,0.0049,0.0271,0.0269,0.8998,0.0088,0.0058
+dia63_utt6,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia63_utt7,neutral,That proposal at the planetarium?,surprise,0.0246,0.0085,0.0129,0.0122,0.2099,0.0219,0.71
+dia63_utt8,sadness,"I know, I know, I was so stupid.",sadness,0.2708,0.1198,0.0921,0.1134,0.0279,0.3708,0.0051
+dia63_utt9,surprise,Are you kidding?,surprise,0.0296,0.0071,0.008,0.0162,0.0195,0.0098,0.9098
+dia63_utt10,joy,with the lilies and the song and the stars?,joy,0.0843,0.0459,0.0125,0.373,0.3666,0.0761,0.0416
+dia63_utt11,joy,It was really wonderful.,joy,0.0127,0.0034,0.0015,0.9059,0.0473,0.0138,0.0155
+dia63_utt12,surprise,You just make that up?,surprise,0.0865,0.029,0.0103,0.0102,0.0235,0.0228,0.8177
+dia63_utt13,neutral,"Actually, I thought about it when we were going out.",neutral,0.0354,0.0211,0.007,0.1547,0.6915,0.0697,0.0207
+dia63_utt14,neutral,That's how I imagined I would ask you to marry me.,joy,0.065,0.0084,0.0151,0.525,0.1347,0.1631,0.0886
+dia63_utt15,neutral,That would have been very hard to say no to.,joy,0.112,0.0444,0.0099,0.3533,0.1403,0.3166,0.0236
+dia63_utt16,neutral,"Well, that's a good thing I didn't do it because it sounds like it would have been a very expensive wedding. Okay, good night. Good night.",sadness,0.0927,0.0432,0.0062,0.2788,0.24,0.331,0.0082
+dia63_utt17,neutral,,,,,,,,,
+dia63_utt18,neutral,Even if the sidecar had a windscreen so your hair wouldn't get messed...,neutral,0.0464,0.057,0.0549,0.0713,0.6435,0.1153,0.0115
+dia63_utt19,neutral,I will think about it.,neutral,0.0162,0.0131,0.0055,0.0306,0.9116,0.021,0.0019
+dia63_utt20,neutral,It's all a mask.,neutral,0.0358,0.0804,0.013,0.0278,0.7918,0.0348,0.0163
+dia64_utt0,surprise,"And guys, it was bananas, cream, and beef. I just cannot believe that you ate that so that I wouldn't feel bad.",surprise,0.1201,0.1,0.0141,0.2212,0.1463,0.1621,0.2362
+dia64_utt1,joy,"Well actually, I didn't eat mine. It's still in the bathroom.",neutral,0.1266,0.1657,0.0077,0.0457,0.4963,0.1346,0.0235
+dia64_utt2,neutral,"No, doesn't I hate that?",disgust,0.0802,0.7226,0.0134,0.0751,0.0363,0.0683,0.004
+dia64_utt3,neutral,And we love cars in Monica's bedroom.,joy,0.043,0.0332,0.0052,0.5013,0.3433,0.0578,0.0162
+dia64_utt4,neutral,"No, got it, and got yours too.",neutral,0.054,0.0117,0.0039,0.0906,0.8121,0.0253,0.0024
+dia65_utt0,joy,And that's why I'm so glad there's no problem.,joy,0.0264,0.0065,0.0023,0.7802,0.1151,0.0628,0.0066
+dia65_utt1,neutral,"It's fine. Actually, I'm on the hiring committee, so there'll be at least one friendly.",neutral,0.0207,0.0205,0.0062,0.0341,0.8828,0.0334,0.0023
+dia65_utt2,joy,"Oh, that's great!",joy,0.016,0.0032,0.0011,0.9272,0.0107,0.0046,0.0371
+dia65_utt3,neutral,"You know, Junior Miss is where I started. I had to sleep with the ugliest guy to get that job.",disgust,0.1133,0.6096,0.008,0.027,0.0638,0.1638,0.0146
+dia65_utt4,surprise,Really?,surprise,0.0061,0.0026,0.0023,0.0097,0.0069,0.0051,0.9673
+dia65_utt5,joy,No!,anger,0.4426,0.1831,0.0144,0.0532,0.0142,0.0489,0.2436
+dia65_utt6,neutral,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia65_utt7,neutral,I mean no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no,fear,0.089,0.0382,0.5823,0.0886,0.1367,0.0522,0.013
+dia65_utt8,neutral,although I might need some convincing.,neutral,0.0343,0.0524,0.0656,0.0641,0.7308,0.0449,0.0078
+dia65_utt9,fear,,,,,,,,,
+dia65_utt10,joy,"Oh, God, I feel wild today.",joy,0.1011,0.1544,0.0543,0.3124,0.0371,0.2604,0.0802
+dia66_utt0,surprise,"Oh my god, can there just less than...",surprise,0.0273,0.0223,0.0142,0.0451,0.015,0.0836,0.7925
+dia66_utt1,neutral,"Yeah, but maybe it's not what we think. Maybe it's, tell Monica I'm sorry, I drank the last of the milk.",sadness,0.04,0.0233,0.0358,0.0236,0.1928,0.681,0.0035
+dia66_utt2,neutral,"Or maybe he was writing to tell her that he's changed his name. You know, tell Monica I'm sorry.",sadness,0.0237,0.012,0.0347,0.0117,0.0587,0.8537,0.0055
+dia66_utt3,surprise,I think it means he freaked out and left. Don't be so negative!,anger,0.6604,0.0546,0.0528,0.1242,0.0248,0.0725,0.0107
+dia66_utt4,anger,"God, isn't it possible that Sorry is sitting in there right now?",surprise,0.0893,0.021,0.0048,0.0971,0.0339,0.1013,0.6527
+dia66_utt5,sadness,"Okay, Phoebe, I think Ross is right. All right, what are we gonna do?",neutral,0.0412,0.01,0.0127,0.1777,0.6848,0.0652,0.0084
+dia66_utt6,neutral,"Okay, I'm just gonna have to go find him and bring him back.",neutral,0.0205,0.0072,0.018,0.0243,0.8181,0.1093,0.0027
+dia66_utt7,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia66_utt8,neutral,"you make sure Monica does not find out, okay?",neutral,0.2004,0.0178,0.2108,0.0384,0.3624,0.144,0.0262
+dia66_utt11,neutral,I will find him.,neutral,0.0083,0.004,0.0028,0.0142,0.9599,0.0089,0.002
+dia67_utt0,joy,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia67_utt2,neutral,"Hey, do you guys know any cute guys?",neutral,0.0205,0.0089,0.0061,0.0806,0.8436,0.0132,0.0271
+dia67_utt3,joy,"Well of course I do, my good friend Joey over here.",neutral,0.0329,0.0173,0.0026,0.1783,0.6879,0.0755,0.0054
+dia67_utt4,joy,"Nope. I'm sorry. Thank you, Chandler.",sadness,0.0145,0.0087,0.0101,0.062,0.2036,0.6954,0.0058
+dia67_utt5,neutral,"Anyway, uh, there's this big charity ball this weekend and Ralph Lauren bought a table so I didn't have to go",neutral,0.0373,0.0196,0.0072,0.2411,0.525,0.1607,0.0089
+dia67_utt6,neutral,What's the charity?,neutral,0.0339,0.0137,0.0106,0.024,0.7559,0.0466,0.1153
+dia67_utt7,neutral,"I don't know, something either trees or disease. I make Ralph Mumbles a lot.",neutral,0.0504,0.0667,0.0091,0.0783,0.7291,0.0626,0.0039
+dia67_utt8,neutral,"Ralph Mumble's a lot. Does Ralph Mumble when you're not paying attention? Yeah, it's weird.",neutral,0.0433,0.205,0.0145,0.0277,0.6373,0.0638,0.0083
+dia67_utt9,surprise,"when you're not paying attention? Yeah, it's weird. No. But the thing is, I need to find a date.",disgust,0.0944,0.4433,0.0444,0.0344,0.2027,0.1522,0.0285
+dia67_utt10,neutral,"Well, what kind of guy are you looking for?",surprise,0.0639,0.0317,0.0078,0.0345,0.1783,0.0132,0.6705
+dia68_utt0,joy,Hey.,neutral,0.0051,0.0037,0.0023,0.0121,0.9652,0.0066,0.005
+dia68_utt1,neutral,"Hey, what are you guys doing later?",neutral,0.0226,0.0075,0.0054,0.0559,0.8014,0.017,0.0903
+dia68_utt2,neutral,So Rachel and I have appointments to get our hair cut.,neutral,0.0221,0.012,0.0078,0.1155,0.7654,0.0688,0.0085
+dia68_utt3,surprise,We're in.,neutral,0.0153,0.0056,0.0039,0.0394,0.9257,0.0064,0.0037
+dia68_utt4,neutral,I want to see what he wants for you.,neutral,0.0711,0.0218,0.0142,0.0706,0.7641,0.0538,0.0044
+dia68_utt5,sadness,I just found out Elizabeth's dad wants to meet me.,neutral,0.0451,0.0133,0.0127,0.2242,0.4843,0.1728,0.0476
+dia68_utt6,surprise,Hold the phone. You're not Elizabeth's dad?,surprise,0.0683,0.014,0.0169,0.0108,0.0677,0.045,0.7773
+dia68_utt7,fear,"Come on guys, I really want this guy to like me.",joy,0.0831,0.0128,0.0162,0.6371,0.0733,0.14,0.0375
+dia68_utt8,sadness,It would really help me out if you guys could be here to kind of make me look good. Of course not!,anger,0.4087,0.0312,0.0134,0.3217,0.0375,0.1695,0.018
+dia68_utt9,joy,"Make me look good. Oh, of course, we'll have you here. Thanks.",neutral,0.0379,0.0164,0.0065,0.4294,0.46,0.0453,0.0045
+dia68_utt10,joy,Are you here? Thanks.,neutral,0.0283,0.0035,0.0037,0.2275,0.6871,0.0115,0.0383
+dia68_utt11,neutral,We know how tough those parent teacher conferences can be.,neutral,0.0472,0.0388,0.0094,0.09,0.6545,0.1565,0.0036
+dia69_utt0,joy,Hi! How are you doing?,joy,0.0238,0.0032,0.0029,0.6839,0.124,0.0106,0.1515
+dia69_utt1,sadness,I'm okay. I gotta go down to the police station and look at mug shots.,neutral,0.027,0.0605,0.0698,0.0236,0.6097,0.2047,0.0047
+dia69_utt2,neutral,"Thanks for having me over, you guys.",neutral,0.03,0.0105,0.0025,0.4113,0.5106,0.0204,0.0147
+dia69_utt3,neutral,"Yeah. Chad, you're going?",neutral,0.0247,0.0065,0.0239,0.0271,0.5592,0.0258,0.3327
+dia69_utt4,joy,"Thanks for having me over you guys. Chad, you're going?",neutral,0.0577,0.0057,0.0092,0.1043,0.4603,0.0339,0.3289
+dia69_utt5,neutral,We didn't get a chance to talk.,neutral,0.0421,0.0104,0.0054,0.0385,0.7436,0.1458,0.0142
+dia69_utt6,neutral,So where did you say you're from again?,neutral,0.02,0.0073,0.0106,0.0185,0.4631,0.0274,0.453
+dia69_utt7,neutral,Colorado.,neutral,0.0055,0.0053,0.0032,0.0121,0.9594,0.0112,0.0034
+dia69_utt8,neutral,What good are you?,joy,0.1396,0.0296,0.0037,0.469,0.2149,0.0292,0.114
+dia69_utt9,neutral,"Look, um, I think we should talk about what happened on the terrace.",neutral,0.0148,0.0167,0.0129,0.0269,0.8523,0.0723,0.004
+dia69_utt10,neutral,Okay,neutral,0.0217,0.0086,0.0056,0.0291,0.9252,0.0072,0.0026
+dia69_utt11,sadness,I never should have said what I said.,neutral,0.2029,0.0423,0.1337,0.0624,0.2757,0.2022,0.0807
+dia69_utt12,neutral,You know what?,surprise,0.0292,0.0079,0.0116,0.0297,0.2065,0.0139,0.7012
+dia69_utt13,sadness,It just doesn't matter how I feel.,sadness,0.123,0.0233,0.0158,0.1674,0.3027,0.3642,0.0037
+dia69_utt14,sadness,"We work together so nothing could really ever happen between us. And what I would love is just to go to work on Monday and never talk about this again. OK, big day Monday, lots to do. So are we OK?",joy,0.063,0.0162,0.0074,0.3716,0.3168,0.2164,0.0086
+dia69_utt15,neutral,I'm not.,neutral,0.1275,0.0581,0.0068,0.0607,0.5954,0.1138,0.0377
+dia69_utt16,sadness,"Oh god, I know what I freaked you out. No, you didn't.",anger,0.3905,0.1169,0.0708,0.1258,0.025,0.1823,0.0888
+dia69_utt17,sadness,"No, you didn't. The only thing that freaked me out was you saying that nothing could ever happen between us.",neutral,0.2923,0.0999,0.0417,0.1126,0.3175,0.0869,0.0491
+dia69_utt18,surprise,Really?,surprise,0.0061,0.0026,0.0023,0.0097,0.0069,0.0051,0.9673
+dia69_utt19,sadness,"Yeah, so please don't fire me for doing this",sadness,0.2643,0.1058,0.1789,0.0435,0.0839,0.3191,0.0046
+dia70_utt0,anger,"Get him! Get him! Get him! Yes! I'm not laughing now, are you pal?",anger,0.67,0.0282,0.0154,0.2344,0.0201,0.0139,0.018
+dia70_utt1,neutral,"You got a buddy that's lying, need a bunch of tubes guys, hitting each other with sticks.",disgust,0.1386,0.4572,0.0087,0.059,0.2752,0.052,0.0093
+dia70_utt2,joy,"Well, pass it! Pass it!",joy,0.2173,0.011,0.0056,0.7114,0.0318,0.0113,0.0116
+dia70_utt3,joy,,,,,,,,,
+dia70_utt4,joy,Stop it! Stop it! Shoot! Shoot!,anger,0.5748,0.0298,0.1254,0.1781,0.0239,0.0324,0.0356
+dia70_utt5,surprise,"Hey look, we're on that TV thing.",neutral,0.0225,0.0277,0.0054,0.0688,0.7793,0.0286,0.0677
+dia71_utt0,joy,I am so psyched I kept this chair for myself,joy,0.0284,0.0042,0.0022,0.8945,0.0344,0.0247,0.0115
+dia71_utt1,neutral,"Yeah, me too.",neutral,0.0284,0.0134,0.0041,0.108,0.733,0.1054,0.0077
+dia71_utt2,surprise,"Wow, you know that this thing has speakers in that head?",surprise,0.0061,0.0053,0.0026,0.0074,0.0052,0.0053,0.968
+dia71_utt3,surprise,Really? Yeah!,surprise,0.0124,0.0032,0.0025,0.0329,0.0065,0.0053,0.9372
+dia71_utt4,joy,You can hook it up to your TV and you get radio.,neutral,0.0314,0.025,0.01,0.0365,0.8819,0.0104,0.0048
+dia71_utt5,neutral,My chair heals itself.,neutral,0.1246,0.1614,0.0104,0.0969,0.467,0.1323,0.0073
+dia72_utt0,anger,"Tiger, Dragon, iceberg, Joseph. Did you even study at all last night?",neutral,0.0501,0.03,0.0161,0.0467,0.6434,0.068,0.1456
+dia72_utt1,sadness,"Yes, yes I did.",neutral,0.0237,0.0122,0.0214,0.0665,0.8081,0.061,0.0072
+dia72_utt2,anger,Then do iceberg!,joy,0.1902,0.0103,0.01,0.6357,0.0868,0.0168,0.0503
+dia72_utt3,neutral,G-Shot,neutral,0.0346,0.0229,0.0127,0.077,0.8301,0.0138,0.009
+dia72_utt4,neutral,"Gee, sharp!",surprise,0.0961,0.1036,0.0132,0.2175,0.0286,0.0208,0.5201
+dia72_utt5,surprise,What? I didn't touch a guitar!,surprise,0.0219,0.0052,0.0059,0.0069,0.0085,0.0083,0.9433
+dia72_utt6,anger,"No, but you're questioning my method!",anger,0.5163,0.0996,0.0152,0.0251,0.031,0.0474,0.2654
+dia72_utt7,anger,"I'm not questioning it Phoebe, I'm saying it's stupid. What?",surprise,0.3094,0.1041,0.0356,0.0202,0.0634,0.0614,0.4059
+dia72_utt8,neutral,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia72_utt9,anger,"You know, none of my other students thought I was stupid.",anger,0.3541,0.2946,0.0106,0.0554,0.1839,0.0837,0.0176
+dia72_utt10,anger,Your other student was you!,surprise,0.2405,0.0206,0.005,0.0278,0.0142,0.0274,0.6645
+dia72_utt11,anger,"Yeah? Well, you know, maybe you just need to try a little harder.",neutral,0.0489,0.0305,0.0283,0.0943,0.6951,0.0921,0.0108
+dia72_utt12,anger,Maybe I need to try a real teacher.,neutral,0.0315,0.0415,0.0101,0.0727,0.7891,0.0503,0.0047
+dia72_utt13,anger,Right here!,joy,0.2902,0.0095,0.0117,0.3813,0.0725,0.0178,0.2169
+dia72_utt14,anger,"Here, Andy Cooper. He teaches. He teaches.",neutral,0.0288,0.0177,0.0041,0.1415,0.7596,0.0312,0.017
+dia72_utt15,neutral,"Right here, here. Andy Cooper. He teaches guitar. Oh, there's a nice picture of him with a little kid.",neutral,0.0376,0.0446,0.0089,0.2207,0.5915,0.0631,0.0336
+dia72_utt16,anger,"Fine! You go learn from your qualified instructor. But don't come crying to me when everyone is sick and tired of hearing you play bad, badly, right, brown!",anger,0.6075,0.2524,0.013,0.0443,0.0318,0.0463,0.0048
+dia72_utt17,neutral,That has been the whole damn time,neutral,0.2478,0.1386,0.0052,0.033,0.4494,0.099,0.027
+dia72_utt18,anger,"Oh, fine, take his side!",anger,0.6429,0.0833,0.0176,0.1189,0.0688,0.0586,0.0097
+dia73_utt0,anger,"And shame on you, you should know better. Joey needs to work. Now come on. Hey.",disgust,0.1176,0.5933,0.0129,0.0716,0.0924,0.1092,0.0029
+dia73_utt1,anger,Hey.,neutral,0.0051,0.0037,0.0023,0.0121,0.9652,0.0066,0.005
+dia73_utt2,anger,"No, you can have this back when the five pages are done.",neutral,0.0148,0.0066,0.0017,0.0233,0.9417,0.0099,0.002
+dia74_utt0,joy,Hi.,neutral,0.0045,0.003,0.0019,0.0114,0.9693,0.006,0.0039
+dia74_utt1,neutral,Bye.,neutral,0.0114,0.0062,0.0046,0.0712,0.8811,0.0213,0.0042
+dia74_utt2,joy,"Hi. Um, I think there's something that we really need to talk about.",neutral,0.0161,0.009,0.0161,0.1195,0.7872,0.0473,0.0048
+dia74_utt3,sadness,"I think we do. Why don't we go inside? Look, uh... I know why you're here.",neutral,0.0383,0.0153,0.0509,0.0333,0.7612,0.0702,0.0308
+dia74_utt4,surprise,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia74_utt5,neutral,"Yeah, and to save you from any embarrassment, I think maybe I should talk first.",neutral,0.0328,0.0271,0.0455,0.045,0.7696,0.0778,0.0021
+dia74_utt6,neutral,Okay,neutral,0.0217,0.0086,0.0056,0.0291,0.9252,0.0072,0.0026
+dia74_utt7,neutral,"Okay. Ross and Rachel. Rachel and Ross. That's been one heck of a seesaw, hasn't it?",neutral,0.0622,0.035,0.0057,0.2886,0.5311,0.0487,0.0288
+dia74_utt8,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia74_utt9,sadness,"I mean, look, that one night we had was fun and certainly passionate, but don't think it's better if we just stay friends.",neutral,0.0683,0.0662,0.0063,0.2484,0.4744,0.1289,0.0075
+dia74_utt10,surprise,"Seriously, what?",surprise,0.0103,0.0059,0.0026,0.0094,0.0081,0.0054,0.9584
+dia74_utt11,neutral,Okay,neutral,0.0217,0.0086,0.0056,0.0291,0.9252,0.0072,0.0026
+dia74_utt12,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia74_utt13,neutral,You know what?,surprise,0.0292,0.0079,0.0116,0.0297,0.2065,0.0139,0.7012
+dia74_utt14,neutral,"If you want to, we can do it one more time.",neutral,0.0364,0.0106,0.0024,0.1268,0.8101,0.0103,0.0034
+dia74_utt15,neutral,"I mean, I'd be okay with that.",neutral,0.0468,0.0668,0.0103,0.0573,0.7567,0.0602,0.002
+dia74_utt16,neutral,"In fact, I have some time right now.",neutral,0.0278,0.011,0.0035,0.0468,0.8664,0.0414,0.003
+dia74_utt17,joy,Can I talk to him?,neutral,0.0183,0.0053,0.0205,0.0162,0.9168,0.011,0.0119
+dia74_utt18,neutral,"Oh, sure. OK.",neutral,0.0152,0.012,0.0153,0.0459,0.889,0.0192,0.0034
+dia74_utt19,anger,"I'm pregnant. LAUGHTER Ross. LAUGHTER Ross. OK. Whenever you're ready. LAUGHTER And you're the father, by the way, but you got...",joy,0.2155,0.1277,0.0527,0.2757,0.2395,0.0767,0.0123
+dia75_utt0,neutral,We should definitely play football more often. Maybe there's like a league we could join or something. Isn't there like a national football league?,neutral,0.0243,0.0139,0.0037,0.1669,0.7564,0.0283,0.0065
+dia76_utt0,joy,,,,,,,,,
+dia76_utt1,surprise,"Well, wow! Well, that was easy! Okay, you...",surprise,0.0491,0.0072,0.0026,0.3108,0.0087,0.0097,0.6119
+dia76_utt2,neutral,Okay,neutral,0.0217,0.0086,0.0056,0.0291,0.9252,0.0072,0.0026
+dia76_utt3,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia76_utt4,joy,"Okay, well you know, you know when you're in bed with a whore?",disgust,0.1252,0.5632,0.0131,0.0481,0.1932,0.0438,0.0134
+dia76_utt5,neutral,No.,neutral,0.0087,0.0048,0.0036,0.0092,0.9587,0.0114,0.0036
+dia76_utt6,joy,"And, uh... You know, you're fooling around with her.",neutral,0.0722,0.1029,0.0985,0.0833,0.4545,0.0999,0.0887
+dia76_utt7,joy,"and you get all these like mental images in your brain, you know, like Elmick Fiercin or that girl at the Xerox.",neutral,0.082,0.2758,0.0126,0.055,0.5154,0.0538,0.0055
+dia76_utt8,joy,"With the belly button, right?",neutral,0.0566,0.0196,0.0111,0.0882,0.7541,0.0158,0.0545
+dia76_utt9,anger,And then all of a sudden your mom pops in here,surprise,0.0951,0.0192,0.034,0.1381,0.2563,0.1142,0.343
+dia76_utt10,anger,"And you're like, mom, get out of here.",disgust,0.3229,0.3966,0.0644,0.0285,0.0574,0.1241,0.0061
+dia76_utt11,anger,"But of course, after that, you can't possibly think of anything else, and you can't stop what you're doing, so it's kind of like you're...",neutral,0.1099,0.0513,0.0182,0.0843,0.6318,0.0989,0.0056
+dia76_utt12,neutral,else and you can't stop what you're doing so it's kind of like you're... you know.,neutral,0.0996,0.061,0.012,0.0683,0.6872,0.0685,0.0035
+dia76_utt13,surprise,You know. You know. You don't know.,neutral,0.0239,0.0206,0.1233,0.1019,0.4668,0.0408,0.2228
+dia76_utt14,disgust,Mom? You're telling me about your mom? What is the matter with you?,surprise,0.2335,0.0736,0.0143,0.0092,0.0162,0.0398,0.6135
+dia76_utt15,neutral,You shi- I said shi-,fear,0.1447,0.0834,0.4932,0.0772,0.1448,0.043,0.0137
+dia76_utt16,neutral,not scare,neutral,0.0521,0.0211,0.3198,0.0226,0.5392,0.0332,0.012
+dia77_utt0,surprise,Bye.,neutral,0.0114,0.0062,0.0046,0.0712,0.8811,0.0213,0.0042
+dia77_utt1,surprise,Look at Emma. Just can't decide who she looks more.,neutral,0.0997,0.0472,0.0239,0.1972,0.3987,0.2155,0.0178
+dia77_utt2,neutral,Look at Emma. I just can't decide who she looks more like. You or Rachel.,neutral,0.1531,0.0306,0.0284,0.1587,0.3568,0.2526,0.0199
+dia77_utt3,joy,"What are you, kimchi? Gorgeous! It's all Rachel.",joy,0.0312,0.009,0.0026,0.6905,0.0291,0.0135,0.2242
+dia77_utt4,neutral,"I'm sorry, for the last time, why aren't you two together again?",sadness,0.0813,0.0187,0.0119,0.0207,0.0802,0.7503,0.0369
+dia77_utt5,neutral,"No, I'm",neutral,0.0089,0.0057,0.0067,0.0246,0.9177,0.0293,0.0071
+dia77_utt6,neutral,"No, I know because you're not in that place.",neutral,0.0226,0.0212,0.0068,0.0196,0.8735,0.0437,0.0126
+dia77_utt7,neutral,which would be fine except you totally are.,neutral,0.0801,0.054,0.0055,0.1104,0.6655,0.0813,0.0032
+dia77_utt8,sadness,"It's complicated, okay?",neutral,0.0659,0.0133,0.0584,0.0316,0.5685,0.1385,0.1239
+dia77_utt9,neutral,"Yeah, that's true. You love her, you always have. You have a child together. There's no right answer.",joy,0.0753,0.0216,0.0097,0.4785,0.2532,0.153,0.0087
+dia77_utt10,sadness,We've been together.,neutral,0.0285,0.0164,0.0048,0.1715,0.7231,0.0392,0.0165
+dia77_utt11,neutral,"Okay, and then apart",neutral,0.0196,0.0098,0.0079,0.0323,0.9125,0.0118,0.006
+dia77_utt12,sadness,and then together and then apart. And now we have a baby.,neutral,0.0419,0.0188,0.0088,0.3445,0.4579,0.0839,0.0442
+dia77_utt13,sadness,"It's just if we got together again and it didn't work out, I can never do that to Emma.",sadness,0.1653,0.0618,0.0195,0.0584,0.0757,0.6151,0.0042
+dia77_utt14,sadness,"I mean, she came into this world thinking everything. Oh, that's now me.",neutral,0.2058,0.029,0.0104,0.1949,0.3286,0.1366,0.0948
+dia77_utt15,neutral,"What, did they put something in the water in this place?",surprise,0.0276,0.0177,0.0089,0.009,0.0561,0.0238,0.8568
+dia77_utt16,sadness,Since Rachel and we're doing we're doing really well right now,joy,0.0343,0.0078,0.0036,0.5734,0.3466,0.0294,0.0049
+dia77_utt17,neutral,"I know, I know, I know, I know. And if you try to make it more, you might wreck it.",fear,0.1241,0.1195,0.2912,0.0668,0.1887,0.2071,0.0026
+dia77_utt18,neutral,"Yeah, exactly.",neutral,0.0084,0.007,0.0045,0.02,0.9434,0.0126,0.004
+dia77_utt19,neutral,Or you might get everything you wanted since you were 15.,neutral,0.0806,0.0161,0.0041,0.2477,0.5822,0.0624,0.0068
+dia78_utt0,joy,"God, I forgot how much I love driving.",joy,0.0418,0.0139,0.0059,0.6711,0.0327,0.1107,0.1239
+dia78_utt1,neutral,"You don't have a valid driver's license? Okay, that is a pullover right now.",surprise,0.1254,0.0589,0.037,0.0273,0.2077,0.0839,0.4599
+dia78_utt2,neutral,"Ross, you're so tense. You just gotta relax, okay? Just need to relax, alright? Just need to relax!",anger,0.3443,0.0654,0.1926,0.1476,0.0977,0.1359,0.0166
+dia78_utt3,anger,What? What do you... Are you okay? That's not funny. Just stop forcing a r-,surprise,0.3118,0.1296,0.0987,0.0214,0.0323,0.0921,0.314
+dia78_utt4,joy,I am not forcing around.,neutral,0.2289,0.0945,0.0164,0.0409,0.5742,0.0417,0.0035
+dia78_utt5,fear,Uh-oh.,fear,0.0084,0.0152,0.8689,0.0184,0.0312,0.0483,0.0097
+dia78_utt6,neutral,"Okay, stay calm. Nothing's gonna happen to you. You are not in that much trouble.",neutral,0.1227,0.0291,0.323,0.0526,0.4064,0.0627,0.0035
+dia78_utt7,fear,Really? You think so?,surprise,0.0095,0.0039,0.0044,0.0092,0.0118,0.0075,0.9538
+dia78_utt8,anger,"I was talking to myself, you're going down.",neutral,0.0477,0.0364,0.0144,0.0319,0.7979,0.0365,0.035
+dia79_utt0,joy,"Sweet honey, I'm just due today.",neutral,0.0221,0.0061,0.0035,0.3992,0.5344,0.0245,0.0103
+dia79_utt1,surprise,Oh yeah? Yeah. Hey.,neutral,0.0304,0.0125,0.018,0.1957,0.6065,0.0351,0.1018
+dia79_utt2,neutral,What do you want to do tonight?,neutral,0.0249,0.0087,0.0457,0.1167,0.664,0.1254,0.0146
+dia79_utt3,neutral,"Oh well, maybe we could...",neutral,0.0198,0.0089,0.0136,0.2684,0.6181,0.0553,0.016
+dia79_utt4,joy,"Okay, trying to turn me on by making a mess?",anger,0.652,0.044,0.0271,0.0445,0.0689,0.0636,0.1
+dia79_utt5,joy,Know your audience!,anger,0.2994,0.0312,0.0417,0.2759,0.1799,0.0301,0.1418
+dia79_utt6,neutral,"Besides, tomorrow we're doing those fertility tests. And until then, you need to keep your cat poles in a tank.",neutral,0.0194,0.0128,0.0023,0.0424,0.8951,0.0256,0.0025
+dia79_utt7,sadness,We really need to take those tests.,neutral,0.0183,0.0091,0.0116,0.0707,0.8691,0.0138,0.0073
+dia79_utt8,neutral,We've been trying to have a baby for over a year.,sadness,0.0675,0.0122,0.027,0.1011,0.2142,0.5388,0.0392
+dia79_utt9,neutral,I just think it's a good idea to find out if everything's okay. Just a few routine tests. But I don't want to do it in a cup.,neutral,0.0497,0.0524,0.011,0.0599,0.7411,0.0825,0.0034
+dia79_utt10,sadness,Just a few routine tests. But I don't want to do it in a cup.,neutral,0.0732,0.1415,0.0147,0.0443,0.6306,0.0906,0.0052
+dia80_utt0,neutral,"Hi. Hi, man. Hey, do you know everybody?",neutral,0.0108,0.0076,0.0051,0.056,0.8788,0.0103,0.0313
+dia80_utt1,neutral,No. Have you some day-,neutral,0.01,0.0068,0.0063,0.0304,0.9287,0.0148,0.0029
+dia80_utt2,neutral,"No, no, he has a big...",neutral,0.0399,0.1345,0.0455,0.068,0.5242,0.0814,0.1064
+dia80_utt3,neutral,"If you see him telling to pack his bags, we are going to mince.",neutral,0.0873,0.2509,0.0258,0.0612,0.4937,0.0791,0.0021
+dia80_utt4,surprise,Minst...,neutral,0.0207,0.016,0.0309,0.092,0.7846,0.0417,0.0142
+dia80_utt5,neutral,Minsk. It's in Russia.,neutral,0.0108,0.0084,0.0033,0.0115,0.9445,0.0139,0.0075
+dia80_utt6,neutral,"I feel fair, men's kiss.",neutral,0.0665,0.057,0.0074,0.3089,0.4217,0.1341,0.0045
+dia80_utt7,joy,We got the grant. Three years. All expenses paid.,neutral,0.0288,0.0077,0.0044,0.0954,0.8369,0.0177,0.009
+dia80_utt8,neutral,So when do you leave?,neutral,0.0272,0.0044,0.0069,0.0275,0.8776,0.0286,0.0277
+dia80_utt9,neutral,January 1st.,neutral,0.0115,0.0066,0.004,0.0265,0.9299,0.0152,0.0062
+dia81_utt0,joy,"You wanted to see me, Professor Geller?",neutral,0.0207,0.0058,0.0093,0.0193,0.8116,0.0229,0.1104
+dia81_utt1,neutral,"Yes, yes, please come in.",neutral,0.0294,0.026,0.2773,0.0354,0.5259,0.1002,0.0058
+dia81_utt2,joy,"Ooh, ooh.",joy,0.0195,0.0914,0.0283,0.4392,0.0276,0.0789,0.3151
+dia82_utt0,joy,Pretty great. Except they did get a little attitude from the robot.,neutral,0.1303,0.1862,0.0082,0.2713,0.3178,0.0797,0.0065
+dia82_utt1,anger,"those robots, they're supposed to be our faithful servants.",neutral,0.068,0.0446,0.0043,0.0877,0.6991,0.0904,0.006
+dia82_utt2,neutral,"Anyway, it wasn't the robot, it was the guy who controls it.",neutral,0.0385,0.0157,0.0051,0.0472,0.849,0.0275,0.017
+dia82_utt3,anger,He doesn't like me. He had cheese knocked over the sandwich.,disgust,0.1264,0.6701,0.0068,0.0506,0.0634,0.0729,0.0098
+dia82_utt5,anger,"You had cheese knock over the sandwich table, right? Well, I was reaching for one. Oh, God. Oh, God. Oh, God.",surprise,0.0292,0.0536,0.0769,0.1239,0.0395,0.1562,0.5207
+dia82_utt6,surprise,I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry. I'm sorry.,sadness,0.0091,0.0067,0.0862,0.0282,0.0185,0.8406,0.0106
+dia82_utt7,neutral,So why don't you just get him fired?,neutral,0.3096,0.0252,0.0139,0.1011,0.4757,0.0559,0.0185
+dia82_utt8,anger,"I may have to. I hate to do it, but I'm the star.",joy,0.0924,0.039,0.0074,0.48,0.1365,0.2334,0.0112
+dia82_utt9,neutral,You know?,surprise,0.015,0.0065,0.0235,0.0314,0.2708,0.0159,0.6368
+dia82_utt10,neutral,There's a limit to how many sandwiches I can eat off the floor.,neutral,0.0557,0.0705,0.0079,0.0379,0.7766,0.0466,0.0048
+dia82_utt11,neutral,Excuse me.,fear,0.1643,0.0486,0.2857,0.0372,0.2474,0.1,0.1168
+dia82_utt12,neutral,Joey Tribbiani.,neutral,0.0101,0.0102,0.0033,0.0412,0.9085,0.0209,0.0058
+dia82_utt13,joy,Joe! I'm glad I found you. I got an audition for you.,joy,0.0217,0.0023,0.0015,0.9196,0.0203,0.0089,0.0257
+dia82_utt14,surprise,Wow!,surprise,0.0084,0.0039,0.0029,0.0421,0.0036,0.0059,0.933
+dia82_utt15,neutral,"The thing is, it's kind on the QT!",surprise,0.2417,0.0273,0.0153,0.0907,0.1958,0.1032,0.3261
+dia82_utt16,neutral,The actor who has the part doesn't know he might be fired.,sadness,0.0726,0.033,0.0536,0.0839,0.2924,0.3744,0.0901
+dia82_utt17,neutral,"It's a lead in a series, Mac and G's.",neutral,0.0224,0.0094,0.0017,0.0288,0.9158,0.0185,0.0034
+dia82_utt18,anger,I'm the lead in Mac and Chee.,neutral,0.0302,0.0217,0.0027,0.1166,0.7996,0.0261,0.003
+dia83_utt0,anger,"Oh, good God! If you want a baby so bad, just go steal it!",anger,0.3063,0.2304,0.1214,0.0905,0.0059,0.1736,0.0719
+dia83_utt1,surprise,What is going on with you? Since when are you so crazy about babies?,surprise,0.1807,0.0835,0.0116,0.0193,0.0459,0.0565,0.6025
+dia83_utt2,joy,I'm not crazy about babies. I'm crazy about us.,anger,0.3414,0.0643,0.0312,0.298,0.1358,0.1174,0.0119
+dia83_utt3,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia83_utt4,neutral,We've always talked about having babies someday. I'm not saying it has to be...,joy,0.0613,0.0171,0.0224,0.3804,0.3549,0.139,0.0248
+dia83_utt5,neutral,but I'm starting to think that we can handle it. We're good.,neutral,0.0472,0.0181,0.0113,0.3336,0.5495,0.0362,0.0041
+dia83_utt6,neutral,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia83_utt7,joy,We're really good,joy,0.0229,0.007,0.0034,0.7059,0.2317,0.0191,0.01
+dia84_utt0,surprise,"Did you catch it? Uh-huh. Oh, what a list.",surprise,0.0401,0.037,0.0124,0.1692,0.2784,0.0455,0.4176
+dia84_utt1,surprise,"Did you catch it? Uh-huh. Oh, what a list.",surprise,0.0401,0.037,0.0124,0.1692,0.2784,0.0455,0.4176
+dia84_utt2,neutral,"He said, um, nice to meet you, Glenda. Well, obviously, I couldn't give him my real name.",neutral,0.0292,0.019,0.0099,0.3324,0.505,0.0764,0.0282
+dia84_utt3,surprise,Why? Why not?,surprise,0.0296,0.0042,0.0118,0.0366,0.1795,0.0306,0.7076
+dia84_utt4,sadness,"Come on, you saw the way you ran out.",neutral,0.1159,0.0791,0.0347,0.1114,0.5156,0.056,0.0873
+dia84_utt5,sadness,What do you think he's gonna stick around and talk to the daughter he abandoned?,neutral,0.2399,0.0605,0.0236,0.0384,0.4122,0.1483,0.0771
+dia84_utt6,neutral,"What did you say to him? Well, I saw...",surprise,0.0458,0.0252,0.123,0.0323,0.3574,0.0389,0.3774
+dia84_utt7,neutral,I was the executor person of Francis as well and that I needed to talk to him so I'm going to meet him at the coffee house later.,neutral,0.0178,0.0086,0.004,0.0296,0.9013,0.0362,0.0025
+dia85_utt0,neutral,"Yeah, sure",neutral,0.0094,0.0063,0.0065,0.0337,0.9197,0.0227,0.0017
+dia85_utt1,joy,"Okay, in about 10 seconds, you're gonna see him kiss.",neutral,0.0317,0.0366,0.0153,0.169,0.7229,0.0168,0.0078
+dia85_utt2,neutral,and in about five seconds you're gonna see why.,neutral,0.0207,0.0148,0.0074,0.0255,0.9158,0.0121,0.0037
+dia85_utt3,neutral,"Ross, did I ever tell you about the time that I went backpacking through Western Europe?",neutral,0.0533,0.0132,0.0112,0.0401,0.6996,0.075,0.1075
+dia85_utt4,joy,"Okay, get ready to see some begging.",disgust,0.2075,0.5414,0.0173,0.0529,0.1478,0.0232,0.0098
+dia85_utt5,surprise,"Oh, you came on the road!",surprise,0.0493,0.0061,0.0056,0.0345,0.0094,0.0143,0.8808
+dia85_utt6,surprise,What? Now I'm so happy.,surprise,0.019,0.0044,0.007,0.083,0.0158,0.0338,0.8371
+dia85_utt7,joy,I'm sorry.,sadness,0.0075,0.0057,0.016,0.0166,0.0371,0.9106,0.0065
+dia85_utt8,surprise,What are you talking about?,surprise,0.0141,0.0052,0.0082,0.0062,0.0741,0.0105,0.8816
+dia85_utt9,joy,You use the Europe story.,neutral,0.0246,0.0117,0.0032,0.0178,0.9164,0.0195,0.0068
+dia85_utt10,anger,That's the magic story you use when you want to have sex!,joy,0.2898,0.0187,0.0043,0.4804,0.0439,0.0308,0.1321
+dia85_utt11,surprise,How do you know about that story? How do you know about that story?,neutral,0.0401,0.0073,0.0233,0.0774,0.424,0.0275,0.4005
+dia85_utt12,neutral,I'm sorry.,sadness,0.0075,0.0057,0.016,0.0166,0.0371,0.9106,0.0065
+dia85_utt13,neutral,"I heard it from my friend Irene, who heard it from some God.",neutral,0.126,0.0568,0.0276,0.1665,0.3404,0.1717,0.111
+dia85_utt14,surprise,Some guy,neutral,0.0434,0.0721,0.0092,0.0759,0.6562,0.0395,0.1037
+dia85_utt15,neutral,"No, no, she told me that his name was Ken Adam.",neutral,0.0151,0.0111,0.0165,0.019,0.8637,0.0422,0.0325
+dia85_utt16,surprise,Canada!,surprise,0.2389,0.0136,0.0055,0.2018,0.0448,0.0375,0.4579
+dia86_utt0,neutral,How we doing? You guys ready?,neutral,0.0259,0.0045,0.0191,0.1957,0.6707,0.0161,0.0679
+dia86_utt1,neutral,So mom already called this morning to remind me not to wear my ear wrap. Did you know my ears were not my best feature?,neutral,0.0996,0.0264,0.0216,0.0531,0.5381,0.1721,0.0891
+dia86_utt2,neutral,Some days it's all I can think about.,neutral,0.0881,0.0351,0.0051,0.0596,0.7081,0.1008,0.0032
+dia86_utt3,neutral,"Hi, I'm sorry I'm late. I couldn't find my bearing.",sadness,0.0289,0.0079,0.0088,0.0549,0.2317,0.6502,0.0176
+dia87_utt0,neutral,Okay,neutral,0.0217,0.0086,0.0056,0.0291,0.9252,0.0072,0.0026
+dia87_utt1,neutral,"Okay, fine, but um...",neutral,0.0283,0.0286,0.108,0.0503,0.6909,0.0894,0.0045
+dia87_utt2,neutral,I just have one question for you.,neutral,0.013,0.0035,0.0061,0.0198,0.9435,0.0081,0.0059
+dia87_utt3,neutral,"When we exit, should we walk or run or prance or st-",neutral,0.0643,0.0467,0.1014,0.0907,0.6305,0.0604,0.0059
+dia87_utt4,joy,"Stop it, stop it! You talk slow, but you might pee fast. Okay, let's move.",anger,0.5093,0.1753,0.0614,0.1171,0.0919,0.0405,0.0045
+dia88_utt0,surprise,I can't believe this. How long has this been going on?,surprise,0.0511,0.0275,0.0147,0.014,0.0094,0.0471,0.8362
+dia88_utt1,neutral,"Well, uh, Alexandra's... Oh, it has a...",neutral,0.0128,0.0092,0.0137,0.0485,0.8164,0.0684,0.031
+dia88_utt2,surprise,Thanks.,neutral,0.0197,0.0083,0.0028,0.2795,0.6594,0.02,0.0102
+dia88_utt3,sadness,Don't get upset.,neutral,0.0828,0.0407,0.3501,0.0343,0.4235,0.0655,0.0031
+dia88_utt4,anger,"Okay. Oh, too late. I'm leaving. Come on, Cham, let's go.",neutral,0.0791,0.0289,0.0485,0.1341,0.5803,0.1225,0.0066
+dia88_utt5,neutral,"Well, I thought I... Yeah, what the hell?",surprise,0.1811,0.1651,0.0178,0.0237,0.0333,0.0998,0.4792
+dia89_utt0,fear,I'm dead!,anger,0.5695,0.0527,0.0666,0.0704,0.0221,0.1715,0.0473
+dia89_utt1,anger,"Oh, that's good. Maybe you'll hear you pull the cord.",neutral,0.0286,0.0233,0.0071,0.2351,0.6821,0.0191,0.0046
+dia89_utt2,fear,"Stop the bus! Wait, wait, wait!",surprise,0.0702,0.0079,0.0312,0.0883,0.0231,0.0377,0.7417
+dia89_utt3,neutral,Are you sure he didn't break it? Because it really hurt.,sadness,0.0574,0.019,0.0432,0.0483,0.0991,0.7207,0.0123
+dia89_utt4,neutral,"No, it's just a good bone bruise. And right here is the puncture wound from your...",disgust,0.0754,0.4305,0.0117,0.0439,0.2204,0.2131,0.0049
+dia89_utt5,sadness,I'm sorry. I'm really sorry.,sadness,0.0076,0.0054,0.0202,0.0315,0.0211,0.9038,0.0103
+dia89_utt6,sadness,,,,,,,,,
+dia89_utt8,joy,"Sorry, hey, hey, I got my asses back!",joy,0.3229,0.0138,0.0031,0.5586,0.0353,0.0284,0.0379
+dia89_utt9,neutral,which we can celebrate later.,joy,0.0461,0.0263,0.0053,0.4756,0.4028,0.0323,0.0116
+dia89_utt10,neutral,"So, so, so...",neutral,0.0545,0.0103,0.0515,0.1292,0.5274,0.081,0.1461
+dia90_utt0,joy,"Okay, palo why don't you just go get dressed and you be on your way?",neutral,0.3199,0.0599,0.008,0.0729,0.4748,0.0524,0.012
+dia90_utt1,neutral,"Rachel, how did this happen?",surprise,0.019,0.0041,0.0115,0.0212,0.0958,0.025,0.8234
+dia90_utt2,fear,"I don't know, I just kind of read into him last night.",neutral,0.0298,0.0126,0.035,0.238,0.6041,0.0527,0.0278
+dia90_utt3,neutral,Where? What is a part?,surprise,0.0296,0.007,0.0235,0.0144,0.4218,0.0276,0.4761
+dia90_utt4,neutral,Where? What is apartment? Is this juice?,surprise,0.0304,0.0117,0.0146,0.0147,0.2383,0.0346,0.6556
+dia90_utt5,anger,"Whoa, whoa. And the fact that you dumped him because he hit on Phoebe?",surprise,0.0148,0.0106,0.0032,0.0111,0.0039,0.0078,0.9487
+dia90_utt6,sadness,"Oh god, I know I'm a pathetic, I'm a loser!",anger,0.4551,0.3739,0.0135,0.0594,0.0105,0.0743,0.0133
+dia91_utt0,surprise,"I can't lift my arm, what?",surprise,0.1098,0.03,0.0766,0.0208,0.0728,0.0659,0.6241
+dia91_utt1,neutral,This breast milk!,surprise,0.0867,0.0124,0.0019,0.0775,0.0127,0.0151,0.7938
+dia91_utt2,neutral,,,,,,,,,
+dia91_utt3,neutral,"Baby, that is juice squeezed from a person.",neutral,0.0242,0.0307,0.0027,0.0349,0.8709,0.028,0.0086
+dia91_utt4,anger,"What is the big deal? No, no!",surprise,0.1235,0.0272,0.0175,0.0179,0.0165,0.0478,0.7496
+dia91_utt5,surprise,What did you just do?,surprise,0.0228,0.0042,0.0114,0.0118,0.0498,0.0145,0.8856
+dia91_utt6,disgust,"Okay, can people stop drinking the breast milk?",neutral,0.21,0.2164,0.0191,0.0703,0.3868,0.0923,0.0051
+dia91_utt7,neutral,You won't even taste it?,surprise,0.036,0.0156,0.0083,0.0219,0.038,0.0204,0.8598
+dia91_utt8,disgust,No.,neutral,0.0087,0.0048,0.0036,0.0092,0.9587,0.0114,0.0036
+dia91_utt9,neutral,If you just pretend that it's milk.,neutral,0.0389,0.1037,0.0071,0.0357,0.7454,0.0599,0.0094
+dia91_utt10,disgust,Not even if Carol's breast had a picture of a missing child on it.,neutral,0.0579,0.0959,0.0096,0.0276,0.5783,0.212,0.0187
+dia92_utt0,surprise,Aww.,neutral,0.0339,0.208,0.0231,0.2193,0.2329,0.2319,0.051
+dia92_utt1,disgust,"Hey, Faveski, please not put your feet up on my new... old sheet.",disgust,0.2082,0.4695,0.0338,0.0271,0.1465,0.1121,0.0029
+dia92_utt2,joy,"Oh, shoot!",anger,0.31,0.0524,0.1797,0.238,0.0577,0.0384,0.1238
+dia92_utt3,surprise,You,neutral,0.0188,0.0059,0.0021,0.0209,0.9304,0.0093,0.0126
+dia92_utt4,surprise,The Pothicary Table!,surprise,0.0982,0.0104,0.0051,0.064,0.056,0.0285,0.7377
+dia92_utt5,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia92_utt6,fear,No!,anger,0.4426,0.1831,0.0144,0.0532,0.0142,0.0489,0.2436
+dia92_utt7,surprise,"Ross, where did you get this? I got an apoterie barn, okay?",surprise,0.0426,0.0129,0.0091,0.027,0.4054,0.031,0.472
+dia92_utt8,anger,"Oh, my God!",surprise,0.0138,0.0178,0.0121,0.0166,0.0031,0.0179,0.9186
+dia92_utt9,anger,"Oh my God, well, if they've ripped off our table, ours must be worth much more than one in fifty dollars.",disgust,0.1383,0.5877,0.0139,0.0383,0.0378,0.0956,0.0884
+dia92_utt10,disgust,"Well, this doesn't even smell like opium!",disgust,0.203,0.4146,0.0097,0.0604,0.0405,0.0433,0.2285
+dia92_utt11,anger,"Of course not, it smells like wine which you spilled. And thanks for wrecking my sheep by the way.",disgust,0.2163,0.4537,0.0043,0.1153,0.0889,0.1162,0.0053
+dia93_utt0,sadness,Help me shoot.,neutral,0.0159,0.0064,0.0168,0.0318,0.9112,0.0134,0.0045
+dia93_utt1,neutral,"It's too soon to tell. She's resting, which is a good sign.",neutral,0.0378,0.0222,0.0164,0.2132,0.5932,0.1108,0.0063
+dia93_utt2,neutral,"How's the hair? I'm not gonna lie to you, R-",anger,0.3984,0.1278,0.1014,0.0466,0.1332,0.1292,0.0634
+dia93_utt3,sadness,"How's the hair? I'm not gonna lie to you, Ross. It doesn't look good.",anger,0.3517,0.2835,0.0243,0.0398,0.087,0.1822,0.0315
+dia93_utt4,neutral,I put a clip on one side which seems to have stopped the curling.,neutral,0.0455,0.0293,0.0079,0.0501,0.8101,0.0465,0.0106
+dia93_utt5,neutral,"Well, can we see you?",neutral,0.0116,0.0051,0.0066,0.0724,0.8733,0.01,0.0209
+dia93_utt6,sadness,"Your hair looks too good. I think it would upset her. Ross, why don't you come on in?",sadness,0.1746,0.1891,0.0632,0.0349,0.1419,0.3764,0.0198
+dia93_utt7,sadness,How you doing?,neutral,0.0208,0.0049,0.007,0.2517,0.6127,0.023,0.0799
+dia94_utt0,neutral,"Of course, the packaging does appeal to grown-ups and kids.",neutral,0.0405,0.0523,0.0123,0.0754,0.747,0.0631,0.0093
+dia94_utt1,joy,"Russ, you were being silly. I've tried. It's no big deal. Come on, just taste it.",anger,0.3345,0.2355,0.0126,0.1284,0.2,0.0797,0.0093
+dia94_utt2,disgust,That would be no.,neutral,0.1517,0.0879,0.0091,0.0603,0.622,0.0571,0.012
+dia94_utt3,neutral,It's not. It's financial. No. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not. It's financial. It doesn't taste bad. It's not.,neutral,0.0656,0.0885,0.1194,0.0849,0.5156,0.1227,0.0033
+dia94_utt4,neutral,"Yeah, tastes kind of sweet, sort of like...",neutral,0.0291,0.056,0.0233,0.3107,0.4926,0.081,0.0073
+dia94_utt5,joy,Like what? Canolope juice.,surprise,0.0173,0.0189,0.0113,0.0455,0.2935,0.0217,0.5917
+dia94_utt6,neutral,Exactly.,neutral,0.0197,0.009,0.0031,0.0617,0.8918,0.012,0.0028
+dia94_utt7,surprise,You've tasted it. You've tasted it.,joy,0.0574,0.0764,0.0198,0.5747,0.2005,0.0396,0.0316
+dia94_utt8,neutral,Uh-huh.,neutral,0.0296,0.0372,0.2705,0.0829,0.524,0.0453,0.0105
+dia94_utt9,anger,"Oh, you've tasted it.",joy,0.0361,0.1235,0.0165,0.3644,0.3218,0.0562,0.0815
+dia94_utt10,neutral,"You can keep saying it, but it won't stop being true.",neutral,0.1747,0.0488,0.0113,0.0845,0.581,0.0976,0.002
+dia94_utt11,anger,Give me the bottle.,neutral,0.0344,0.0169,0.0065,0.0491,0.8769,0.0131,0.003
+dia95_utt0,anger,Still don't get why Greg and Ginny would give us a fake number.,neutral,0.1673,0.0481,0.0226,0.0369,0.3976,0.1268,0.2006
+dia95_utt1,neutral,"You know, if they knew what they were doing, they probably didn't give you real names either. Okay.",neutral,0.0276,0.0442,0.0115,0.024,0.8604,0.025,0.0073
+dia95_utt2,anger,"Maybe people give out fake numbers, but they don't give out fake names.",neutral,0.0511,0.0537,0.0432,0.0273,0.7694,0.0501,0.0053
+dia95_utt3,neutral,"Oh, yeah? Hi, Ken Adams. Nice to meet you.",joy,0.0258,0.0081,0.0102,0.4188,0.3433,0.0212,0.1726
+dia95_utt4,neutral,Regina Follangy.,neutral,0.0094,0.0108,0.0046,0.0271,0.9155,0.0288,0.0038
+dia95_utt5,surprise,"I just don't get it, we didn't do anything wrong. I know!",anger,0.4381,0.0115,0.0281,0.4075,0.0251,0.0507,0.039
+dia95_utt6,anger,How about you did too an awful lot of jokes?,anger,0.2818,0.2797,0.0039,0.1224,0.1679,0.1252,0.0191
+dia95_utt7,surprise,I thought you said those jokes were funny. Choo choo choo choo choo,joy,0.0249,0.0124,0.0059,0.8785,0.0475,0.0182,0.0127
+dia95_utt8,anger,"Joe, Joe, bleh, bleh!",anger,0.4522,0.1515,0.0398,0.2261,0.0391,0.0506,0.0408
+dia95_utt9,neutral,"Well, maybe it was all of your questions.",neutral,0.0247,0.0071,0.0067,0.0139,0.9098,0.0188,0.019
+dia95_utt10,neutral,What about my question?,neutral,0.0643,0.0115,0.0144,0.0264,0.6703,0.0219,0.1912
+dia96_utt0,neutral,"Oh, I'm sorry. It's just my foot itches like cr-",sadness,0.0877,0.3737,0.0168,0.0361,0.0548,0.4242,0.0067
+dia96_utt1,neutral,"Oh, okay.",neutral,0.0116,0.0087,0.0102,0.0298,0.918,0.0187,0.003
+dia96_utt2,surprise,"Wow, I usually get to know a girl better before I let her spoon me.",surprise,0.0225,0.0145,0.0065,0.171,0.0191,0.0294,0.7371
+dia96_utt3,joy,"Relax, it's not like we're forking.",neutral,0.1215,0.2866,0.0094,0.0733,0.4339,0.071,0.0043
+dia97_utt0,joy,"Look at it! Oh, wallpaper's a little faded. That's okay. Carb is a little loose. Hardwood floors!",surprise,0.2139,0.2465,0.0107,0.0763,0.0594,0.1226,0.2706
+dia97_utt1,joy,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia97_utt2,neutral,Oh!,surprise,0.0085,0.0041,0.0034,0.0279,0.0047,0.0084,0.943
+dia97_utt3,joy,"Oh, Monica! It's so beautiful! I know!",joy,0.016,0.003,0.0016,0.9151,0.0087,0.0109,0.0447
+dia97_utt4,joy,I know!,surprise,0.0544,0.0054,0.0134,0.2105,0.0363,0.0195,0.6605
+dia97_utt5,joy,"So, I'm here, ready to play.",neutral,0.021,0.0083,0.0075,0.0735,0.8749,0.011,0.0038
+dia97_utt6,neutral,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia97_utt7,joy,"I bought a bunch of stuff for the house, so check it out. Ha ha.",joy,0.0423,0.0213,0.0032,0.7285,0.1742,0.0143,0.0162
+dia97_utt8,surprise,What's this?,surprise,0.0196,0.0055,0.0123,0.0249,0.2942,0.0167,0.6268
+dia97_utt9,joy,That's a dog. Every house should have a dog.,disgust,0.0799,0.3159,0.0049,0.1925,0.3112,0.0554,0.0401
+dia97_utt10,surprise,not one that can pee on the roof.,neutral,0.0864,0.3764,0.0068,0.033,0.4216,0.0576,0.0183
+dia97_utt11,joy,Maybe it's so big because the house was built on radioactive waste.,neutral,0.054,0.0657,0.0082,0.0551,0.5597,0.1216,0.1358
+dia97_utt12,surprise,And is this in case the house sneezes?,neutral,0.0562,0.0198,0.0435,0.0205,0.7017,0.0796,0.0786
+dia97_utt13,neutral,"No. No, that's the ghost for the attic.",neutral,0.0104,0.0114,0.0034,0.0106,0.9305,0.0175,0.0161
+dia97_utt14,fear,"I don't want a ghost. Well, nobody wants a ghost.",neutral,0.0919,0.1056,0.0172,0.0774,0.5709,0.1288,0.0083
+dia97_utt15,neutral,"But you've got one, because the house is sitting on an ancient Indian burial ground.",neutral,0.0213,0.0147,0.0038,0.0178,0.8698,0.0394,0.0333
+dia97_utt16,surprise,"Wait a minute, the house was built on radioactive waste and an ancient Indian burial ground. That would never happen.",surprise,0.1093,0.0534,0.0182,0.0431,0.236,0.1546,0.3854
+dia97_utt17,neutral,"Okay, obviously you don't know much about the U.S. government.",neutral,0.0125,0.0155,0.0055,0.0168,0.9263,0.015,0.0085
+dia97_utt18,surprise,Hey! Hey!,joy,0.0322,0.0031,0.0041,0.5866,0.0337,0.0064,0.3338
+dia97_utt19,neutral,you,neutral,0.0188,0.0078,0.0021,0.019,0.9321,0.0107,0.0094
+dia97_utt20,joy,I need to talk to you!,anger,0.3127,0.01,0.082,0.2973,0.0707,0.0423,0.185
+dia97_utt21,neutral,Sure. What's up?,neutral,0.0123,0.0046,0.0051,0.0549,0.8969,0.0077,0.0186
+dia98_utt0,anger,"Alright, I just got changed in 30 seconds so you could be alone with him. You better go for it. Please, I'm not going for anything.",neutral,0.1444,0.0715,0.0502,0.0383,0.6169,0.0759,0.0028
+dia98_utt1,disgust,"You better go for it. Please, I'm not going for anything.",fear,0.196,0.1347,0.3075,0.031,0.1961,0.1317,0.0029
+dia98_utt2,anger,"If you don't, I will.",neutral,0.1107,0.0212,0.0072,0.0905,0.7185,0.0496,0.0023
+dia98_utt3,joy,Please go,neutral,0.0966,0.0302,0.1722,0.0265,0.5821,0.0826,0.0097
+dia99_utt0,joy,"Hey guys, guys, did you see my new China cabinet?",neutral,0.0286,0.0148,0.0071,0.1806,0.6595,0.0206,0.0888
+dia99_utt1,neutral,Uh-huh.,neutral,0.0296,0.0372,0.2705,0.0829,0.524,0.0453,0.0105
+dia99_utt2,joy,"Watch, watch.",neutral,0.0329,0.0275,0.0571,0.0946,0.7079,0.0574,0.0226
+dia99_utt4,joy,"And, and...",neutral,0.0208,0.0071,0.0202,0.1465,0.7208,0.0617,0.0228
+dia99_utt5,surprise,Oh!,surprise,0.0085,0.0041,0.0034,0.0279,0.0047,0.0084,0.943
+dia99_utt6,surprise,"Hey, my father's house does that.",neutral,0.0172,0.0189,0.002,0.0188,0.9107,0.0259,0.0065
+dia99_utt7,neutral,"Oh, okay. How did it go? Tell me everything.",neutral,0.0573,0.0068,0.0751,0.1629,0.5811,0.0619,0.0549
+dia99_utt8,neutral,"Well, the movie was great. The dinner was great, and there's nothing like a cool, crisp New York evening.",joy,0.0265,0.0168,0.0024,0.7802,0.1408,0.0252,0.0082
+dia100_utt0,neutral,That's my lawful husband. Do you take Joanie? Oof!,anger,0.4075,0.3589,0.0064,0.0376,0.0154,0.0529,0.1212
+dia101_utt0,sadness,"Oh, I'm sorry, was that another joke? Was that another question?",surprise,0.2164,0.0244,0.022,0.0248,0.0832,0.065,0.5643
+dia102_utt0,neutral,You've got Carol the-,neutral,0.0129,0.009,0.0042,0.033,0.9111,0.0238,0.0061
+dia102_utt1,neutral,tomorrow.,neutral,0.0122,0.0078,0.0085,0.0336,0.9109,0.0234,0.0036
+dia103_utt0,neutral,She's clearly an Emma.,neutral,0.0494,0.0662,0.0131,0.0927,0.679,0.0472,0.0524
+dia103_utt1,sadness,"Oh, honey, but you love that name.",joy,0.028,0.0303,0.005,0.7184,0.1415,0.0604,0.0163
+dia103_utt2,joy,"Yeah, but I love you more.",joy,0.0227,0.0057,0.0027,0.8309,0.082,0.0492,0.0068
+dia103_utt3,neutral,"size, you know? Nothing goes with being.",neutral,0.1737,0.1596,0.011,0.0698,0.4683,0.0974,0.02
+dia103_utt4,joy,I'm screwed.,sadness,0.1809,0.1354,0.0602,0.032,0.0572,0.526,0.0083
+dia104_utt0,joy,"Oh, I'm a duck. I go quack quack. I'm happy all the time.",neutral,0.1208,0.1324,0.0066,0.316,0.3688,0.0514,0.0041
+dia104_utt1,sadness,Nice try.,joy,0.0644,0.0323,0.0036,0.6474,0.225,0.0144,0.013
+dia104_utt2,joy,"Wait, wait, wait, wait, wait.",surprise,0.0385,0.0197,0.086,0.144,0.0897,0.0682,0.554
+dia104_utt3,neutral,"Look, come on.",neutral,0.0489,0.037,0.0154,0.039,0.8259,0.0255,0.0083
+dia104_utt4,surprise,Okay.,neutral,0.0129,0.0081,0.0047,0.0186,0.9457,0.0079,0.0021
+dia104_utt5,anger,This is not gonna work.,anger,0.3699,0.1179,0.0182,0.0558,0.1734,0.256,0.0089
+dia104_utt6,joy,"Alright, this will work.",neutral,0.0305,0.014,0.0058,0.0362,0.9006,0.0109,0.0021
+dia104_utt7,joy,You are so great. I love you.,joy,0.01,0.0023,0.0015,0.9393,0.025,0.012,0.0099
+dia104_utt8,surprise,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia104_utt9,fear,"Nothing, I said, you're so great, and then I just stopped talking.",joy,0.0274,0.0068,0.0025,0.8959,0.0362,0.0196,0.0117
+dia104_utt10,surprise,"You said you love me, I can't believe it!",anger,0.3361,0.0244,0.0137,0.2896,0.0072,0.0582,0.2708
+dia104_utt11,fear,"No, I didn't.",neutral,0.0435,0.0096,0.0065,0.0865,0.7564,0.067,0.0306
+dia104_utt12,surprise,"Yes, you did! No, I didn't.",joy,0.308,0.0155,0.016,0.3958,0.0766,0.0726,0.1155
+dia104_utt13,fear,Thank you.,neutral,0.0215,0.0082,0.0026,0.2529,0.6954,0.0115,0.0079
+dia104_utt14,joy,You love me.,joy,0.0249,0.005,0.0027,0.8436,0.0596,0.0544,0.0098
+dia104_utt15,anger,"No, no! Stop it! Stop it! Stop it! Stop it!",anger,0.5404,0.0576,0.183,0.137,0.0166,0.0472,0.0181
+dia105_utt0,neutral,"Hello, Greg. Hi, this is Monica from the plane.",neutral,0.0132,0.0074,0.0036,0.0317,0.9237,0.012,0.0083
+dia105_utt2,anger,"Listen, the number that you gave me, uh, 8535... That is their all number! Jimmy's been giving it out since they moved!",anger,0.5192,0.0249,0.0151,0.0921,0.0871,0.0569,0.2047
+dia105_utt3,anger,That is their old number. Jimmy's been giving it out since they moved.,neutral,0.0236,0.0091,0.0031,0.0183,0.9137,0.0269,0.0053
+dia105_utt4,joy,"Jenny, that is so Jenny.",joy,0.0729,0.0499,0.005,0.4959,0.2271,0.0581,0.0912
+dia105_utt5,neutral,"Hey listen, how would you like to get together and save next Saturday?",neutral,0.0178,0.0085,0.0027,0.1458,0.7929,0.0222,0.0101
+dia105_utt6,neutral,Stay next Saturday.,neutral,0.0106,0.0084,0.0026,0.0351,0.926,0.0137,0.0036
+dia105_utt7,neutral,"Okay, have a Sunday!",joy,0.0489,0.0088,0.0032,0.741,0.1632,0.0151,0.0199
+dia105_utt8,joy,"Okay, um, the week after that.",neutral,0.0126,0.0101,0.0082,0.0152,0.9245,0.0242,0.0052
+dia105_utt9,joy,What?,surprise,0.0121,0.0043,0.022,0.0104,0.1089,0.0148,0.8275
+dia105_utt10,anger,"You know what, Greg?",neutral,0.0685,0.0295,0.0092,0.0724,0.7433,0.0197,0.0573
+dia105_utt11,anger,"You know what, we are good, interesting, funny people with good questions.",neutral,0.0339,0.0214,0.0033,0.1623,0.7569,0.0179,0.0043
+dia106_utt0,neutral,"Hey, Chairman! You know that girl you went to college with who became a movie director?",surprise,0.0689,0.0128,0.0036,0.1244,0.0471,0.0201,0.723
+dia106_utt1,neutral,"Oh yeah, Dana Keystone, she was in my movement class.",neutral,0.0187,0.0248,0.0053,0.0413,0.842,0.0556,0.0122
+dia106_utt2,neutral,What's a movement class?,neutral,0.0389,0.0176,0.0117,0.0182,0.6753,0.0252,0.2132
+dia106_utt3,neutral,It's Chandler's way of pretending he didn't take mime.,neutral,0.0869,0.1042,0.0041,0.0437,0.7012,0.0486,0.0113
+dia106_utt4,joy,"Listen, anyway, she's directing the new Al Pacino movie. You gotta get me an audition. Oh, I don't know, man. I haven't talked to her in like 10 years.",neutral,0.0416,0.0388,0.0144,0.0857,0.6947,0.0926,0.0323
+dia106_utt5,neutral,"You gotta get me an audition. Oh, I don't know man, I haven't talked here in like 10 years.",neutral,0.0597,0.0618,0.0525,0.1119,0.5918,0.0999,0.0224
+dia107_utt0,neutral,I am.,neutral,0.0175,0.0081,0.0036,0.0823,0.8404,0.0331,0.0151
+dia107_utt1,neutral,What are you talking about? You're a terrific actor!,surprise,0.0332,0.0068,0.0023,0.1805,0.0088,0.0087,0.7597
+dia107_utt2,surprise,You really think so?,surprise,0.0193,0.0046,0.0107,0.0213,0.0766,0.0175,0.8499
+dia107_utt3,surprise,How can you even ask that question?,surprise,0.0576,0.0267,0.0098,0.0122,0.0725,0.0258,0.7955
+dia108_utt0,surprise,"Boss, get a shot at this.",neutral,0.1231,0.0423,0.0078,0.0481,0.756,0.0177,0.005
+dia108_utt1,fear,"Oh, okay, I'm having another one.",neutral,0.0228,0.01,0.0042,0.0623,0.8577,0.0377,0.0053
+dia108_utt2,surprise,"This one doesn't hurt either? Oh, yes it does. Ow!",disgust,0.2528,0.257,0.0109,0.2283,0.0193,0.0455,0.1862
+dia108_utt3,anger,Ow!,surprise,0.0635,0.2316,0.0074,0.0426,0.0063,0.0329,0.6157
+dia108_utt4,anger,Ow!,surprise,0.0635,0.2316,0.0074,0.0426,0.0063,0.0329,0.6157
+dia108_utt6,anger,Ow! Ow!,disgust,0.106,0.5148,0.0111,0.0581,0.0061,0.0353,0.2687
+dia108_utt7,surprise,Ooh!,surprise,0.0159,0.0149,0.0051,0.3032,0.0092,0.0159,0.6359
+dia108_utt8,sadness,"Who I was kind of helping, that was it.",neutral,0.0551,0.0123,0.0044,0.1567,0.6951,0.0672,0.0092
+dia108_utt9,neutral,"Hey, where are Monica and Rachel anyway?",neutral,0.1176,0.0463,0.007,0.0193,0.5906,0.1148,0.1042
+dia108_utt10,joy,"Yeah, I love you. Okay, bye.",joy,0.0176,0.0048,0.0029,0.7192,0.1954,0.0537,0.0065
+dia108_utt11,joy,Bye.,neutral,0.0114,0.0062,0.0046,0.0712,0.8811,0.0213,0.0042
+dia108_utt12,fear,That was Alice's mom. She said that she left five hours ago. She should be here by now.,neutral,0.0276,0.0086,0.0032,0.0326,0.8581,0.0531,0.0168
+dia108_utt13,neutral,"Oh honey, don't worry, she's gonna make it on...",neutral,0.0552,0.0067,0.1163,0.27,0.3704,0.1612,0.0202
+dia108_utt14,neutral,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia109_utt0,neutral,I guess I set up the video camera to try an entice Joey.,neutral,0.0886,0.0321,0.0092,0.0861,0.6983,0.0754,0.0105
+dia109_utt1,joy,"But sadly, I could not be enticed.",joy,0.0561,0.0074,0.021,0.3601,0.2369,0.2872,0.0314
+dia109_utt2,disgust,"Unbelievable. I mean, you really kept Joey's underwear? Why would you do that?",surprise,0.0164,0.0106,0.0036,0.0087,0.0085,0.0104,0.9418
+dia109_utt3,sadness,I'm Monica. I'm disgusting. I stalk guys and keep their underpants.,disgust,0.0743,0.8505,0.012,0.0215,0.0123,0.0225,0.007
+dia109_utt4,anger,"Well, I think we've all learned something about who's disgusting and who's not",disgust,0.1108,0.6393,0.0104,0.063,0.1278,0.0435,0.0052
+dia109_utt5,neutral,Huh?,surprise,0.0151,0.0061,0.0189,0.0142,0.1683,0.0149,0.7625
+dia109_utt6,neutral,"All right, now I'm gonna get back to my bucket",neutral,0.1086,0.0452,0.0098,0.084,0.7206,0.0281,0.0036
+dia109_utt7,neutral,"I'm only eating the skin, so the chicken's up for grabs.",neutral,0.0449,0.0333,0.0035,0.0654,0.8207,0.0283,0.0039
+dia110_utt0,neutral,"Oh, okay, well they gave you the old-time pricing.",neutral,0.0957,0.0716,0.0031,0.0414,0.7009,0.0806,0.0066
+dia110_utt1,neutral,Yeah.,neutral,0.0088,0.0096,0.0032,0.0252,0.9324,0.0188,0.002
+dia110_utt2,neutral,"Well, what period is it from?",neutral,0.0264,0.0107,0.0111,0.0155,0.7878,0.0269,0.1216
+dia110_utt3,neutral,"Uh, it's from your, like the days of your, you know?",neutral,0.0558,0.0275,0.0101,0.0216,0.7786,0.0693,0.037
+dia110_utt4,neutral,"Yes, I do.",neutral,0.0163,0.0098,0.0039,0.0494,0.8886,0.0286,0.0034
+dia110_utt5,joy,"Oh, it's just perfect!",joy,0.0239,0.0025,0.0017,0.9241,0.0131,0.0082,0.0266
+dia110_utt6,joy,"Wow, I bet it has a great story behind it.",joy,0.0187,0.0055,0.0035,0.6022,0.0241,0.0187,0.3273
+dia110_utt8,joy,"Oh yes, that I know. This is from White Plains.",neutral,0.0115,0.0127,0.0103,0.0264,0.8951,0.0263,0.0177
+dia110_utt9,joy,"White planes. Mm-hmm. Oh, it sounds like such a magical place",joy,0.0394,0.0385,0.0209,0.3383,0.2638,0.0715,0.2277
+dia111_utt0,anger,You still don't think I'm boyfriend material?,surprise,0.0326,0.0099,0.011,0.0096,0.0422,0.0219,0.8729
+dia111_utt1,neutral,Huh?,surprise,0.0151,0.0061,0.0189,0.0142,0.1683,0.0149,0.7625
+dia111_utt2,neutral,Saw you checking me out during the game last night.,joy,0.023,0.0184,0.0024,0.7829,0.1202,0.0273,0.0259
+dia112_utt0,anger,I'm... shut up!,anger,0.5953,0.0568,0.1878,0.0534,0.0316,0.0651,0.01
+dia112_utt1,sadness,Goodbye Phoebe and Ursula. I'll miss you. P.S. your mom lives in Montauk. I just wrote this!,joy,0.0939,0.0071,0.0048,0.6628,0.0465,0.1463,0.0386
+dia112_utt2,neutral,"Well, it's pretty much the gist. Except for the poem. You read the poem, right?",neutral,0.0253,0.0106,0.005,0.0144,0.9119,0.017,0.0157
+dia112_utt3,sadness,No!,anger,0.4426,0.1831,0.0144,0.0532,0.0142,0.0489,0.2436
+dia112_utt4,neutral,"Alright, hang on.",neutral,0.0379,0.0248,0.0061,0.0365,0.8733,0.0192,0.0022
+dia113_utt0,neutral,"Rachel, it's going to happen. Chandler is going to move in here.",neutral,0.0521,0.0123,0.0063,0.1835,0.6506,0.0791,0.0161
+dia113_utt1,sadness,But I...,neutral,0.0264,0.0056,0.1735,0.0797,0.4659,0.1915,0.0573
+dia113_utt2,neutral,"No, we, we, just let me finish, okay?",neutral,0.1644,0.0193,0.0474,0.1032,0.5641,0.0951,0.0065
+dia113_utt3,sadness,,,,,,,,,
+dia113_utt4,neutral,"This isn't something that we just, just impulsively decided to do in Vegas. This is something that we both really want.",joy,0.2324,0.0626,0.0127,0.3976,0.1693,0.0945,0.031
+dia113_utt5,neutral,And it is going to happen.,neutral,0.039,0.0068,0.0159,0.1903,0.7017,0.0383,0.008
+dia113_utt6,surprise,It is? Really?,surprise,0.0066,0.0029,0.0029,0.0096,0.0082,0.0064,0.9634
+dia113_utt7,neutral,"Yes, we...",neutral,0.0162,0.0064,0.0139,0.1187,0.7976,0.0404,0.0068
+dia113_utt8,sadness,"I mean, we're not going to live together anymore?",anger,0.3258,0.0691,0.0357,0.0199,0.0393,0.2748,0.2354
+dia113_utt9,sadness,No.,neutral,0.0087,0.0048,0.0036,0.0092,0.9587,0.0114,0.0036
+dia113_utt10,sadness,"Oh my god, I'm gonna miss you so much.",sadness,0.0179,0.0074,0.0117,0.3125,0.0341,0.5986,0.0177
+dia113_utt11,sadness,It's you.,neutral,0.0137,0.0032,0.0021,0.0272,0.9286,0.0127,0.0126
+dia113_utt12,sadness,I'm gonna see it in the middle of the air!,joy,0.214,0.0334,0.0111,0.3724,0.0342,0.0265,0.3084
+dia113_utt13,sadness,I know!,surprise,0.0544,0.0054,0.0134,0.2105,0.0363,0.0195,0.6605

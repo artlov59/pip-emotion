@@ -1,0 +1,70 @@
+{
+  "accuracy": 0.49542124542124544,
+  "weighted_f1": 0.4901855306048946,
+  "macro_f1": 0.35678223459360997,
+  "per_class": {
+    "anger": {
+      "precision": 0.41739130434782606,
+      "recall": 0.3221476510067114,
+      "f1": 0.36363636363636365,
+      "support": 149
+    },
+    "disgust": {
+      "precision": 0.058823529411764705,
+      "recall": 0.09090909090909091,
+      "f1": 0.07142857142857142,
+      "support": 22
+    },
+    "fear": {
+      "precision": 0.17647058823529413,
+      "recall": 0.23076923076923078,
+      "f1": 0.2,
+      "support": 39
+    },
+    "joy": {
+      "precision": 0.46875,
+      "recall": 0.37037037037037035,
+      "f1": 0.41379310344827586,
+      "support": 162
+    },
+    "neutral": {
+      "precision": 0.6077669902912621,
+      "recall": 0.6760259179265659,
+      "f1": 0.6400817995910021,
+      "support": 463
+    },
+    "sadness": {
+      "precision": 0.3218390804597701,
+      "recall": 0.2545454545454545,
+      "f1": 0.28426395939086296,
+      "support": 110
+    },
+    "surprise": {
+      "precision": 0.5,
+      "recall": 0.5510204081632653,
+      "f1": 0.5242718446601942,
+      "support": 147
+    }
+  },
+  "split": "dev",
+  "text_source": "whisper",
+  "n": 1092,
+  "empty": 21,
+  "asr_provenance": {
+    "path": "/Users/artemtrefilov/Desktop/audio-cnn/data/meld/whisper_dev.csv",
+    "sha256": "21b1b0c302f8d8c1b2fd489be131038b43d00ae4c433fe37caf731ad9b79af1a",
+    "split": "dev",
+    "cache_rows": 1092,
+    "expected_audio_usable": 1092,
+    "covered_audio_usable": 1092,
+    "coverage": 1.0,
+    "allow_partial": false,
+    "required_coverage": 1.0,
+    "nonempty_audio_usable": 1071,
+    "excluded_hit_token_limit": 0,
+    "excluded_nonempty_hit_token_limit": 0,
+    "excluded_hit_token_limit_audio_usable": 0,
+    "quality_filter": "discard hit_token_limit transcripts; keep processed IDs for coverage; raw cache unchanged",
+    "generation_metadata": null
+  }
+}

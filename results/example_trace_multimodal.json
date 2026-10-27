@@ -1,0 +1,1284 @@
+{
+  "clip": "dia17_utt8",
+  "source_audio": "/Users/artemtrefilov/Desktop/audio-cnn/data/meld/wav/test/dia17_utt8.wav",
+  "source_video": "/Users/artemtrefilov/Desktop/audio-cnn/data/MELD.Raw/output_repeated_splits_test/dia17_utt8.mp4",
+  "stats": {
+    "frames_sent": 20,
+    "frames_dropped": 0,
+    "timed_out": false
+  },
+  "events": [
+    {
+      "type": "ready",
+      "sample_rate": 16000,
+      "chunk_ms": 100,
+      "end_silence_ms": 500,
+      "partial_every_s": 0.5,
+      "partial_window_s": 3.0,
+      "modalities": {
+        "voice": true,
+        "words": true,
+        "face": true
+      },
+      "engine": {
+        "backend": "cpu",
+        "cpu_threads": 4,
+        "backend_provenance": {
+          "asr": {
+            "backend": "torch-cpu-whisper-small-mlx-weights-greedy-no-timestamps-v1",
+            "source_repo": "mlx-community/whisper-small-mlx",
+            "source_revision": "45f3915923c7a79a5a5b5a7d909d39aeb0e5630e",
+            "source_weights_sha256": "55b6674c9b339702d486e2b1573839a66f8ec8f821ed2886993ef717a86b09f5",
+            "source_tensors": 478,
+            "source_tensor_elements": 240582912,
+            "source_auxiliary_not_learned": {
+              "alignment_heads": {
+                "shape": [
+                  10,
+                  2
+                ],
+                "elements": 20,
+                "values": [
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    9
+                  ],
+                  [
+                    8,
+                    0
+                  ],
+                  [
+                    8,
+                    4
+                  ],
+                  [
+                    8,
+                    7
+                  ],
+                  [
+                    8,
+                    8
+                  ],
+                  [
+                    9,
+                    0
+                  ],
+                  [
+                    9,
+                    7
+                  ],
+                  [
+                    9,
+                    9
+                  ],
+                  [
+                    10,
+                    5
+                  ]
+                ]
+              }
+            },
+            "hf_state_tensors": 480,
+            "all_source_shapes_verified": true,
+            "all_source_values_roundtrip_verified": true,
+            "regenerated_fixed_sinusoid_elements": 1152000,
+            "hf_unique_parameter_elements": 241734912,
+            "output_projection_tied": true,
+            "device": "cpu",
+            "dtype": "float32",
+            "torch_version": "2.14.1",
+            "transformers_version": "5.20.2",
+            "decode_profile": "English greedy, no timestamps, no previous text, no segment silence filter",
+            "max_new_tokens": 224,
+            "threads": 4,
+            "mlx_numerical_parity_verified": false
+          },
+          "llm": {
+            "source_directory": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457",
+            "snapshot_revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+            "source_config_sha256": "ceb97c46fe17f523ac42c0f0254fd18d9589f8725f0bbbe0bef541f8ef84547a",
+            "source_weights_bytes": 1736293090,
+            "logical_parameters": 3085938688,
+            "float32_parameter_bytes": 12343754752,
+            "estimated_peak_rss_bytes": 16685464290,
+            "rss_cap_bytes": 20000000000,
+            "stored_tensors": 940,
+            "quantized_weights": 253,
+            "learned_tensor_mapping": 434,
+            "all_shapes_match": true,
+            "tied_head": "lm_head.weight aliases model.embed_tokens.weight; no duplicate learned matrix",
+            "formula": "q_i=(uint32 >> (4*i))&15, low nibble first; w=scale*q+bias in groups of64",
+            "backend_parity": "Same cached quantized learned values. GPU/MLX numerical or output parity has not been measured.",
+            "dtype": "float32",
+            "threads": 4,
+            "offline": true,
+            "backend": "torch_cpu_fp32_from_mlx_affine4bit",
+            "source_repo": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+            "max_context_tokens": 2048,
+            "extra_requantization": false,
+            "runtime_quantization": {
+              "mode": "fp32_from_mlx_affine4bit",
+              "extra_requantization": false
+            },
+            "load_s": 7.4725844580098055,
+            "load_peak_rss_bytes": 15451324416,
+            "rss_after_load_bytes": 12190367744,
+            "actual_unique_parameters": 3085938688,
+            "source_weights_sha256": "f212cf6fb9923281a09c135e05d43a052ee5ef7121f5b1dc0b0fb2de80f97cfd"
+          }
+        },
+        "emotion_checkpoint": "/Users/artemtrefilov/Documents/Codex/2026-10-22/ml-challenge-real-time-multimodal-ml/work/submission_verification_20261023/extracted/checkpoints/emotion_cnn.pt",
+        "emotion_meta": {
+          "run": "wce_sqrt_mixup",
+          "epoch": 31,
+          "dev_metrics": {
+            "loss": 1.6109403924665588,
+            "accuracy": 0.4432234432234432,
+            "weighted_f1": 0.4098088722715167,
+            "macro_f1": 0.25352887434053767
+          },
+          "device": "cpu",
+          "pooling_mode": "legacy"
+        },
+        "asr": "mlx-community/whisper-small-mlx",
+        "llm": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+        "text_model": "/Users/artemtrefilov/Documents/Codex/2026-10-22/ml-challenge-real-time-multimodal-ml/work/submission_verification_20261023/extracted/checkpoints/text_emotion",
+        "vision_model": "hsemotion-onnx:enet_b0_8_best_vgaf + YuNet-2023mar",
+        "fusion_weights": {
+          "audio": 1.0,
+          "text": 0.9,
+          "vision": 0.3
+        },
+        "fusion_tuned_on_dev": true,
+        "errors": {},
+        "load_times_s": {
+          "vad": 0.04,
+          "prosody": 2.47,
+          "emotion_cnn": 0.25,
+          "asr": 0.8,
+          "text_emotion": 0.21,
+          "vision": 0.41,
+          "llm": 8.07
+        },
+        "active_modalities": {
+          "audio": true,
+          "text": true,
+          "vision": true
+        },
+        "response_mode": "llm",
+        "multimodal_ready": true
+      },
+      "stream_t_s": 0.0
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 8.2
+      },
+      "frames_dropped": 0,
+      "emotion": "disgust",
+      "confidence": 0.2997,
+      "probs": {
+        "anger": 0.2964,
+        "disgust": 0.2997,
+        "fear": 0.1731,
+        "joy": 0.0013,
+        "neutral": 0.0321,
+        "sadness": 0.1833,
+        "surprise": 0.0141
+      },
+      "box": [
+        0.611,
+        0.152,
+        0.097,
+        0.221
+      ],
+      "stream_t_s": 0.1
+    },
+    {
+      "type": "vad",
+      "state": "speech_start",
+      "utterance_id": 1,
+      "stream_t_s": 0.22
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.3
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3304,
+      "probs": {
+        "anger": 0.3304,
+        "disgust": 0.3179,
+        "fear": 0.1699,
+        "joy": 0.0015,
+        "neutral": 0.0291,
+        "sadness": 0.1343,
+        "surprise": 0.0168
+      },
+      "box": [
+        0.611,
+        0.151,
+        0.096,
+        0.219
+      ],
+      "stream_t_s": 0.29
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.4
+      },
+      "frames_dropped": 0,
+      "emotion": "disgust",
+      "confidence": 0.3176,
+      "probs": {
+        "anger": 0.3121,
+        "disgust": 0.3176,
+        "fear": 0.1834,
+        "joy": 0.0016,
+        "neutral": 0.0297,
+        "sadness": 0.1407,
+        "surprise": 0.0149
+      },
+      "box": [
+        0.611,
+        0.15,
+        0.096,
+        0.22
+      ],
+      "stream_t_s": 0.48
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 11.6
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.4447,
+      "probs": {
+        "anger": 0.4447,
+        "disgust": 0.2418,
+        "fear": 0.1705,
+        "joy": 0.0009,
+        "neutral": 0.019,
+        "sadness": 0.1104,
+        "surprise": 0.0127
+      },
+      "box": [
+        0.611,
+        0.151,
+        0.095,
+        0.219
+      ],
+      "stream_t_s": 0.67
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.5
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.2615,
+      "probs": {
+        "anger": 0.2615,
+        "disgust": 0.2277,
+        "fear": 0.2089,
+        "joy": 0.0009,
+        "neutral": 0.0254,
+        "sadness": 0.2606,
+        "surprise": 0.015
+      },
+      "box": [
+        0.61,
+        0.15,
+        0.094,
+        0.218
+      ],
+      "stream_t_s": 0.9
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.3435,
+      "probs": {
+        "anger": 0.3435,
+        "disgust": 0.0675,
+        "fear": 0.0631,
+        "joy": 0.0749,
+        "neutral": 0.0451,
+        "sadness": 0.1046,
+        "surprise": 0.3013
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "surprise",
+          "confidence": 0.3817,
+          "probs": {
+            "anger": 0.2337,
+            "disgust": 0.0474,
+            "fear": 0.0484,
+            "joy": 0.1566,
+            "neutral": 0.0505,
+            "sadness": 0.0816,
+            "surprise": 0.3817
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.329,
+          "probs": {
+            "anger": 0.329,
+            "disgust": 0.2809,
+            "fear": 0.1812,
+            "joy": 0.0012,
+            "neutral": 0.0271,
+            "sadness": 0.1659,
+            "surprise": 0.0147
+          },
+          "frames": 5
+        }
+      },
+      "window_s": 1.02,
+      "latency_ms": {
+        "emotion": 10.8
+      },
+      "stream_t_s": 1.09
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 10.8
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3146,
+      "probs": {
+        "anger": 0.3146,
+        "disgust": 0.2066,
+        "fear": 0.1977,
+        "joy": 0.0015,
+        "neutral": 0.0349,
+        "sadness": 0.2279,
+        "surprise": 0.0168
+      },
+      "box": [
+        0.602,
+        0.146,
+        0.098,
+        0.221
+      ],
+      "stream_t_s": 1.09
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 10.0
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3159,
+      "probs": {
+        "anger": 0.3159,
+        "disgust": 0.1775,
+        "fear": 0.2891,
+        "joy": 0.001,
+        "neutral": 0.0221,
+        "sadness": 0.1816,
+        "surprise": 0.0129
+      },
+      "box": [
+        0.601,
+        0.157,
+        0.092,
+        0.209
+      ],
+      "stream_t_s": 1.28
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.5
+      },
+      "frames_dropped": 0,
+      "emotion": "sadness",
+      "confidence": 0.2848,
+      "probs": {
+        "anger": 0.2724,
+        "disgust": 0.2478,
+        "fear": 0.1396,
+        "joy": 0.0021,
+        "neutral": 0.0368,
+        "sadness": 0.2848,
+        "surprise": 0.0165
+      },
+      "box": [
+        0.596,
+        0.158,
+        0.095,
+        0.21
+      ],
+      "stream_t_s": 1.47
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.3327,
+      "probs": {
+        "anger": 0.3327,
+        "disgust": 0.0623,
+        "fear": 0.0688,
+        "joy": 0.0669,
+        "neutral": 0.0517,
+        "sadness": 0.1242,
+        "surprise": 0.2935
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "surprise",
+          "confidence": 0.3771,
+          "probs": {
+            "anger": 0.232,
+            "disgust": 0.0454,
+            "fear": 0.0531,
+            "joy": 0.1381,
+            "neutral": 0.0584,
+            "sadness": 0.096,
+            "surprise": 0.3771
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.3185,
+          "probs": {
+            "anger": 0.3185,
+            "disgust": 0.2546,
+            "fear": 0.1915,
+            "joy": 0.0014,
+            "neutral": 0.0286,
+            "sadness": 0.1905,
+            "surprise": 0.015
+          },
+          "frames": 8
+        }
+      },
+      "window_s": 1.54,
+      "latency_ms": {
+        "emotion": 10.5
+      },
+      "stream_t_s": 1.6
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 10.2
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3599,
+      "probs": {
+        "anger": 0.3599,
+        "disgust": 0.1736,
+        "fear": 0.1579,
+        "joy": 0.002,
+        "neutral": 0.0427,
+        "sadness": 0.2455,
+        "surprise": 0.0183
+      },
+      "box": [
+        0.596,
+        0.159,
+        0.094,
+        0.212
+      ],
+      "stream_t_s": 1.7
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 11.3
+      },
+      "frames_dropped": 0,
+      "emotion": "sadness",
+      "confidence": 0.2984,
+      "probs": {
+        "anger": 0.2936,
+        "disgust": 0.1915,
+        "fear": 0.1499,
+        "joy": 0.0017,
+        "neutral": 0.0445,
+        "sadness": 0.2984,
+        "surprise": 0.0204
+      },
+      "box": [
+        0.597,
+        0.159,
+        0.093,
+        0.213
+      ],
+      "stream_t_s": 1.89
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 14.7
+      },
+      "frames_dropped": 0,
+      "emotion": "sadness",
+      "confidence": 0.2843,
+      "probs": {
+        "anger": 0.2556,
+        "disgust": 0.1752,
+        "fear": 0.2465,
+        "joy": 0.0007,
+        "neutral": 0.0223,
+        "sadness": 0.2843,
+        "surprise": 0.0153
+      },
+      "box": [
+        0.596,
+        0.16,
+        0.095,
+        0.212
+      ],
+      "stream_t_s": 2.08
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.3495,
+      "probs": {
+        "anger": 0.3495,
+        "disgust": 0.1,
+        "fear": 0.0779,
+        "joy": 0.087,
+        "neutral": 0.059,
+        "sadness": 0.1281,
+        "surprise": 0.1984
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "surprise",
+          "confidence": 0.2592,
+          "probs": {
+            "anger": 0.2511,
+            "disgust": 0.0762,
+            "fear": 0.0619,
+            "joy": 0.1846,
+            "neutral": 0.0675,
+            "sadness": 0.0994,
+            "surprise": 0.2592
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.3143,
+          "probs": {
+            "anger": 0.3143,
+            "disgust": 0.2343,
+            "fear": 0.1897,
+            "joy": 0.0014,
+            "neutral": 0.0308,
+            "sadness": 0.2138,
+            "surprise": 0.0158
+          },
+          "frames": 11
+        }
+      },
+      "window_s": 2.05,
+      "latency_ms": {
+        "emotion": 16.3
+      },
+      "stream_t_s": 2.08
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.5
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3046,
+      "probs": {
+        "anger": 0.3046,
+        "disgust": 0.1559,
+        "fear": 0.2057,
+        "joy": 0.0011,
+        "neutral": 0.0306,
+        "sadness": 0.2756,
+        "surprise": 0.0266
+      },
+      "box": [
+        0.596,
+        0.16,
+        0.095,
+        0.212
+      ],
+      "stream_t_s": 2.27
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.2
+      },
+      "frames_dropped": 0,
+      "emotion": "sadness",
+      "confidence": 0.3361,
+      "probs": {
+        "anger": 0.2811,
+        "disgust": 0.1312,
+        "fear": 0.1895,
+        "joy": 0.0021,
+        "neutral": 0.0384,
+        "sadness": 0.3361,
+        "surprise": 0.0216
+      },
+      "box": [
+        0.595,
+        0.156,
+        0.095,
+        0.213
+      ],
+      "stream_t_s": 2.59
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.3532,
+      "probs": {
+        "anger": 0.3532,
+        "disgust": 0.1057,
+        "fear": 0.0892,
+        "joy": 0.0752,
+        "neutral": 0.0928,
+        "sadness": 0.1242,
+        "surprise": 0.1597
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "anger",
+          "confidence": 0.2616,
+          "probs": {
+            "anger": 0.2616,
+            "disgust": 0.0839,
+            "fear": 0.0728,
+            "joy": 0.164,
+            "neutral": 0.1087,
+            "sadness": 0.0979,
+            "surprise": 0.2112
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.311,
+          "probs": {
+            "anger": 0.311,
+            "disgust": 0.2203,
+            "fear": 0.1909,
+            "joy": 0.0014,
+            "neutral": 0.0314,
+            "sadness": 0.228,
+            "surprise": 0.0171
+          },
+          "frames": 13
+        }
+      },
+      "window_s": 2.56,
+      "latency_ms": {
+        "emotion": 20.5
+      },
+      "stream_t_s": 2.59
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.5
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3673,
+      "probs": {
+        "anger": 0.3673,
+        "disgust": 0.057,
+        "fear": 0.1692,
+        "joy": 0.0019,
+        "neutral": 0.0482,
+        "sadness": 0.3331,
+        "surprise": 0.0233
+      },
+      "box": [
+        0.594,
+        0.153,
+        0.096,
+        0.217
+      ],
+      "stream_t_s": 2.78
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.0
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3663,
+      "probs": {
+        "anger": 0.3663,
+        "disgust": 0.1345,
+        "fear": 0.2212,
+        "joy": 0.0034,
+        "neutral": 0.0527,
+        "sadness": 0.1905,
+        "surprise": 0.0314
+      },
+      "box": [
+        0.593,
+        0.155,
+        0.096,
+        0.214
+      ],
+      "stream_t_s": 2.98
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.2114,
+      "probs": {
+        "anger": 0.2114,
+        "disgust": 0.1124,
+        "fear": 0.0964,
+        "joy": 0.0784,
+        "neutral": 0.1549,
+        "sadness": 0.166,
+        "surprise": 0.1806
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "surprise",
+          "confidence": 0.2267,
+          "probs": {
+            "anger": 0.1504,
+            "disgust": 0.0881,
+            "fear": 0.0759,
+            "joy": 0.1609,
+            "neutral": 0.1725,
+            "sadness": 0.1255,
+            "surprise": 0.2267
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.32,
+          "probs": {
+            "anger": 0.32,
+            "disgust": 0.1968,
+            "fear": 0.1928,
+            "joy": 0.0016,
+            "neutral": 0.034,
+            "sadness": 0.236,
+            "surprise": 0.0187
+          },
+          "frames": 14
+        }
+      },
+      "window_s": 3.0,
+      "latency_ms": {
+        "emotion": 17.6
+      },
+      "stream_t_s": 3.07
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.1
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3085,
+      "probs": {
+        "anger": 0.3085,
+        "disgust": 0.2608,
+        "fear": 0.1399,
+        "joy": 0.0027,
+        "neutral": 0.0445,
+        "sadness": 0.2248,
+        "surprise": 0.0188
+      },
+      "box": [
+        0.593,
+        0.157,
+        0.096,
+        0.213
+      ],
+      "stream_t_s": 3.2
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 12.0
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.4491,
+      "probs": {
+        "anger": 0.4491,
+        "disgust": 0.192,
+        "fear": 0.1321,
+        "joy": 0.0022,
+        "neutral": 0.0466,
+        "sadness": 0.1558,
+        "surprise": 0.0222
+      },
+      "box": [
+        0.593,
+        0.157,
+        0.096,
+        0.213
+      ],
+      "stream_t_s": 3.39
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.2
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.3895,
+      "probs": {
+        "anger": 0.3895,
+        "disgust": 0.0938,
+        "fear": 0.0775,
+        "joy": 0.0006,
+        "neutral": 0.0983,
+        "sadness": 0.3135,
+        "surprise": 0.0268
+      },
+      "box": [
+        0.585,
+        0.163,
+        0.091,
+        0.213
+      ],
+      "stream_t_s": 3.58
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.4296,
+      "probs": {
+        "anger": 0.4296,
+        "disgust": 0.1034,
+        "fear": 0.1017,
+        "joy": 0.0547,
+        "neutral": 0.0856,
+        "sadness": 0.1143,
+        "surprise": 0.1106
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "anger",
+          "confidence": 0.3414,
+          "probs": {
+            "anger": 0.3414,
+            "disgust": 0.0932,
+            "fear": 0.0909,
+            "joy": 0.1242,
+            "neutral": 0.1024,
+            "sadness": 0.0951,
+            "surprise": 0.1529
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.3243,
+          "probs": {
+            "anger": 0.3243,
+            "disgust": 0.1732,
+            "fear": 0.1803,
+            "joy": 0.0017,
+            "neutral": 0.042,
+            "sadness": 0.258,
+            "surprise": 0.0204
+          },
+          "frames": 14
+        }
+      },
+      "window_s": 3.0,
+      "latency_ms": {
+        "emotion": 21.6
+      },
+      "stream_t_s": 3.58
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.3
+      },
+      "frames_dropped": 0,
+      "emotion": "sadness",
+      "confidence": 0.3353,
+      "probs": {
+        "anger": 0.2899,
+        "disgust": 0.0128,
+        "fear": 0.0514,
+        "joy": 0.0024,
+        "neutral": 0.2611,
+        "sadness": 0.3353,
+        "surprise": 0.0472
+      },
+      "box": [
+        0.569,
+        0.173,
+        0.095,
+        0.223
+      ],
+      "stream_t_s": 3.78
+    },
+    {
+      "type": "face_state",
+      "face": true,
+      "latency_ms": {
+        "vision": 13.3
+      },
+      "frames_dropped": 0,
+      "emotion": "anger",
+      "confidence": 0.5798,
+      "probs": {
+        "anger": 0.5798,
+        "disgust": 0.0173,
+        "fear": 0.013,
+        "joy": 0.0015,
+        "neutral": 0.2052,
+        "sadness": 0.1513,
+        "surprise": 0.0318
+      },
+      "box": [
+        0.556,
+        0.175,
+        0.086,
+        0.209
+      ],
+      "stream_t_s": 4.0
+    },
+    {
+      "type": "partial_state",
+      "utterance_id": 1,
+      "emotion": "anger",
+      "confidence": 0.2717,
+      "probs": {
+        "anger": 0.2717,
+        "disgust": 0.1248,
+        "fear": 0.1185,
+        "joy": 0.0639,
+        "neutral": 0.1688,
+        "sadness": 0.1691,
+        "surprise": 0.0834
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "anger",
+          "confidence": 0.2098,
+          "probs": {
+            "anger": 0.2098,
+            "disgust": 0.1147,
+            "fear": 0.1073,
+            "joy": 0.1411,
+            "neutral": 0.1788,
+            "sadness": 0.1384,
+            "surprise": 0.1099
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.3452,
+          "probs": {
+            "anger": 0.3452,
+            "disgust": 0.1444,
+            "fear": 0.1559,
+            "joy": 0.0018,
+            "neutral": 0.071,
+            "sadness": 0.2579,
+            "surprise": 0.0238
+          },
+          "frames": 14
+        }
+      },
+      "window_s": 3.0,
+      "latency_ms": {
+        "emotion": 18.7
+      },
+      "stream_t_s": 4.1
+    },
+    {
+      "type": "vad",
+      "state": "speech_end",
+      "utterance_id": 1,
+      "reason": "silence",
+      "stream_t_s": 4.7
+    },
+    {
+      "type": "final_state",
+      "utterance_id": 1,
+      "start_s": 0.0,
+      "duration_s": 4.29,
+      "emotion": "anger",
+      "confidence": 0.6608,
+      "probs": {
+        "anger": 0.6608,
+        "disgust": 0.0427,
+        "fear": 0.0049,
+        "joy": 0.0078,
+        "neutral": 0.0513,
+        "sadness": 0.0446,
+        "surprise": 0.1878
+      },
+      "modalities": {
+        "voice": {
+          "emotion": "anger",
+          "confidence": 0.3422,
+          "probs": {
+            "anger": 0.3422,
+            "disgust": 0.0845,
+            "fear": 0.0844,
+            "joy": 0.1334,
+            "neutral": 0.0943,
+            "sadness": 0.0854,
+            "surprise": 0.1759
+          }
+        },
+        "words": {
+          "emotion": "surprise",
+          "confidence": 0.3799,
+          "probs": {
+            "anger": 0.2911,
+            "disgust": 0.0808,
+            "fear": 0.0076,
+            "joy": 0.0351,
+            "neutral": 0.1284,
+            "sadness": 0.0772,
+            "surprise": 0.3799
+          }
+        },
+        "face": {
+          "emotion": "anger",
+          "confidence": 0.3397,
+          "probs": {
+            "anger": 0.3397,
+            "disgust": 0.1816,
+            "fear": 0.1643,
+            "joy": 0.0017,
+            "neutral": 0.0582,
+            "sadness": 0.2334,
+            "surprise": 0.0212
+          },
+          "frames": 20
+        }
+      },
+      "fusion": {
+        "used": [
+          "audio",
+          "text",
+          "vision"
+        ],
+        "weights": {
+          "audio": 1.0,
+          "text": 0.9,
+          "vision": 0.3
+        },
+        "tuned_on_dev": true
+      },
+      "agreement": {
+        "kind": "unknown",
+        "words": "surprise",
+        "nonverbal": "anger",
+        "note": "not enough confidence to compare words and delivery"
+      },
+      "transcript": "I know! At 4.99 for a pillow-top queen said who cares about the divorce?",
+      "tags": [
+        "emotion:anger",
+        "voice:anger",
+        "words:surprise",
+        "face:anger",
+        "pitch_variation:animated",
+        "pace:fast"
+      ],
+      "prosody": {
+        "duration_s": 4.29,
+        "active_speech_s": 4.07,
+        "loudness_dbfs": -34.7,
+        "pitch_hz": 298.1,
+        "pitch_variation_st": 5.73,
+        "words": 16,
+        "rate_wps": 3.93,
+        "labels": {
+          "loudness": "normal",
+          "pitch": null,
+          "pitch_variation": "animated",
+          "pace": "fast"
+        }
+      },
+      "delivery": "animated, varied intonation, speaking fast",
+      "latency_ms": {
+        "queue": 1.2,
+        "emotion": 26.0,
+        "asr": 589.5,
+        "text_emotion": 7.6,
+        "parallel_stage": 597.9,
+        "end_of_speech_to_state": 599.1
+      },
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": "It",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " seems",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " like",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " a",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " lot",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " of",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " stress",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " though",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": ".",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " Maybe",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " you",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": "'re",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " feeling",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " upset",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " about",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": " something",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_delta",
+      "utterance_id": 1,
+      "text": ".",
+      "stream_t_s": 5.15
+    },
+    {
+      "type": "response_done",
+      "utterance_id": 1,
+      "text": "It seems like a lot of stress though. Maybe you're feeling upset about something.",
+      "latency_ms": {
+        "end_of_speech_to_first_token": 2749.8,
+        "end_of_speech_to_last_token": 4532.9,
+        "generation": 3933.7
+      },
+      "tokens": 17,
+      "tokens_per_s": 4.3,
+      "token_count_source": "visible_stream_deltas",
+      "stream_deltas": 17,
+      "stream_deltas_per_s": 4.3,
+      "stream_t_s": 5.15
+    }
+  ]
+}

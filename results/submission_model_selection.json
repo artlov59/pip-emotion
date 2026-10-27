@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "locked_for_test": true,
+  "locked_utc": "2026-10-23T19:18:36.968260+00:00",
+  "selection_split": "dev",
+  "test_used_for_selection": false,
+  "prior_historical_test_reports_exist": true,
+  "recipe": "audio0_text1",
+  "protocol": {
+    "device": "cpu",
+    "max_audio_seconds": 10.0,
+    "text_max_tokens": 64
+  },
+  "fusion_weights": {
+    "path": "results/fusion_weights.json",
+    "sha256": "10339e91487ba6ea8e7e432a428b7aa51d7c34af22598454b4389d486237ec4e"
+  },
+  "baseline": {
+    "audio": {
+      "path": "checkpoints/emotion_cnn.pt",
+      "sha256": "89324f5e12a885c5c0f389d46f9aaf6edea4fdce43fc597ee6fcdbe4328f00f1"
+    },
+    "text": {
+      "path": "checkpoints/text_emotion_baseline_20261023",
+      "files": {
+        "model.safetensors": "a1f8a542be632856bbe1f29575a38cf66a620dd4b7568254e14fb525f0325b32",
+        "config.json": "62a0c5e29003e0d8c6329e8e9e7c0075814845fc87cb8357626ec2bfe1e24eca",
+        "tokenizer.json": "f99541c67fdd8746dd7e3f59b553b78332303915bf7918f930034f19ab923727",
+        "tokenizer_config.json": "aa6a8a3f069d2d98c09444ee3f9671d64c29ce647473dccd78169b10c490d359",
+        "meld_meta.json": "7f910b7e5eac36b88efa5714e54d057cbcf0a3df59698a492b7c5adfe50e5dac"
+      }
+    }
+  },
+  "selected": {
+    "audio": {
+      "path": "checkpoints/emotion_cnn.pt",
+      "sha256": "89324f5e12a885c5c0f389d46f9aaf6edea4fdce43fc597ee6fcdbe4328f00f1"
+    },
+    "text": {
+      "path": "checkpoints/text_emotion",
+      "files": {
+        "model.safetensors": "f9c9b8585c9227e77752b23b1f6dd6e0d0a801111126a255d2d6bf8dd55e2bff",
+        "config.json": "62a0c5e29003e0d8c6329e8e9e7c0075814845fc87cb8357626ec2bfe1e24eca",
+        "tokenizer.json": "f99541c67fdd8746dd7e3f59b553b78332303915bf7918f930034f19ab923727",
+        "tokenizer_config.json": "5a70eb0672fb29acd446145523815047a192ba4226c545255e2f3bdc84cf395a",
+        "meld_meta.json": "d10878fa0aa4498de1e5be35a1f2d5fbec92e6f51b98b7053960f8676717c5f3"
+      }
+    }
+  },
+  "selection_evidence": {
+    "path": "results/retraining_20261023/dev_comparison/dev_multimodal_comparison.json",
+    "sha256": "15d90f4e0859f85b28c147d76b124958c16d9065d9cecae741bd666cb14b701a"
+  },
+  "development_metrics": {
+    "audio0_text0": {
+      "accuracy": 0.5439560439560439,
+      "weighted_f1": 0.5201099766647387,
+      "macro_f1": 0.3718982934364063,
+      "per_class": {
+        "anger": {
+          "precision": 0.6,
+          "recall": 0.3825503355704698,
+          "f1": 0.4672131147540984,
+          "support": 149
+        },
+        "disgust": {
+          "precision": 0.058823529411764705,
+          "recall": 0.045454545454545456,
+          "f1": 0.05128205128205128,
+          "support": 22
+        },
+        "fear": {
+          "precision": 0.6,
+          "recall": 0.07692307692307693,
+          "f1": 0.13636363636363635,
+          "support": 39
+        },
+        "joy": {
+          "precision": 0.5585585585585585,
+          "recall": 0.38271604938271603,
+          "f1": 0.4542124542124542,
+          "support": 162
+        },
+        "neutral": {
+          "precision": 0.5798722044728435,
+          "recall": 0.7840172786177105,
+          "f1": 0.6666666666666666,
+          "support": 463
+        },
+        "sadness": {
+          "precision": 0.4,
+          "recall": 0.2727272727272727,
+          "f1": 0.32432432432432434,
+          "support": 110
+        },
+        "surprise": {
+          "precision": 0.4785276073619632,
+          "recall": 0.5306122448979592,
+          "f1": 0.5032258064516129,
+          "support": 147
+        }
+      }
+    },
+    "audio0_text1": {
+      "accuracy": 0.5476190476190477,
+      "weighted_f1": 0.5321245810794518,
+      "macro_f1": 0.3907278576070792,
+      "per_class": {
+        "anger": {
+          "precision": 0.5038167938931297,
+          "recall": 0.4429530201342282,
+          "f1": 0.4714285714285714,
+          "support": 149
+        },
+        "disgust": {
+          "precision": 0.05555555555555555,
+          "recall": 0.045454545454545456,
+          "f1": 0.05,
+          "support": 22
+        },
+        "fear": {
+          "precision": 0.35,
+          "recall": 0.1794871794871795,
+          "f1": 0.23728813559322035,
+          "support": 39
+        },
+        "joy": {
+          "precision": 0.559322033898305,
+          "recall": 0.4074074074074074,
+          "f1": 0.4714285714285714,
+          "support": 162
+        },
+        "neutral": {
+          "precision": 0.6110154905335629,
+          "recall": 0.7667386609071274,
+          "f1": 0.6800766283524904,
+          "support": 463
+        },
+        "sadness": {
+          "precision": 0.367816091954023,
+          "recall": 0.2909090909090909,
+          "f1": 0.3248730964467005,
+          "support": 110
+        },
+        "surprise": {
+          "precision": 0.5182481751824818,
+          "recall": 0.48299319727891155,
+          "f1": 0.5,
+          "support": 147
+        }
+      }
+    }
+  },
+  "audio_decision": "Both corrected audio warm-start attempts failed development safeguards; preserve original audio.",
+  "text_decision": "Warm-start original; two mixed gold/CPU-ASR epochs, select epoch2 on frozen MLX development text. Fixed vision and fusion.",
+  "deployment": "Canonical selected checkpoint; original text baseline retained for comparison.",
+  "test_policy": "One frozen comparison; no further model or fusion selection based on its results.",
+  "path_normalization": {
+    "scope": "Paths only; selected learned weights, fusion and original selection time unchanged.",
+    "original_freeze": "results/retraining_20261023/frozen_selection.json",
+    "original_freeze_sha256": "2957820dc8d7afcd0dbea0ae87b10e532bdf195343e3ff42f1e4119cdf439665"
+  }
+}

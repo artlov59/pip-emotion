@@ -1,0 +1,40 @@
+{
+  "live": {
+    "audio": 1.0,
+    "text": 0.9,
+    "vision": 0.3
+  },
+  "all": {
+    "audio": {
+      "audio": 1.0
+    },
+    "text_whisper": {
+      "text_whisper": 1.0
+    },
+    "text_gold": {
+      "text_gold": 1.0
+    },
+    "vision": {
+      "vision": 1.0
+    },
+    "audio+text_whisper": {
+      "audio": 1.0,
+      "text_whisper": 1.0
+    },
+    "audio+vision": {
+      "audio": 1.0,
+      "vision": 0.2
+    },
+    "audio+text_whisper+vision": {
+      "audio": 1.0,
+      "text_whisper": 0.9,
+      "vision": 0.3
+    },
+    "audio+text_gold+vision": {
+      "audio": 1.0,
+      "text_gold": 1.9,
+      "vision": 1.2
+    }
+  },
+  "rule": "score_c = sum_m w_m * log p_m(c) over available modalities"
+}

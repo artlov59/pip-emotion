@@ -1,0 +1,547 @@
+{
+  "n": 1092,
+  "n_dialogues": 114,
+  "recipes": {
+    "audio0_text0": {
+      "metrics": {
+        "accuracy": 0.5439560439560439,
+        "weighted_f1": 0.5201099766647387,
+        "macro_f1": 0.3718982934364063,
+        "per_class": {
+          "anger": {
+            "precision": 0.6,
+            "recall": 0.3825503355704698,
+            "f1": 0.4672131147540984,
+            "support": 149
+          },
+          "disgust": {
+            "precision": 0.058823529411764705,
+            "recall": 0.045454545454545456,
+            "f1": 0.05128205128205128,
+            "support": 22
+          },
+          "fear": {
+            "precision": 0.6,
+            "recall": 0.07692307692307693,
+            "f1": 0.13636363636363635,
+            "support": 39
+          },
+          "joy": {
+            "precision": 0.5585585585585585,
+            "recall": 0.38271604938271603,
+            "f1": 0.4542124542124542,
+            "support": 162
+          },
+          "neutral": {
+            "precision": 0.5798722044728435,
+            "recall": 0.7840172786177105,
+            "f1": 0.6666666666666666,
+            "support": 463
+          },
+          "sadness": {
+            "precision": 0.4,
+            "recall": 0.2727272727272727,
+            "f1": 0.32432432432432434,
+            "support": 110
+          },
+          "surprise": {
+            "precision": 0.4785276073619632,
+            "recall": 0.5306122448979592,
+            "f1": 0.5032258064516129,
+            "support": 147
+          }
+        }
+      },
+      "missing": {
+        "audio": 0,
+        "text": 21,
+        "vision": 5
+      },
+      "delta_vs_baseline": {
+        "weighted_f1": 0.0,
+        "macro_f1": 0.0,
+        "accuracy": 0.0
+      },
+      "per_class_f1_delta": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "guards": {
+        "weighted_f1_improves": false,
+        "macro_f1_not_lower": true,
+        "classes_with_lower_f1": [],
+        "new_zero_f1_classes": []
+      },
+      "conditional_dialogue_bootstrap_delta_95ci": {
+        "weighted_f1": [
+          0.0,
+          0.0
+        ],
+        "macro_f1": [
+          0.0,
+          0.0
+        ],
+        "accuracy": [
+          0.0,
+          0.0
+        ],
+        "per_class_f1": {
+          "anger": [
+            0.0,
+            0.0
+          ],
+          "disgust": [
+            0.0,
+            0.0
+          ],
+          "fear": [
+            0.0,
+            0.0
+          ],
+          "joy": [
+            0.0,
+            0.0
+          ],
+          "neutral": [
+            0.0,
+            0.0
+          ],
+          "sadness": [
+            0.0,
+            0.0
+          ],
+          "surprise": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "changed_predictions": 0,
+      "fixes": 0,
+      "breaks": 0
+    },
+    "audio1_text0": {
+      "metrics": {
+        "accuracy": 0.5439560439560439,
+        "weighted_f1": 0.5201099766647387,
+        "macro_f1": 0.3718982934364063,
+        "per_class": {
+          "anger": {
+            "precision": 0.6,
+            "recall": 0.3825503355704698,
+            "f1": 0.4672131147540984,
+            "support": 149
+          },
+          "disgust": {
+            "precision": 0.058823529411764705,
+            "recall": 0.045454545454545456,
+            "f1": 0.05128205128205128,
+            "support": 22
+          },
+          "fear": {
+            "precision": 0.6,
+            "recall": 0.07692307692307693,
+            "f1": 0.13636363636363635,
+            "support": 39
+          },
+          "joy": {
+            "precision": 0.5585585585585585,
+            "recall": 0.38271604938271603,
+            "f1": 0.4542124542124542,
+            "support": 162
+          },
+          "neutral": {
+            "precision": 0.5798722044728435,
+            "recall": 0.7840172786177105,
+            "f1": 0.6666666666666666,
+            "support": 463
+          },
+          "sadness": {
+            "precision": 0.4,
+            "recall": 0.2727272727272727,
+            "f1": 0.32432432432432434,
+            "support": 110
+          },
+          "surprise": {
+            "precision": 0.4785276073619632,
+            "recall": 0.5306122448979592,
+            "f1": 0.5032258064516129,
+            "support": 147
+          }
+        }
+      },
+      "missing": {
+        "audio": 0,
+        "text": 21,
+        "vision": 5
+      },
+      "delta_vs_baseline": {
+        "weighted_f1": 0.0,
+        "macro_f1": 0.0,
+        "accuracy": 0.0
+      },
+      "per_class_f1_delta": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "guards": {
+        "weighted_f1_improves": false,
+        "macro_f1_not_lower": true,
+        "classes_with_lower_f1": [],
+        "new_zero_f1_classes": []
+      },
+      "conditional_dialogue_bootstrap_delta_95ci": {
+        "weighted_f1": [
+          0.0,
+          0.0
+        ],
+        "macro_f1": [
+          0.0,
+          0.0
+        ],
+        "accuracy": [
+          0.0,
+          0.0
+        ],
+        "per_class_f1": {
+          "anger": [
+            0.0,
+            0.0
+          ],
+          "disgust": [
+            0.0,
+            0.0
+          ],
+          "fear": [
+            0.0,
+            0.0
+          ],
+          "joy": [
+            0.0,
+            0.0
+          ],
+          "neutral": [
+            0.0,
+            0.0
+          ],
+          "sadness": [
+            0.0,
+            0.0
+          ],
+          "surprise": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "changed_predictions": 0,
+      "fixes": 0,
+      "breaks": 0
+    },
+    "audio0_text1": {
+      "metrics": {
+        "accuracy": 0.5476190476190477,
+        "weighted_f1": 0.5321245810794518,
+        "macro_f1": 0.3907278576070792,
+        "per_class": {
+          "anger": {
+            "precision": 0.5038167938931297,
+            "recall": 0.4429530201342282,
+            "f1": 0.4714285714285714,
+            "support": 149
+          },
+          "disgust": {
+            "precision": 0.05555555555555555,
+            "recall": 0.045454545454545456,
+            "f1": 0.05,
+            "support": 22
+          },
+          "fear": {
+            "precision": 0.35,
+            "recall": 0.1794871794871795,
+            "f1": 0.23728813559322035,
+            "support": 39
+          },
+          "joy": {
+            "precision": 0.559322033898305,
+            "recall": 0.4074074074074074,
+            "f1": 0.4714285714285714,
+            "support": 162
+          },
+          "neutral": {
+            "precision": 0.6110154905335629,
+            "recall": 0.7667386609071274,
+            "f1": 0.6800766283524904,
+            "support": 463
+          },
+          "sadness": {
+            "precision": 0.367816091954023,
+            "recall": 0.2909090909090909,
+            "f1": 0.3248730964467005,
+            "support": 110
+          },
+          "surprise": {
+            "precision": 0.5182481751824818,
+            "recall": 0.48299319727891155,
+            "f1": 0.5,
+            "support": 147
+          }
+        }
+      },
+      "missing": {
+        "audio": 0,
+        "text": 21,
+        "vision": 5
+      },
+      "delta_vs_baseline": {
+        "weighted_f1": 0.012014604414713137,
+        "macro_f1": 0.018829564170672886,
+        "accuracy": 0.003663003663003761
+      },
+      "per_class_f1_delta": {
+        "anger": 0.004215456674473039,
+        "disgust": -0.0012820512820512775,
+        "fear": 0.10092449922958399,
+        "joy": 0.01721611721611721,
+        "neutral": 0.013409961685823757,
+        "sadness": 0.0005487721223761399,
+        "surprise": -0.003225806451612856
+      },
+      "guards": {
+        "weighted_f1_improves": true,
+        "macro_f1_not_lower": true,
+        "classes_with_lower_f1": [
+          "disgust",
+          "surprise"
+        ],
+        "new_zero_f1_classes": []
+      },
+      "conditional_dialogue_bootstrap_delta_95ci": {
+        "weighted_f1": [
+          -0.0033944707193703932,
+          0.02845837362590792
+        ],
+        "macro_f1": [
+          -0.013698619858258907,
+          0.05155400259962348
+        ],
+        "accuracy": [
+          -0.010728678914822936,
+          0.018488433366274534
+        ],
+        "per_class_f1": {
+          "anger": [
+            -0.03891934349641008,
+            0.0535628927699637
+          ],
+          "disgust": [
+            -0.1290413625985741,
+            0.13955841638981162
+          ],
+          "fear": [
+            -0.029630346013324725,
+            0.2333417997097242
+          ],
+          "joy": [
+            -0.014278496881884092,
+            0.04895408030751651
+          ],
+          "neutral": [
+            -0.0022334269494900527,
+            0.028286388480557915
+          ],
+          "sadness": [
+            -0.052624337725702644,
+            0.052636280540656936
+          ],
+          "surprise": [
+            -0.04532249186528742,
+            0.04296680313046648
+          ]
+        }
+      },
+      "changed_predictions": 129,
+      "fixes": 41,
+      "breaks": 37
+    },
+    "audio1_text1": {
+      "metrics": {
+        "accuracy": 0.5476190476190477,
+        "weighted_f1": 0.5321245810794518,
+        "macro_f1": 0.3907278576070792,
+        "per_class": {
+          "anger": {
+            "precision": 0.5038167938931297,
+            "recall": 0.4429530201342282,
+            "f1": 0.4714285714285714,
+            "support": 149
+          },
+          "disgust": {
+            "precision": 0.05555555555555555,
+            "recall": 0.045454545454545456,
+            "f1": 0.05,
+            "support": 22
+          },
+          "fear": {
+            "precision": 0.35,
+            "recall": 0.1794871794871795,
+            "f1": 0.23728813559322035,
+            "support": 39
+          },
+          "joy": {
+            "precision": 0.559322033898305,
+            "recall": 0.4074074074074074,
+            "f1": 0.4714285714285714,
+            "support": 162
+          },
+          "neutral": {
+            "precision": 0.6110154905335629,
+            "recall": 0.7667386609071274,
+            "f1": 0.6800766283524904,
+            "support": 463
+          },
+          "sadness": {
+            "precision": 0.367816091954023,
+            "recall": 0.2909090909090909,
+            "f1": 0.3248730964467005,
+            "support": 110
+          },
+          "surprise": {
+            "precision": 0.5182481751824818,
+            "recall": 0.48299319727891155,
+            "f1": 0.5,
+            "support": 147
+          }
+        }
+      },
+      "missing": {
+        "audio": 0,
+        "text": 21,
+        "vision": 5
+      },
+      "delta_vs_baseline": {
+        "weighted_f1": 0.012014604414713137,
+        "macro_f1": 0.018829564170672886,
+        "accuracy": 0.003663003663003761
+      },
+      "per_class_f1_delta": {
+        "anger": 0.004215456674473039,
+        "disgust": -0.0012820512820512775,
+        "fear": 0.10092449922958399,
+        "joy": 0.01721611721611721,
+        "neutral": 0.013409961685823757,
+        "sadness": 0.0005487721223761399,
+        "surprise": -0.003225806451612856
+      },
+      "guards": {
+        "weighted_f1_improves": true,
+        "macro_f1_not_lower": true,
+        "classes_with_lower_f1": [
+          "disgust",
+          "surprise"
+        ],
+        "new_zero_f1_classes": []
+      },
+      "conditional_dialogue_bootstrap_delta_95ci": {
+        "weighted_f1": [
+          -0.0033944707193703932,
+          0.02845837362590792
+        ],
+        "macro_f1": [
+          -0.013698619858258907,
+          0.05155400259962348
+        ],
+        "accuracy": [
+          -0.010728678914822936,
+          0.018488433366274534
+        ],
+        "per_class_f1": {
+          "anger": [
+            -0.03891934349641008,
+            0.0535628927699637
+          ],
+          "disgust": [
+            -0.1290413625985741,
+            0.13955841638981162
+          ],
+          "fear": [
+            -0.029630346013324725,
+            0.2333417997097242
+          ],
+          "joy": [
+            -0.014278496881884092,
+            0.04895408030751651
+          ],
+          "neutral": [
+            -0.0022334269494900527,
+            0.028286388480557915
+          ],
+          "sadness": [
+            -0.052624337725702644,
+            0.052636280540656936
+          ],
+          "surprise": [
+            -0.04532249186528742,
+            0.04296680313046648
+          ]
+        }
+      },
+      "changed_predictions": 129,
+      "fixes": 41,
+      "breaks": 37
+    }
+  },
+  "recommended_recipe": "audio0_text1",
+  "selection_rule": "highest fixed-weight dev weighted F1 with macro F1 >= audio0_text0; ties preserve earlier recipe",
+  "method": {
+    "weights": "unchanged live per-availability subset lookup",
+    "bootstrap_replicates": 2000,
+    "bootstrap_unit": "paired dialogue clusters",
+    "seed": 0,
+    "test_split_read": false,
+    "runtime_modified": false,
+    "recipe_locked_for_test": false
+  },
+  "caveat": "Checkpoint/fusion selection and this recipe comparison use dev. Bootstrap intervals are conditional, not selection-adjusted or held-out gains. Scores use labelled clips rather than end-to-end streaming VAD.",
+  "same_dev_transcripts_verified": true,
+  "sources": {
+    "manifest": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/data/meld/dev.csv",
+      "sha256": "19ce904169b4ae6f160b98864c35de223742a7abb2eea46f8c9a815120f3ce1f"
+    },
+    "baseline_audio": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/runtime_dev/dev_runtime_audio_predictions.csv",
+      "sha256": "c4002ae279e9ea88a2e31cd227a5fc5619daa5446a0cc54e7905a9dba5e7e5ab"
+    },
+    "candidate_audio": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/runtime_dev/dev_runtime_audio_predictions.csv",
+      "sha256": "c4002ae279e9ea88a2e31cd227a5fc5619daa5446a0cc54e7905a9dba5e7e5ab"
+    },
+    "baseline_text": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/retraining_20261023/text_baseline_cpu/text_dev_whisper_predictions.csv",
+      "sha256": "6e93b399cd945e6d77e07ff9cfc9acb90b2030350ded1581c5646b9c20a348d4"
+    },
+    "candidate_text": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_asr_mixed_20261023/results/text_dev_whisper_predictions.csv",
+      "sha256": "b18fe3e3b7bde4d2c8d1ca16b554c45184fada2158f97c2f7ffda2b55465086d"
+    },
+    "vision": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/data/meld/vision_dev.csv",
+      "sha256": "42b1e3df1a1b8374549290c165eb331bb311d87ad71c82eac980bb3cabb68bd7"
+    },
+    "original_weights": {
+      "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/fusion_weights.json",
+      "sha256": "10339e91487ba6ea8e7e432a428b7aa51d7c34af22598454b4389d486237ec4e"
+    }
+  }
+}

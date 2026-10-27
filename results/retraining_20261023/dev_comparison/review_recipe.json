@@ -1,0 +1,22 @@
+{
+  "recipe": "audio0_text1",
+  "audio": {
+    "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/runtime_dev/dev_runtime_audio_predictions.csv",
+    "sha256": "c4002ae279e9ea88a2e31cd227a5fc5619daa5446a0cc54e7905a9dba5e7e5ab"
+  },
+  "text": {
+    "path": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_asr_mixed_20261023/results/text_dev_whisper_predictions.csv",
+    "sha256": "b18fe3e3b7bde4d2c8d1ca16b554c45184fada2158f97c2f7ffda2b55465086d"
+  },
+  "vision": {
+    "path": "/Users/artemtrefilov/Desktop/audio-cnn/data/meld/vision_dev.csv",
+    "sha256": "42b1e3df1a1b8374549290c165eb331bb311d87ad71c82eac980bb3cabb68bd7"
+  },
+  "weights": {
+    "path": "/Users/artemtrefilov/Desktop/audio-cnn/results/retraining_20261023/dev_comparison/review_fusion_weights.json",
+    "sha256": "534c6093dd50c4d5c4926f961c5b7a8bc7814fce774beee6370b1353e20d9489"
+  },
+  "runtime_modified": false,
+  "locked_for_test": false,
+  "scope": "development recommendation for review only"
+}

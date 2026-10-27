@@ -1,0 +1,738 @@
+{
+  "hardware": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.12.15",
+    "macos": "26.6.2",
+    "cpu": null,
+    "ram_gb": 48.0,
+    "cpu_cores": 18,
+    "inference_backend": "cpu",
+    "torch": "2.14.1",
+    "mps_available": null,
+    "mlx": "0.32.4"
+  },
+  "n_clips_requested": 35,
+  "n_clips": 35,
+  "n_utterances": 36,
+  "speed": 1.0,
+  "end_of_turn_silence_ms": 500,
+  "model_load_s_total": 8.0,
+  "model_load_s": {
+    "vad": 0.03,
+    "prosody": 0.51,
+    "emotion_cnn": 0.11,
+    "asr": 0.83,
+    "text_emotion": 0.19,
+    "vision": 0.84,
+    "llm": 5.44
+  },
+  "peak_rss_gb": 14.64,
+  "rss_after_load_gb": 11.36,
+  "mlx_peak_gb": null,
+  "torch_mps_driver_gb": null,
+  "backend": "cpu",
+  "cpu_threads": 4,
+  "avg_process_cpu_percent": 95.7,
+  "wall_s": 230.7,
+  "latency_ms": {
+    "partial_emotion_ms": {
+      "p50": 14.9,
+      "p95": 17.7
+    },
+    "face_frame_ms": {
+      "p50": 11.9,
+      "p95": 12.8
+    },
+    "final_emotion_ms": {
+      "p50": 17.9,
+      "p95": 24.3
+    },
+    "asr_ms": {
+      "p50": 465.9,
+      "p95": 574.3
+    },
+    "text_emotion_ms": {
+      "p50": 5.4,
+      "p95": 5.8
+    },
+    "eos_to_state_ms": {
+      "p50": 483.2,
+      "p95": 822.6
+    },
+    "eos_to_first_token_ms": {
+      "p50": 1461.0,
+      "p95": 2447.7
+    },
+    "eos_to_last_token_ms": {
+      "p50": 3403.4,
+      "p95": 4816.8
+    },
+    "tokens_per_s": {
+      "p50": 6.2,
+      "p95": 6.8
+    }
+  },
+  "engine": {
+    "backend": "cpu",
+    "cpu_threads": 4,
+    "backend_provenance": {
+      "asr": {
+        "backend": "torch-cpu-whisper-small-mlx-weights-greedy-no-timestamps-v1",
+        "source_repo": "mlx-community/whisper-small-mlx",
+        "source_revision": "45f3915923c7a79a5a5b5a7d909d39aeb0e5630e",
+        "source_weights_sha256": "55b6674c9b339702d486e2b1573839a66f8ec8f821ed2886993ef717a86b09f5",
+        "source_tensors": 478,
+        "source_tensor_elements": 240582912,
+        "source_auxiliary_not_learned": {
+          "alignment_heads": {
+            "shape": [
+              10,
+              2
+            ],
+            "elements": 20,
+            "values": [
+              [
+                5,
+                3
+              ],
+              [
+                5,
+                9
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                4
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                9,
+                7
+              ],
+              [
+                9,
+                9
+              ],
+              [
+                10,
+                5
+              ]
+            ]
+          }
+        },
+        "hf_state_tensors": 480,
+        "all_source_shapes_verified": true,
+        "all_source_values_roundtrip_verified": true,
+        "regenerated_fixed_sinusoid_elements": 1152000,
+        "hf_unique_parameter_elements": 241734912,
+        "output_projection_tied": true,
+        "device": "cpu",
+        "dtype": "float32",
+        "torch_version": "2.14.1",
+        "transformers_version": "5.20.2",
+        "decode_profile": "English greedy, no timestamps, no previous text, no segment silence filter",
+        "max_new_tokens": 224,
+        "threads": 4,
+        "mlx_numerical_parity_verified": false
+      },
+      "llm": {
+        "source_directory": "/Users/artemtrefilov/.cache/huggingface/hub/models--mlx-community--Qwen2.5-3B-Instruct-4bit/snapshots/4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "snapshot_revision": "4f83f8f146fdf28b512a06562b671d7af4fab457",
+        "source_config_sha256": "ceb97c46fe17f523ac42c0f0254fd18d9589f8725f0bbbe0bef541f8ef84547a",
+        "source_weights_bytes": 1736293090,
+        "logical_parameters": 3085938688,
+        "float32_parameter_bytes": 12343754752,
+        "estimated_peak_rss_bytes": 16603839202,
+        "rss_cap_bytes": 20000000000,
+        "stored_tensors": 940,
+        "quantized_weights": 253,
+        "learned_tensor_mapping": 434,
+        "all_shapes_match": true,
+        "tied_head": "lm_head.weight aliases model.embed_tokens.weight; no duplicate learned matrix",
+        "formula": "q_i=(uint32 >> (4*i))&15, low nibble first; w=scale*q+bias in groups of64",
+        "backend_parity": "Same cached quantized learned values. GPU/MLX numerical or output parity has not been measured.",
+        "dtype": "float32",
+        "threads": 4,
+        "offline": true,
+        "backend": "torch_cpu_fp32_from_mlx_affine4bit",
+        "source_repo": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+        "max_context_tokens": 2048,
+        "extra_requantization": false,
+        "runtime_quantization": {
+          "mode": "fp32_from_mlx_affine4bit",
+          "extra_requantization": false
+        },
+        "load_s": 4.8421939999680035,
+        "load_peak_rss_bytes": 15799697408,
+        "rss_after_load_bytes": 13982466048,
+        "actual_unique_parameters": 3085938688,
+        "source_weights_sha256": "f212cf6fb9923281a09c135e05d43a052ee5ef7121f5b1dc0b0fb2de80f97cfd"
+      }
+    },
+    "emotion_checkpoint": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/emotion_cnn.pt",
+    "emotion_meta": {
+      "run": "wce_sqrt_mixup",
+      "epoch": 31,
+      "dev_metrics": {
+        "loss": 1.6109403924665588,
+        "accuracy": 0.4432234432234432,
+        "weighted_f1": 0.4098088722715167,
+        "macro_f1": 0.25352887434053767
+      },
+      "device": "cpu",
+      "pooling_mode": "legacy"
+    },
+    "asr": "mlx-community/whisper-small-mlx",
+    "llm": "mlx-community/Qwen2.5-3B-Instruct-4bit",
+    "text_model": "/Users/artemtrefilov/Desktop/audio-cnn/checkpoints/text_emotion",
+    "vision_model": "hsemotion-onnx:enet_b0_8_best_vgaf + YuNet-2023mar",
+    "fusion_weights": {
+      "audio": 1.0,
+      "text": 0.9,
+      "vision": 0.3
+    },
+    "fusion_tuned_on_dev": true,
+    "errors": {},
+    "load_times_s": {
+      "vad": 0.03,
+      "prosody": 0.51,
+      "emotion_cnn": 0.11,
+      "asr": 0.83,
+      "text_emotion": 0.19,
+      "vision": 0.84,
+      "llm": 5.44
+    },
+    "active_modalities": {
+      "audio": true,
+      "text": true,
+      "vision": true
+    },
+    "response_mode": "llm",
+    "multimodal_ready": true
+  },
+  "mode": "multimodal",
+  "measurement_definition": {
+    "transport": "in-process Session; excludes WebSocket, network and browser capture overhead",
+    "latency_origin": "VAD-declared end of speech; excludes the configured end-silence wait",
+    "population": "latencies cover detected utterances; clip_outcomes also includes misses and failures",
+    "sampling": "round-robin by emotion from usable 1.5-8 s test clips, up to the requested count",
+    "resources": "RSS, MLX peak and MPS driver allocations can overlap in unified memory; do not add them",
+    "cpu": "process CPU percentage; 100% means one fully occupied CPU core",
+    "token_count_source": "visible_stream_deltas; tokens/tokens_per_s retain legacy field names and are not tokenizer counts",
+    "auxiliary_latency": "partial/face timings summarize per-utterance/per-clip mean compute respectively"
+  },
+  "clip_outcomes": [
+    {
+      "clip": "dia206_utt4",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 10,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia170_utt4",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 20,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia119_utt5",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 12,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia46_utt4",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 14,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia93_utt8",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 13,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia199_utt13",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 27,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia49_utt12",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 14,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia259_utt13",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 9,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia170_utt3",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 14,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia113_utt4",
+      "status": "no_speech",
+      "speech_detected": false,
+      "n_utterances": 0,
+      "n_accepted_turns": 0,
+      "n_completed_replies": 0,
+      "reply_complete": false,
+      "errors": [],
+      "n_all_modalities": 0,
+      "frames_sent": 9,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia171_utt7",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 23,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia221_utt3",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 3,
+      "n_accepted_turns": 3,
+      "n_completed_replies": 3,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 3,
+      "frames_sent": 28,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia207_utt0",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 2,
+      "n_accepted_turns": 2,
+      "n_completed_replies": 2,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 2,
+      "frames_sent": 33,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia190_utt0",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 10,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia196_utt12",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 17,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia205_utt5",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 11,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia133_utt15",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 9,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia72_utt1",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 17,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia89_utt1",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 15,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia277_utt0",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 2,
+      "n_accepted_turns": 2,
+      "n_completed_replies": 2,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 2,
+      "frames_sent": 13,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia266_utt12",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 24,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia112_utt7",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 16,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia123_utt13",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 19,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia17_utt16",
+      "status": "no_speech",
+      "speech_detected": false,
+      "n_utterances": 0,
+      "n_accepted_turns": 0,
+      "n_completed_replies": 0,
+      "reply_complete": false,
+      "errors": [],
+      "n_all_modalities": 0,
+      "frames_sent": 14,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia198_utt6",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 8,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia133_utt9",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 8,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia102_utt5",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 15,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia169_utt11",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 12,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia174_utt13",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 8,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia70_utt9",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 20,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia60_utt0",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 24,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia180_utt6",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 9,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia74_utt2",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 8,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia107_utt3",
+      "status": "complete",
+      "speech_detected": true,
+      "n_utterances": 1,
+      "n_accepted_turns": 1,
+      "n_completed_replies": 1,
+      "reply_complete": true,
+      "errors": [],
+      "n_all_modalities": 1,
+      "frames_sent": 14,
+      "frames_dropped": 0,
+      "timed_out": false
+    },
+    {
+      "clip": "dia98_utt2",
+      "status": "no_speech",
+      "speech_detected": false,
+      "n_utterances": 0,
+      "n_accepted_turns": 0,
+      "n_completed_replies": 0,
+      "reply_complete": false,
+      "errors": [],
+      "n_all_modalities": 0,
+      "frames_sent": 10,
+      "frames_dropped": 0,
+      "timed_out": false
+    }
+  ],
+  "n_clips_no_speech": 3,
+  "n_clips_with_errors": 0,
+  "n_clips_reply_complete": 32,
+  "n_utterances_all_modalities": 36,
+  "n_clips_all_modalities": 32,
+  "frames_sent_total": 527,
+  "frames_dropped_total": 0
+}
