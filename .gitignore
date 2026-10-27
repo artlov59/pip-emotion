@@ -13,4 +13,5 @@ checkpoints/*
 # the final model (~85 MB) is committed so the demo runs without retraining
 !checkpoints/emotion_cnn.pt
 runs/
+dist/
 results/traces/
