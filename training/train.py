@@ -28,6 +28,9 @@ from model import AudioCNN, count_parameters
 from training.dataset import MeldMelDataset, collate
 
 
+# Purpose: Select an explicit Torch device or the available auto backend.
+# Input: name: device string, including auto.
+# Output: torch.device, preferring MPS then CUDA then CPU in auto mode.
 def pick_device(name: str) -> torch.device:
     if name != "auto":
         return torch.device(name)
@@ -38,6 +41,9 @@ def pick_device(name: str) -> torch.device:
     return torch.device("cpu")
 
 
+# Purpose: Build class-frequency loss weights for seven emotions.
+# Input: labels: training label indices; mode: supported weighting rule.
+# Output: Float32 tensor of per-class weights.
 def class_weights(labels, mode: str) -> torch.Tensor:
     counts = np.maximum(np.bincount(labels, minlength=len(EMOTIONS)), 1).astype(np.float64)
     if mode == "none":
@@ -52,12 +58,25 @@ def class_weights(labels, mode: str) -> torch.Tensor:
     return torch.tensor(w, dtype=torch.float32)
 
 
-def mixup(x, y, alpha=0.2):
+# Purpose: Mix padded clips and retain the temporal extent of contributing donors.
+# Input: x: batched features; lengths: valid time counts; y: labels; alpha: beta-distribution parameter.
+# Output: Tuple (mixed_x, mixed_lengths, original_y, permuted_y, lambda).
+def mixup(x, lengths, y, alpha=0.2):
+    """Mix padded clips and keep every temporal cell contributed by either clip."""
     lam = float(np.random.beta(alpha, alpha))
     idx = torch.randperm(x.size(0), device=x.device)
-    return lam * x + (1 - lam) * x[idx], y, y[idx], lam
+    if lam == 1.0:
+        mixed_lengths = lengths
+    elif lam == 0.0:
+        mixed_lengths = lengths[idx]
+    else:
+        mixed_lengths = torch.maximum(lengths, lengths[idx])
+    return lam * x + (1 - lam) * x[idx], mixed_lengths, y, y[idx], lam
 
 
+# Purpose: Measure classifier quality over a loader without updating weights.
+# Input: model: AudioCNN; loader: batches; device: Torch device; criterion: optional loss.
+# Output: Dict with loss or None, accuracy, weighted F1, and macro F1.
 @torch.no_grad()
 def evaluate(model, loader, device, criterion=None):
     model.eval()
@@ -78,6 +97,9 @@ def evaluate(model, loader, device, criterion=None):
     }
 
 
+# Purpose: Train an audio CNN and select its checkpoint using development scores.
+# Input: None explicitly; reads CLI model/training/device/output settings.
+# Output: None; writes checkpoints, history, and configured evaluation artifacts.
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-name", default=None)
@@ -113,7 +135,7 @@ def main():
     train_dl = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, collate_fn=collate, drop_last=True)
     dev_dl = DataLoader(dev_ds, batch_size=16, shuffle=False, collate_fn=collate)
 
-    model = AudioCNN(num_classes=len(EMOTIONS), dropout=args.dropout).to(device)
+    model = AudioCNN(num_classes=len(EMOTIONS), dropout=args.dropout, pooling_mode="exact").to(device)
     weights = class_weights(train_ds.labels, args.class_weighting)
     criterion = nn.CrossEntropyLoss(weight=weights.to(device), label_smoothing=args.label_smoothing)
     dev_criterion = nn.CrossEntropyLoss()  # unweighted, comparable across runs
@@ -131,7 +153,7 @@ def main():
         for x, lengths, y in tqdm(train_dl, desc=f"epoch {epoch + 1}/{args.epochs}", leave=False):
             x, lengths, y = x.to(device), lengths.to(device), y.to(device)
             if args.mixup_prob > 0 and random.random() < args.mixup_prob:
-                x, ya, yb, lam = mixup(x, y)
+                x, lengths, ya, yb, lam = mixup(x, lengths, y)
                 logits = model(x, lengths)
                 loss = lam * criterion(logits, ya) + (1 - lam) * criterion(logits, yb)
             else:
@@ -163,6 +185,7 @@ def main():
                 "model_state_dict": model.state_dict(),
                 "classes": EMOTIONS,
                 "feature_config": FEATURE_CONFIG,
+                "pooling_mode": model.pooling_mode,
                 "epoch": epoch + 1,
                 "dev_metrics": dev,
                 "args": vars(args),

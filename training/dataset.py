@@ -14,6 +14,10 @@ MIN_FRAMES = 32  # 0.32 s; shorter clips are zero-padded so the CNN has somethin
 
 
 class MeldMelDataset(Dataset):
+    # Purpose: Load a prepared split and configure spectrogram cropping/augmentation.
+    # Input: split: MELD split; train: training flag; max_frames: mel time limit; spec_augment: masking
+    #          flag.
+    # Output: None; stores usable clip IDs, labels, and preprocessing settings.
     def __init__(self, split: str, train: bool, max_frames: int = 400, spec_augment: bool = True):
         df = pd.read_csv(MELD_DIR / f"{split}.csv")
         df = df[df["status"] == "ok"].reset_index(drop=True)
@@ -27,9 +31,15 @@ class MeldMelDataset(Dataset):
         self.max_frames = max_frames
         self.spec_augment = spec_augment and train
 
+    # Purpose: Report the number of usable examples in this split.
+    # Input: None explicitly; reads stored clip IDs.
+    # Output: Integer dataset size.
     def __len__(self):
         return len(self.ids)
 
+    # Purpose: Load one cached mel, crop it, normalize it, and optionally mask it.
+    # Input: idx: dataset row index.
+    # Output: Tuple (mel_tensor, integer_label); the mel tensor has shape (n_mels, T).
     def __getitem__(self, idx):
         mel = self.mels[self.ids[idx]].astype(np.float32)
         t = mel.shape[1]
@@ -42,6 +52,9 @@ class MeldMelDataset(Dataset):
         return torch.from_numpy(mel), self.labels[idx]
 
 
+# Purpose: Apply random frequency/time masking to a spectrogram.
+# Input: mel: mel array; n_freq/n_time: mask counts; max_f/max_t: maximum mask widths.
+# Output: Masked mel array.
 def spec_augment(mel: np.ndarray, n_freq=2, max_f=8, n_time=2, max_t=40) -> np.ndarray:
     mel = mel.copy()
     n_mels, t = mel.shape
@@ -57,6 +70,9 @@ def spec_augment(mel: np.ndarray, n_freq=2, max_f=8, n_time=2, max_t=40) -> np.n
     return mel
 
 
+# Purpose: Pad variable-length mel examples into one training batch.
+# Input: batch: sequence of (mel_tensor, label) pairs.
+# Output: Tuple (x, lengths, labels): padded (B, 1, n_mels, T), valid frame counts (B,), and labels (B,).
 def collate(batch):
     """Zero-pad to the longest clip in the batch; return (x, lengths, labels)."""
     mels, labels = zip(*batch)

@@ -41,6 +41,9 @@ MOJIBAKE = {"â€™": "'", "â€˜": "'", "â€œ": '"',
             "\ufffd": "'"}
 
 
+# Purpose: Repair MELD text encoding artifacts and normalize whitespace.
+# Input: s: utterance string.
+# Output: Cleaned text with collapsed whitespace.
 def clean_text(s: str) -> str:
     s = str(s)
     for bad, good in MOJIBAKE.items():
@@ -48,12 +51,18 @@ def clean_text(s: str) -> str:
     return " ".join(s.split())
 
 
+# Purpose: Unpack an existing tar archive into a destination directory.
+# Input: archive: tar Path; dest: extraction directory Path.
+# Output: None; extracts archive contents.
 def extract(archive: Path, dest: Path):
     print(f"Extracting {archive.name} -> {dest} (this can take several minutes)", flush=True)
     dest.mkdir(parents=True, exist_ok=True)
     subprocess.run(["tar", "-xzf", str(archive), "-C", str(dest)], check=True)
 
 
+# Purpose: Find MELD.Raw, extracting outer and split archives when necessary.
+# Input: raw: directory containing downloaded MELD archives or extracted files.
+# Output: MELD.Raw directory Path; may create extracted dataset files.
 def find_raw_root(raw: Path) -> Path:
     """Return the MELD.Raw folder, extracting the outer and inner archives as needed.
 
@@ -77,11 +86,17 @@ def find_raw_root(raw: Path) -> Path:
     return root
 
 
+# Purpose: Find the source utterance-label CSV for a dataset split.
+# Input: root: extracted MELD root; split: train/dev/test.
+# Output: Matching CSV Path, or None.
 def find_csv(root: Path, split: str):
     hits = sorted(p for p in root.rglob(CSV_NAMES[split]) if not p.name.startswith("._"))
     return hits[0] if hits else None
 
 
+# Purpose: Find the extracted clip directory for a MELD split.
+# Input: root: extracted MELD root; split: train/dev/test.
+# Output: Video directory Path, or None.
 def find_video_dir(root: Path, split: str):
     for name in VIDEO_DIRS[split]:
         for d in root.rglob(name):
@@ -94,6 +109,9 @@ def find_video_dir(root: Path, split: str):
     return None
 
 
+# Purpose: Convert a source clip into a mono 16-kHz WAV.
+# Input: src: input video Path; dst: output WAV Path.
+# Output: Status string: ok, missing_video, or ffmpeg_failed; writes WAV when conversion succeeds.
 def convert(src: Path, dst: Path) -> str:
     if dst.exists() and dst.stat().st_size > 1000:
         return "ok"
@@ -111,6 +129,9 @@ def convert(src: Path, dst: Path) -> str:
     return "ok"
 
 
+# Purpose: Prepare MELD audio, manifests, and cached log-mel features.
+# Input: None explicitly; reads CLI raw-data, split, and worker options.
+# Output: None; writes dataset artifacts and preparation statistics.
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--raw", default=str(DATA_DIR / "MELD.Raw.tar.gz"),
