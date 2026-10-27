@@ -31,6 +31,17 @@ from app.protocol import handle_message
 STATIC = ROOT / "app" / "static"
 engine: Engine = None
 _video_dirs = {}
+_browser_url = None  # set by main(); printed once the models are loaded
+
+
+# Purpose: Build the address to open in a browser for the configured host and port.
+# Input: host: bind address from --host; port: bind port from --port.
+# Output: http URL; wildcard binds (0.0.0.0, ::) are shown as 127.0.0.1.
+def browser_url(host: str, port: int) -> str:
+    shown = "127.0.0.1" if host in ("", "0.0.0.0", "::") else host
+    if ":" in shown:  # bare IPv6 literal
+        shown = f"[{shown}]"
+    return f"http://{shown}:{port}"
 
 
 # Purpose: Locate a prepared MELD clip's original video.
@@ -62,7 +73,8 @@ async def lifespan(_app):
                 "Required multimodal mode needs audio, text, vision and the local LLM. "
                 f"Model errors: {engine.errors}. See README model setup instructions."
             )
-        print("[server] ready", flush=True)
+        print(f"[server] ready: open {_browser_url} in your browser" if _browser_url else "[server] ready",
+              flush=True)
         yield
     finally:
         engine.close()
@@ -175,7 +187,7 @@ async def ws_endpoint(ws: WebSocket):
 # Input: None explicitly; reads CLI host/port/backend/model/readiness options.
 # Output: None; starts Uvicorn using the requested settings.
 def main():
-    global engine
+    global engine, _browser_url
     ap = argparse.ArgumentParser()
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
@@ -200,6 +212,7 @@ def main():
     if args.require_multimodal:
         settings.require_multimodal = True
     engine = create_engine(settings, args.backend, args.cpu_threads)
+    _browser_url = browser_url(args.host, args.port)
 
     import uvicorn
     uvicorn.run(app, host=args.host, port=args.port, log_level="warning", ws_max_size=2 ** 22)

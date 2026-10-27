@@ -73,5 +73,15 @@ class ServerLifecycleTests(unittest.IsolatedAsyncioTestCase):
         self.assertTrue(engine.closed)
 
 
+class BrowserUrl(unittest.TestCase):
+    # Purpose: Verify the startup message shows an address a browser can open.
+    # Input: None explicitly.
+    # Output: None; raises an assertion if the URL format regresses.
+    def test_browser_url(self):
+        self.assertEqual(server.browser_url("127.0.0.1", 8000), "http://127.0.0.1:8000")
+        self.assertEqual(server.browser_url("0.0.0.0", 8080), "http://127.0.0.1:8080")
+        self.assertEqual(server.browser_url("::1", 9000), "http://[::1]:9000")
+
+
 if __name__ == "__main__":
     unittest.main()
