@@ -24,6 +24,9 @@ RESULTS_DIR = ROOT / "results"
 CHECKPOINT_DIR = ROOT / "checkpoints"
 
 
+# Purpose: Read an environment setting with a fallback.
+# Input: name: environment variable name; default: value used when absent.
+# Output: Environment value, or default.
 def _env(name, default):
     return os.environ.get(name, default)
 
@@ -36,6 +39,15 @@ class Settings:
     llm_repo: str = _env("LLM_REPO", "mlx-community/Qwen2.5-3B-Instruct-4bit")
     torch_device: str = _env("TORCH_DEVICE", "auto")      # auto | mps | cpu
     use_llm: bool = _env("USE_LLM", "1") == "1"          # 0 -> template replies (debug only)
+    # multimodal extension (each degrades gracefully: missing model -> that modality is skipped)
+    text_model_dir: Path = field(default_factory=lambda: Path(_env("TEXT_MODEL_DIR", str(CHECKPOINT_DIR / "text_emotion"))))
+    use_text: bool = _env("USE_TEXT", "1") == "1"
+    use_vision: bool = _env("USE_VISION", "1") == "1"
+    face_model: str = _env("FACE_MODEL", "enet_b0_8_best_vgaf")
+    face_history_s: float = 60.0        # keep this much face history per session
+
+    # Submission/demo mode: fail startup instead of silently dropping required models.
+    require_multimodal: bool = _env("REQUIRE_MULTIMODAL", "0") == "1"
 
     # streaming / turn-taking (see README "Definition of real-time")
     chunk_ms: int = 100                 # client sends 100 ms PCM chunks

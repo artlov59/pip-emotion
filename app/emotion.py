@@ -9,6 +9,9 @@ from app.features import log_mel, normalize
 
 
 class EmotionClassifier:
+    # Purpose: Configure the audio emotion classifier without loading weights.
+    # Input: checkpoint: AudioCNN checkpoint Path; device: auto or explicit Torch device.
+    # Output: None; stores the checkpoint and device preference.
     def __init__(self, checkpoint: Path, device: str = "auto"):
         self.checkpoint = Path(checkpoint)
         self.device_name = device
@@ -16,6 +19,9 @@ class EmotionClassifier:
         self.classes = EMOTIONS
         self.meta = {}
 
+    # Purpose: Validate checkpoint metadata and load the audio CNN for inference.
+    # Input: None explicitly; uses the configured checkpoint and device.
+    # Output: None; initializes the evaluated model, label order, and checkpoint metadata.
     def load(self):
         import torch
 
@@ -28,22 +34,25 @@ class EmotionClassifier:
         ckpt = torch.load(self.checkpoint, map_location="cpu", weights_only=True)
         if ckpt.get("feature_config") != FEATURE_CONFIG:
             raise ValueError(f"Checkpoint features {ckpt.get('feature_config')} != runtime {FEATURE_CONFIG}")
+        if ckpt.get("classes") != EMOTIONS:
+            raise ValueError(f"Checkpoint classes {ckpt.get('classes')} != runtime MELD label order {EMOTIONS}")
         if self.device_name == "auto":
             self.device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
         else:
             self.device = torch.device(self.device_name)
         self.classes = ckpt["classes"]
-        self.model = AudioCNN(num_classes=len(self.classes))
+        self.model = AudioCNN(num_classes=len(self.classes), pooling_mode=ckpt.get("pooling_mode", "legacy"))
         self.model.load_state_dict(ckpt["model_state_dict"])
         self.model.to(self.device).eval()
         self.meta = {"run": ckpt.get("run"), "epoch": ckpt.get("epoch"), "dev_metrics": ckpt.get("dev_metrics"),
-                     "device": str(self.device)}
+                     "device": str(self.device), "pooling_mode": self.model.pooling_mode}
         self._torch = torch
         self.predict(np.zeros(16000, dtype=np.float32))  # warm-up (first MPS call is slow)
 
-    def num_parameters(self) -> int:
-        return sum(p.numel() for p in self.model.parameters())
 
+    # Purpose: Classify vocal emotion from an audio segment.
+    # Input: wav: mono 16-kHz NumPy waveform; call load() first.
+    # Output: Dict containing emotion, confidence, seven class probabilities, and processing ms.
     def predict(self, wav: np.ndarray) -> dict:
         t0 = time.perf_counter()
         mel = normalize(log_mel(wav))

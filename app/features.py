@@ -9,6 +9,9 @@ import soundfile as sf
 from app.config import FMAX, FMIN, HOP, N_FFT, N_MELS, SAMPLE_RATE
 
 
+# Purpose: Decode an audio/video file, downmix to mono, and resample.
+# Input: path: input file; sr: target sample rate in Hz, default 16000.
+# Output: One-dimensional float32 NumPy waveform; falls back to ffmpeg when needed.
 def load_audio(path, sr: int = SAMPLE_RATE) -> np.ndarray:
     """Load any audio/video file as mono float32 at `sr` Hz."""
     path = Path(path)
@@ -25,6 +28,9 @@ def load_audio(path, sr: int = SAMPLE_RATE) -> np.ndarray:
     return np.frombuffer(out, dtype=np.float32).copy()
 
 
+# Purpose: Compute the CNN's natural-log mel power features.
+# Input: wav: mono waveform at SAMPLE_RATE (16 kHz).
+# Output: Float32 array shaped (n_mels, T), at 100 frames per second.
 def log_mel(wav: np.ndarray) -> np.ndarray:
     """(n_mels, T) natural-log mel power spectrogram, float32. 100 frames per second."""
     if wav.size < N_FFT:
@@ -35,6 +41,9 @@ def log_mel(wav: np.ndarray) -> np.ndarray:
     return np.log(mel + 1e-6).astype(np.float32)
 
 
+# Purpose: Remove a clip's overall gain from its log-mel features.
+# Input: mel: NumPy log-mel array.
+# Output: Float32 features with approximately zero mean and unit variance.
 def normalize(mel: np.ndarray) -> np.ndarray:
     """Per-utterance normalisation (zero mean, unit variance over the whole clip).
 

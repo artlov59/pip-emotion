@@ -12,6 +12,9 @@ import numpy as np
 class SileroVAD:
     FRAME = 512  # samples at 16 kHz (the frame size Silero expects at this rate)
 
+    # Purpose: Load the packaged Silero speech detector and initialize its state.
+    # Input: None.
+    # Output: None; prepares the Torch VAD model used for one conversation.
     def __init__(self):
         import torch
         from silero_vad import load_silero_vad
@@ -21,24 +24,15 @@ class SileroVAD:
             warnings.simplefilter("ignore", FutureWarning)
             self.model = load_silero_vad()  # TorchScript, CPU; one instance per session (it is stateful)
 
+    # Purpose: Estimate speech probability for one Silero frame.
+    # Input: frame: 512 mono float samples at 16 kHz.
+    # Output: Float speech probability; advances the detector's recurrent state.
     def prob(self, frame: np.ndarray) -> float:
         with self._torch.no_grad():
             return float(self.model(self._torch.from_numpy(frame.astype(np.float32)), 16000))
 
+    # Purpose: Clear the detector's recurrent speech history.
+    # Input: None explicitly; uses the instance model.
+    # Output: None; resets model state for a new detection sequence.
     def reset(self):
         self.model.reset_states()
-
-
-class EnergyVAD:
-    """Dependency-free stand-in used by tests (not for real use)."""
-    FRAME = 512
-
-    def __init__(self, threshold_dbfs: float = -40.0):
-        self.threshold = threshold_dbfs
-
-    def prob(self, frame: np.ndarray) -> float:
-        db = 20 * np.log10(np.sqrt(np.mean(frame ** 2)) + 1e-9)
-        return 1.0 if db > self.threshold else 0.0
-
-    def reset(self):
-        pass

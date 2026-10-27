@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pip · Audio Emotion</title>
+  <title>Pip · Multimodal Emotion</title>
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
       <div class="logo" aria-hidden="true">◉</div>
       <div>
         <h1>Pip</h1>
-        <p class="sub">Real-time audio emotion → structured state + spoken-style reply · all local</p>
+        <p class="sub">Real-time voice + words + face → structured emotion state + reply · all local</p>
       </div>
     </div>
     <div class="conn"><span id="connDot" class="dot"></span><span id="connText">connecting…</span></div>
@@ -20,6 +20,7 @@
 
   <section class="controls">
     <button id="micBtn" class="primary">● Start microphone</button>
+    <button id="camBtn">◎ Start camera</button>
     <div class="group">
       <select id="clipSelect" aria-label="MELD test clip"><option value="">MELD test clip…</option></select>
       <button id="clipBtn">▶ Stream clip</button>
@@ -30,13 +31,23 @@
 
   <main>
     <section class="live card">
+      <div class="media" id="media">
+        <video id="mediaVideo" playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div id="mediaHint" class="media-hint">camera off</div>
+      </div>
       <div class="live-head">
-        <h2>Now hearing</h2>
+        <h2>Now</h2>
         <span id="vadBadge" class="badge idle">silence</span>
       </div>
       <div id="liveEmotion" class="live-emotion">—</div>
-      <div id="liveMeta" class="meta">Speak, or stream a clip. Provisional updates appear every 0.5 s while someone is talking; the final tag lands ~0.5 s after they stop.</div>
+      <div id="liveMeta" class="meta">Speak (and optionally turn on the camera), or stream a MELD clip.</div>
       <div id="bars" class="bars"></div>
+      <div class="mods" id="mods">
+        <div class="mod"><span class="mod-name">voice</span><span class="mod-val" id="mod-voice">–</span></div>
+        <div class="mod"><span class="mod-name">words</span><span class="mod-val" id="mod-words">–</span></div>
+        <div class="mod"><span class="mod-name">face</span><span class="mod-val" id="mod-face">–</span></div>
+      </div>
       <details class="engine">
         <summary>Engine</summary>
         <pre id="engineInfo">…</pre>

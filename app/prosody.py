@@ -13,6 +13,10 @@ SR = 16000
 HOP = 160
 
 
+# Purpose: Measure acoustic delivery without classifying emotion.
+# Input: wav: mono 16-kHz NumPy waveform.
+# Output: Dict of duration/active speech seconds, loudness dBFS, pitch Hz, and pitch variation semitones;
+#          unavailable values are None.
 def analyze(wav: np.ndarray) -> dict:
     wav = wav.astype(np.float32)
     if wav.size < 2048:
@@ -35,6 +39,9 @@ def analyze(wav: np.ndarray) -> dict:
     }
 
 
+# Purpose: Add transcript word count and estimated speaking rate to prosody.
+# Input: p: prosody dict; transcript: recognized text.
+# Output: The same dict, updated with word/rate measurements.
 def add_speech_rate(p: dict, transcript: str) -> dict:
     words = len(re.findall(r"[A-Za-z0-9']+", transcript or ""))
     p["words"] = words
@@ -49,10 +56,16 @@ class ProsodyBaseline:
     (pitch variation, pace, and extreme loudness).
     """
 
+    # Purpose: Create a rolling baseline for speaker-relative delivery tags.
+    # Input: keep: maximum number of previous measurements to retain.
+    # Output: None; initializes bounded measurement histories.
     def __init__(self, keep: int = 20):
         self.keep = keep
         self.loud, self.pitch = [], []
 
+    # Purpose: Compare current prosody with the rolling speaker baseline.
+    # Input: p: current prosody measurement dict.
+    # Output: Dict of delivery labels based on loudness, pitch, variation, and speaking rate.
     def describe(self, p: dict) -> dict:
         labels = {"loudness": None, "pitch": None, "pitch_variation": None, "pace": None}
         if p.get("loudness_dbfs") is not None:
@@ -74,6 +87,9 @@ class ProsodyBaseline:
             labels["pace"] = "fast" if v > 3.6 else "slow" if v < 1.8 else "normal"
         return labels
 
+    # Purpose: Add usable prosody measurements to the rolling baseline.
+    # Input: p: current prosody measurement dict.
+    # Output: None; appends available measurements to bounded histories.
     def update(self, p: dict):
         if p.get("loudness_dbfs") is not None:
             self.loud = (self.loud + [p["loudness_dbfs"]])[-self.keep:]
@@ -81,6 +97,9 @@ class ProsodyBaseline:
             self.pitch = (self.pitch + [p["pitch_hz"]])[-self.keep:]
 
 
+# Purpose: Turn delivery labels into readable prompt text.
+# Input: labels: delivery-tag dict from ProsodyBaseline.describe().
+# Output: Comma-separated delivery description, or 'nothing unusual'.
 def describe_delivery(labels: dict) -> str:
     phrases = {
         ("loudness", "loud"): "louder than usual", ("loudness", "quiet"): "quieter than usual",

@@ -1,6 +1,9 @@
 // AudioWorklet: microphone (usually 44.1/48 kHz float) -> 16 kHz int16 chunks of 100 ms.
 // A native BiquadFilter low-pass (7 kHz) sits in front of this node to limit aliasing.
 class PCMCapture extends AudioWorkletProcessor {
+  // Purpose: Initialize streaming resampling state and the transferable PCM buffer.
+  // Input: options: AudioWorklet options with optional targetRate/chunkSamples.
+  // Output: New processor state; default output is 16-kHz int16 chunks of 1600 samples.
   constructor(options) {
     super();
     const o = (options && options.processorOptions) || {};
@@ -12,6 +15,9 @@ class PCMCapture extends AudioWorkletProcessor {
     this.prev = 0;   // last sample of the previous block (position -1)
   }
 
+  // Purpose: Resample microphone blocks with interpolation and emit full PCM chunks.
+  // Input: inputs: AudioWorklet input buses; reads the first mono channel.
+  // Output: True to keep processing; posts completed Int16Array buffers and preserves partial/interpolation state.
   process(inputs) {
     const input = inputs[0];
     if (!input || !input[0]) return true;
