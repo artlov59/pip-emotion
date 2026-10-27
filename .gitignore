@@ -14,4 +14,3 @@ checkpoints/*
 !checkpoints/emotion_cnn.pt
 runs/
 results/traces/
-_legacy_esc50/

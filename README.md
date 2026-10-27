@@ -1,363 +1,210 @@
-# Pip: real-time, audio-first emotion tagging + reply (MELD)
+# Pip: local multimodal emotion state and streamed reply
 
-A small, fully local prototype for an emotion-aware character robot. You talk (or stream a
-MELD clip). While you're speaking, Pip shows a **provisional emotion tag** that updates
-twice a second. When you stop, it emits a **structured state** (MELD emotion + confidence,
-transcript, prosody tags) and **streams a short reply** grounded in what you said *and how
-you said it*.
+Pip accepts speech and video over time. It combines voice, recognized words and facial
+expression into a seven-category MELD emotion state, then streams a short spoken-style
+text reply. Models run locally. The target is one English speaker, sequential turns,
+and an Apple-Silicon Mac.
 
-**Track:** Audio (primary). Text appears only as a by-product of the audio: a local Whisper
-transcript gives the reply something to answer, and is never used by the emotion classifier.
+## Run
 
-```
-browser mic / MELD clip / file
-        │  16 kHz int16 PCM, 100 ms chunks, WebSocket
-        ▼
-   Silero VAD (32 ms frames) ──► while speaking, every 0.5 s: AudioCNN(last 3 s) ──► partial_state
-        │ 500 ms of silence = end of turn
-        ▼
-   utterance ─┬─ AudioCNN (ours, trained on MELD audio) ┐
-              ├─ Whisper-small (MLX)                   ├─► final_state ──► Qwen2.5-3B (MLX) ──► response_delta … response_done
-              └─ prosody: pitch / loudness / pace      ┘
-```
-
-Everything runs on one laptop. The emotion model was trained locally. No cloud
-inference. Total learned parameters on the inference path: **3.35 B of the 6 B limit**
-(table [below](#models-and-parameter-budget)).
-
----
-
-## Contents
-1. [Quick start](#quick-start)
-2. [Reproduce training](#reproduce-training)
-3. [What "real-time" means here](#what-real-time-means-here)
-4. [Output format](#output-format)
-5. [Models and parameter budget](#models-and-parameter-budget)
-6. [Results](#results)
-7. [Decisions and trade-offs](#decisions-and-trade-offs)
-8. [Limitations](#limitations)
-9. [Done vs. intentionally left out](#done-vs-intentionally-left-out)
-10. [External components](#external-components)
-11. [Repository layout](#repository-layout)
-
----
-
-## Quick start
-
-Requirements: Apple-Silicon Mac (MLX), Python 3.11/3.12, `ffmpeg` (`brew install ffmpeg`).
-First start downloads Whisper-small and Qwen2.5-3B-4bit from Hugging Face (~2.5 GB).
+Use Python 3.12, an Apple-Silicon Mac, and `ffmpeg` on PATH. The submission includes the
+selected audio and text classifiers and YuNet detector. MELD media is not bundled.
 
 ```bash
-python3.12 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-
-python -m app.server            # → open http://127.0.0.1:8000
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-verified.txt
+python -m scripts.cache_models --output results/model_cache_manifest.json
+python -m app.server --backend cpu --cpu-threads 4 --require-multimodal
 ```
 
-In the page: **Start microphone** and talk, or pick a **MELD test clip** and stream it (needs
-the data step below), or **stream any audio/video file**. The trained emotion checkpoint
-`checkpoints/emotion_cnn.pt` is included, so no training is needed to run the demo.
+Open http://127.0.0.1:8000 and start microphone and camera, or stream an audio/video file.
+The MELD clip library requires prepared dataset files. Microphone input does not.
+Whisper and Qwen are acquired during setup; HSEmotion downloads its weights on first
+load. Acquisition can use the network; inference runs locally.
 
-**One input through the whole system, from the terminal** (server must be running):
+The default backend is MLX. On a Metal-enabled session use:
 
 ```bash
-python -m app.replay --clip dia3_utt2         # a MELD test clip, shows ground truth
-python -m app.replay path/to/any.wav|mp4|m4a  # anything ffmpeg can read
+python -m app.server --require-multimodal
 ```
 
-It prints the provisional updates, the final structured state and the streamed reply as they
-arrive, and saves the full event trace to `results/traces/<name>.json`. An example trace is
-in [`results/example_trace.json`](results/example_trace.json).
+For exact MLX reproduction, set `ASR_REPO` and `LLM_REPO` to the local snapshot paths
+written by `scripts.cache_models`. CPU mode resolves the pinned cached revisions itself
+and never downloads Whisper/Qwen. CPU decoding is not claimed to match MLX numerically.
+The CPU Qwen adapter reconstructs cached affine four-bit values into FP32 memory. Its
+process memory guard is 20 billion bytes; measured peak RSS was 14.64 GiB.
 
-Other entry points:
+Useful configuration: `TEXT_MODEL_DIR`, `EMOTION_CKPT`, `TORCH_DEVICE`, `USE_TEXT`,
+`USE_VISION`, `USE_LLM`. `--audio-only` and `--no-llm` are diagnostic modes. Strict
+`--require-multimodal` startup fails if the required models cannot load. A three-input
+interaction also needs recognized words and video containing a face.
 
-| command | what |
-|---|---|
-| `python -m tests.test_pipeline` | turn-taking/event-order test with fake models (no downloads) |
-| `python -m scripts.count_params` | loads every model and counts parameters → `results/params.json` |
-| `python -m scripts.benchmark_latency --n 35` | latency + memory benchmark → `results/benchmark.*` |
-| `curl -F file=@clip.wav localhost:8000/api/analyze` | non-streaming debug path (whole file = one utterance) |
-| `python -m app.server --no-llm` | template replies instead of the LLM (debugging) |
+## Interaction and outputs
 
-## Reproduce training
+The browser sends 16 kHz mono PCM in 100 ms chunks and JPEG video at about 5 fps over
+`/ws`. Audio drives Silero VAD; 500 ms silence closes a turn. While speaking, the CNN
+analyzes the last three seconds every 0.5 seconds. Final voice emotion uses up to the
+last ten seconds. Face readings are matched to the captured audio interval.
 
-All local (Apple-GPU via PyTorch MPS). ~11 GB download, ~25 GB on disk while extracting.
+```text
+PCM -> VAD -> utterance -> AudioCNN ---------------- voice --+
+                       -> Whisper -> DistilRoBERTa - words --+-> fusion -> final_state
+JPEG -> YuNet -> HSEmotion ------------------------- face ---+                |
+                       utterance -> prosody ---------------- tags            v
+                                                                  Qwen -> streamed reply
+```
+
+Events include `ready`, `vad`, `partial_state`, `face_state`, `final_state`,
+`response_delta`, `response_done`, `flushed` and `error`. Control messages are
+`{"type":"flush"}` and `{"type":"reset"}`. Binary messages start with `0x01` for PCM
+or `0x02` for JPEG. Reset cancels pending work and suppresses stale results.
+
+A final state contains an emotion from anger/disgust/fear/joy/neutral/sadness/surprise,
+probabilities, transcript, per-modality readings, prosody, agreement and latency fields.
+`fusion.used` identifies the inputs actually used. Reply deltas reconstruct the final
+response text. Legacy `tokens`/`tokens_per_s` fields count visible stream deltas;
+`stream_deltas`/`stream_deltas_per_s` make that unit explicit.
 
 ```bash
-# 1. data: the official MELD.Raw archive (Hugging Face mirror of the declare-lab release)
-curl -L -C - -o data/MELD.Raw.tar.gz \
-  https://huggingface.co/datasets/declare-lab/MELD/resolve/main/MELD.Raw.tar.gz
-python -m training.prepare_meld     # extract → 16 kHz mono wav → log-mel cache → manifests
-
-# 2. train three variants (each selects its best epoch on *dev* weighted-F1)
-python -m training.train --run-name ce_plain       --class-weighting none
-python -m training.train --run-name wce_sqrt       --class-weighting sqrt
-python -m training.train --run-name wce_sqrt_mixup --class-weighting sqrt --mixup-prob 0.5
-
-# 3. choose on dev, promote the winner, then touch test exactly once
-python -m training.evaluate --split dev  --checkpoints checkpoints/*/best.pt --promote
-python -m training.evaluate --split test --checkpoints checkpoints/emotion_cnn.pt
+# Keep the server running in another terminal. Prepared MELD supplies the clip/video.
+python -m app.replay --clip dia17_utt8
+python -m app.replay path/to/clip.mp4
 ```
 
-`tensorboard --logdir runs` shows the curves. `data/meld/prep_report.json` lists clip
-counts, durations and any clips that failed to decode.
+`results/example_trace_multimodal.json` records a real selected-model CPU interaction.
+The full chain produced an anger state using audio/text/vision and streamed a reply.
+ASR also recognized speech beyond the labelled "I know!" line, illustrating MELD clip
+boundary noise. This is a functional demonstration, not a perfect recognition example.
 
-## What "real-time" means here
+## Results and constraints
 
-The target interaction is **turn-based conversation with a robot**: one speaker, a natural
-pause at the end of each turn. "Real-time" means the robot *visibly listens while you talk*
-and *starts answering within about a second of you stopping*, which is roughly the gap
-people leave between turns.
+The selected recipe keeps the original AudioCNN and frozen fusion/vision weights, and
+uses text checkpoint epoch 2 after mixed gold/CPU-ASR fine-tuning. Development selection
+required higher weighted F1 without lower macro F1. Model hashes were locked before the
+final comparison. Existing historical test reports predated this experiment; no new test
+result was used to select models or weights.
 
-| moment | budget | how |
-|---|---|---|
-| audio transport | 100 ms chunks | browser AudioWorklet → WebSocket |
-| provisional emotion while speaking | every 0.5 s, each ≤ 50 ms compute | CNN on the last 3 s of speech |
-| end-of-turn detection | 500 ms of silence | Silero VAD with hysteresis |
-| final structured state | ≤ 300 ms after end of turn | CNN ∥ Whisper ∥ prosody in parallel |
-| first reply word | ≤ 1 s after end of turn | LLM streams token by token |
+| evaluation | baseline weighted F1 | selected weighted F1 | baseline macro F1 | selected macro F1 |
+|---|---:|---:|---:|---:|
+| text, dev | 0.4773 | 0.4902 | 0.3394 | 0.3568 |
+| audio + text + vision, dev | 0.5201 | 0.5321 | 0.3719 | 0.3907 |
+| text, test | 0.5068 | 0.5089 | 0.3395 | 0.3498 |
+| audio + text, test | 0.5135 | 0.5321 | 0.3420 | 0.3629 |
+| audio + text + vision, test | 0.5311 | 0.5372 | 0.3591 | 0.3654 |
 
-Assumptions: English speech, one speaker at a time, a laptop microphone at conversational
-distance, and the user waits for the reply (no barge-in). The 500 ms end-of-turn silence is
-a deliberate trade-off: shorter pauses cut people off mid-sentence, longer ones feel sluggish.
-Measured numbers are in [Results](#results).
+Test uses 2,576 usable labelled clips, singleton CPU audio/text wrappers, frozen MLX
+transcripts and cached vision. It does not measure VAD segmentation. The all-three gain
+is 0.62 weighted-F1 points; its paired dialogue-bootstrap 95% interval is [-0.39,+1.62]
+points. Overall accuracy falls 0.62 points and disgust F1 falls from 0.1846 to 0.1417.
+This is a small observed trade-off, not strong evidence of general improvement.
+Two audio adaptation runs and a learned-fusion experiment failed their safeguards and
+were not selected. Their obsolete training/experiment tools have been retired.
 
-## Output format
+Full CPU benchmark: 35 clips at 1x, 36 detected utterances using all three modalities,
+32 clips with completed replies, three clips with no detected speech, zero errors,
+and 527 video frames with no drops.
 
-Server → client JSON events on `/ws` (client sends raw int16 PCM; text commands `flush`, `reset`).
+| stage after VAD declares end-of-speech | median | p95 |
+|---|---:|---:|
+| structured state | 483.2 ms | 822.6 ms |
+| first visible reply text | 1461.0 ms | 2447.7 ms |
+| completed reply | 3403.4 ms | 4816.8 ms |
 
-`partial_state`: provisional, while the person is still speaking
-```json
-{"type": "partial_state", "utterance_id": 1, "emotion": "anger", "confidence": 0.47,
- "probs": {"anger": 0.47, "disgust": 0.03, "fear": 0.05, "joy": 0.06, "neutral": 0.29, "sadness": 0.04, "surprise": 0.06},
- "window_s": 2.5, "latency_ms": {"emotion": 14.2}, "stream_t_s": 3.1}
+Measurements exclude browser/WebSocket overhead and the configured 500 ms silence wait.
+Including silence, median first reply is about 1.96 seconds. The design target was about
+one second, so CPU misses it. Full MLX multimodal performance remains unverified because
+the execution environment exposes no Metal device. Perception updates continue during
+speech and replies; the user waits before the next turn. Barge-in is out of scope.
+
+Observed hardware: arm64 Mac, 48 GiB memory, 18 logical CPUs, macOS 26.6.2, Python
+3.12.15, Torch 2.14.1 with four intra-op threads. The sandbox hides the chip brand; the
+earlier hardware report identified Apple M5 Pro. Load took 8.0 s, peak RSS 14.64 GiB,
+and mean process CPU was 95.7% (100% is one core). JSON `*_gb` fields use bytes/2^30.
+
+| required component | learned parameters / conservative bound |
+|---|---:|
+| Silero VAD | 462,594 |
+| AudioCNN | 21,281,991 |
+| Whisper small | 240,582,912 |
+| DistilRoBERTa text emotion | 82,123,783 |
+| YuNet + HSEmotion | 4,049,910 |
+| Qwen2.5-3B-Instruct | 3,085,938,688 |
+| all stored fusion coefficients | 17 |
+| **total** | **3,434,439,895 < 6 billion** |
+
+Quantized matrices count logical unpacked weights. Fixed alignment-head indices,
+sinusoidal positions and packing metadata are not learned weights. ONNX initializers
+are included conservatively. Frozen encoders are counted in full.
+
+Detailed evidence lives in `results/retraining_20261023/`: development comparison,
+locked test metrics/predictions, text evaluation, audio experiment histories, benchmark
+CSV/JSON and the selected parameter audit. `results/submission_model_selection.json`
+records current checkpoint locations and hashes; it references the original immutable
+freeze receipt. The original text baseline is retained for paired evaluation. Duplicate
+copies and inactive training checkpoints are outside the maintained project.
+
+## Training and evaluation
+
+Prepared data uses official MELD splits: 9,877 audio-usable train / 1,092 dev / 2,576 test
+clips. Text training retains all 9,989 train utterances and falls back to gold text where
+ASR/audio is missing or ASR hit its token cap. New checkpoints use distinct output paths.
+
+```bash
+# Prepare an existing data/MELD.Raw.tar.gz archive.
+python -m training.prepare_meld
+# Audio training; exact pooling and corrected variable-length mixup for new models.
+python -m training.train --run-name audio_new
+python -m training.evaluate audio --checkpoint checkpoints/audio_new/best.pt --output-dir results/audio_new_dev
+# Create a separate CPU training transcript cache, or reuse the existing verified cache.
+python -m training.transcribe_cpu --output data/meld/whisper_cpu_train_new.csv
+# MLX development/test transcript regeneration is available through training.transcribe_meld.
+python -m training.train_text --train-source mixed --selection-source whisper \
+  --init-model-dir checkpoints/text_emotion_baseline_20261023 --local-files-only \
+  --train-asr-cache data/meld/whisper_cpu_train.csv --preserve-baseline-macro \
+  --epochs 2 --lr 1e-5 --device cpu --output-dir checkpoints/text_new
 ```
 
-`final_state`: the structured state for the whole utterance
-```json
-{"type": "final_state", "utterance_id": 1, "start_s": 0.62, "duration_s": 2.84,
- "emotion": "anger", "confidence": 0.58, "probs": {"anger": 0.58, "...": 0.0},
- "transcript": "You ate my sandwich?",
- "tags": ["emotion:anger", "loudness:loud", "pitch_variation:animated"],
- "prosody": {"loudness_dbfs": -14.2, "pitch_hz": 221.4, "pitch_variation_st": 4.6, "rate_wps": 2.9,
-             "labels": {"loudness": "loud", "pitch": null, "pitch_variation": "animated", "pace": "normal"}},
- "delivery": "louder than usual, animated, varied intonation",
- "latency_ms": {"queue": 0.1, "emotion": 18.0, "asr": 160.0, "parallel_stage": 171.0, "end_of_speech_to_state": 172.0}}
+All scoring entry points are under `python -m training.evaluate`: `audio` is development
+only; `compare` compares two fixed recipes on development caches without fitting;
+`test` requires a dev-selection lock and verifies hashes before opening test inputs.
+See each subcommand's `--help`. No command promotes a model from its test score.
+Training text evaluates dev only by default; test requires explicit `--eval-only`.
+Face cache regeneration uses `training.extract_faces_meld`; CPU shard merging uses
+`training.merge_asr_caches`. Frozen fusion weights are supplied in results/fusion_weights.json.
+
+## Verification and handoff
+
+```bash
+python -m unittest discover -s tests
+python -m tests.test_pipeline
+node tests/test_frontend.js
+python -m scripts.count_params_offline --require-multimodal --output results/parameter_check.json
+python -m scripts.benchmark_latency --backend cpu --cpu-threads 4 --n 35
+python -m scripts.create_submission_bundle --repo . \
+  --audio-checkpoint checkpoints/emotion_cnn.pt --text-model-dir checkpoints/text_emotion \
+  --selection-receipt results/submission_model_selection.json \
+  --face-detector checkpoints/face_detection_yunet_2023mar.onnx --output /path/to/pip_submission.tar.gz
 ```
 
-`response_delta` (a few characters each) then `response_done`:
-```json
-{"type": "response_done", "utterance_id": 1, "text": "Oh no, I did not touch it, I promise! Want me to help find out who did?",
- "latency_ms": {"end_of_speech_to_first_token": 410.0, "end_of_speech_to_last_token": 1180.0, "generation": 1000.0},
- "tokens": 24, "tokens_per_s": 31.0}
-```
-Also: `ready` (config + loaded models), `vad` (`speech_start` / `speech_end` / `discarded`), `error`.
-*(Example values above are illustrative. Real traces are in `results/`.)*
+The archive includes selected models, source, tests, evidence and per-file checksums.
+It excludes MELD media, environments, caches and unselected training checkpoints.
+`requirements.txt` lists direct dependencies; `requirements-verified.txt` pins the tested
+Python 3.12 environment. The baseline text model is needed only for paired comparison
+or warm-start reproduction and is supplied separately from the selected-model archive.
 
-## Models and parameter budget
+The app has separate modality adapters, one engine owning inference workers, a per-session
+state machine, a small protocol validator and a browser client. Tensor conversion is
+confined to the CPU adapters. Evaluation and runtime share fusion-weight lookup.
 
-| component | role | source | parameters |
-|---|---|---|---:|
-| Silero VAD | speech start / end | `silero-vad` pip package | 462,594 |
-| **AudioCNN (ours)** | emotion: provisional + final | trained here on MELD | 21,281,991 |
-| Whisper small | transcript | `mlx-community/whisper-small-mlx` | 240,582,932 |
-| Qwen2.5-3B-Instruct (4-bit) | reply text | `mlx-community/Qwen2.5-3B-Instruct-4bit` | 3,085,938,688 |
-| prosody (librosa YIN + RMS) | pitch / loudness / pace tags | hand-written DSP | 0 |
-| **total** | | | **3,348,266,205 (3.35 B / 6 B)** |
+External components are MELD, Silero VAD, Whisper-small, DistilRoBERTa-base, YuNet,
+HSEmotion EfficientNet-B0 and Qwen2.5-3B-Instruct. Whisper/Qwen pinned revisions and source
+hashes are recorded by `scripts.cache_models`; learned-parameter evidence names all models.
+The audio classifier, MELD text fine-tuning, streaming pipeline, fusion, prompts and tools
+are project components. An AI coding assistant assisted implementation, review, experiments
+and documentation; the repository author remains responsible for the submitted results.
 
-Measured by `python -m scripts.count_params` on the models as loaded (`results/params.json`).
-
-Counting rule: every learned tensor on the inference path, with 4-bit weights counted as
-unpacked parameters (quantisation scales/offsets excluded; see `app/mlx_params.py`).
-
-## Results
-
-### Emotion recognition (audio only, MELD)
-
-**Data.** Official MELD splits. 9,877 train / 1,092 dev / 2,576 test utterances were usable.
-Dropped: 161 clips whose audio track is under 0.2 s (broken cuts, e.g. 0.12 s of audio for
-*"We have so much in common!"*), one corrupt train video and one missing dev video. Details are
-in `data/meld/prep_report.json`. **Because 34 test clips are dropped, the test scores are on
-2,576 of the 2,610 utterances.**
-
-**Model selection on dev** (best epoch of each run, by dev weighted F1):
-
-| run | loss | weighted F1 | macro F1 | accuracy |
-|---|---|---|---|---|
-| majority class (neutral) | n/a | 0.252 | 0.085 | 0.424 |
-| `ce_plain` | cross-entropy | 0.390 | 0.218 | 0.465 |
-| `wce_sqrt` | 1/√freq class-weighted CE | 0.393 | 0.227 | 0.445 |
-| **`wce_sqrt_mixup`** | weighted CE + mixup (p = 0.5) | **0.410** | **0.254** | 0.443 |
-
-Class weighting and mixup both trade a little accuracy for better minority-class F1.
-Mixup gave the clearest gain: dev sadness F1 rose from 0.03 to 0.21. That run was promoted
-to `checkpoints/emotion_cnn.pt`.
-
-**Held-out test** (evaluated once, after selection):
-
-| model | weighted F1 | macro F1 | accuracy | anger | disgust | fear | joy | neutral | sadness | surprise |
-|---|---|---|---|---|---|---|---|---|---|---|
-| majority class (neutral) | 0.312 | 0.093 | 0.481 | 0.00 | 0.00 | 0.00 | 0.00 | 0.65 | 0.00 | 0.00 |
-| **AudioCNN (ours)** | **0.420** | **0.220** | 0.469 | 0.29 | 0.00 | 0.00 | 0.18 | 0.65 | 0.13 | 0.29 |
-
-![test confusion matrix](results/test_emotion_cnn_confusion.png)
-
-How to read this:
-- **+10.8 points of weighted F1 over always saying "neutral"**, and macro F1 more than doubles.
-- **For reference, not a like-for-like comparison:** the MELD paper's audio-only baselines
-  use openSMILE features *plus dialogue context* and report 39.1 (bcLSTM) and 41.8
-  (DialogueRNN) test weighted F1 (Poria et al., 2019, Table 11). This model sees one
-  utterance at a time. The same paper's text-only baselines reach about 56–57, which is why
-  the words are passed to the reply generator.
-- **What the model learned:** it is best at the high-arousal classes (anger, surprise).
-- **Where it fails:** it never predicts disgust or fear (68 and 50 test examples), and it
-  pulls most joy and sadness toward neutral. These are the honest weaknesses of a small,
-  from-scratch audio model on TV audio.
-- **Training cost:** ~26 s per epoch on the M5 Pro GPU. Each run early-stopped after 34–39
-  epochs, about 15–17 minutes.
-
-### Latency and resources
-
-**Core (audio track) system.** `python -m scripts.benchmark_latency --n 35` streams 35 MELD test
-clips (5 per emotion) through the full pipeline in real time: VAD, CNN, Whisper, prosody and
-the LLM, with every model loaded exactly as the server loads them. The end of a turn is
-declared after 500 ms of silence, and the times below are measured *from that point*.
-
-| stage | p50 | p95 | target |
-|---|---|---|---|
-| final emotion (CNN, whole utterance) | 54 ms | 81 ms | |
-| Whisper transcript (runs in parallel with the CNN) | 90 ms | 128 ms | |
-| **end of speech → `final_state`** | **91 ms** | **129 ms** | ≤ 300 ms |
-| **end of speech → first reply token** | **186 ms** | **240 ms** | ≤ 1 s |
-| end of speech → full reply | 310 ms | 372 ms | |
-| LLM generation speed | 70 tok/s | 79 tok/s | |
-
-So the robot can start answering ~0.7 s after the person stops talking (0.5 s silence wait
-+ 0.19 s), which is within the length of a natural conversational pause.
-
-- **Detection:** speech was detected in 32 of 35 clips. In 3 clips the VAD never fired on the
-  TV audio (music/laughter, or very short speech). One clip was split into two utterances.
-- **Hardware:** MacBook Pro, **Apple M5 Pro**, 48 GB unified memory, macOS 26.6. PyTorch
-  2.14 (MPS) and MLX 0.32.
-- **Resources:**
-  - Model load: 7.1 s (models already cached; the first run also downloads ~2.2 GB).
-  - Peak process RSS: 3.5 GB. MLX peak: 3.0 GB. PyTorch-MPS: 2.2 GB.
-  - Average CPU: ~11% of one core, so nearly all work runs on the GPU.
-
-Full numbers: `results/benchmark.md`, `results/benchmark.json`, per-utterance `results/latency.csv`.
-
-## Decisions and trade-offs
-
-- **Audio track, reusing my earlier CNN.** The ResNet-style log-mel CNN was first built for
-  ESC-50 environmental sounds. Here it is retrained from scratch on MELD audio with 7 outputs.
-  Changes: 16 kHz features, per-utterance normalisation, masked temporal pooling for
-  variable-length clips, a class-weighted loss, and fixes to bugs in the original training
-  loop (`SummaryWriter` closed inside the epoch loop, sample-rate mislabelled as 22.05 kHz,
-  duplicated lines in the residual block). It is small (~21 M parameters) and runs in a few
-  ms, so it can run twice a second while someone is talking.
-- **Why not a big pretrained speech-emotion encoder?** Something like wav2vec2/HuBERT/emotion2vec
-  would probably score higher. It would also be slower for the twice-a-second updates, and
-  most of the modelling would no longer be my own work. With a 2–3 day timebox I chose to
-  own a small model and measure it honestly. A pretrained encoder is the obvious next step.
-- **Per-utterance spectrogram normalisation.** MELD is mixed TV audio and the live input is a
-  laptop mic. Normalising each clip removes gain differences between the two. The cost is
-  that the CNN can't see absolute loudness, so loudness, pitch and pace are measured
-  separately (`app/prosody.py`) and reported as tags. They also feed the reply prompt.
-- **Class imbalance.** About 47% of MELD is *neutral*. Plain accuracy rewards always saying
-  neutral, so model selection uses dev **weighted F1** (the standard MELD metric) and I also
-  report **macro F1**, which exposes rare classes (fear, disgust). The loss uses
-  softened inverse-frequency weights (1/√count).
-- **Turn-taking with a VAD instead of fixed windows.** The final tag and the reply are made
-  per utterance, like MELD's labels. Partial tags use a sliding 3 s window, so the UI reacts
-  before the turn ends.
-- **Whisper + LLM only after the turn ends.** Running them continuously would compete for
-  the GPU with no benefit for a turn-based robot. They run in parallel with the final CNN
-  pass, and the reply streams so the first words arrive quickly.
-- **Threading.** VAD and bookkeeping run on the asyncio loop. The CNN and prosody run on a
-  "torch" worker thread. Whisper and the LLM run on one "mlx" thread (MLX models must be
-  used on the thread that created them). As a result, provisional tags keep updating while
-  a reply is being generated.
-- **MLX on Apple Silicon** (Whisper-small, Qwen2.5-3B-Instruct 4-bit). These are fast,
-  local, and fit comfortably in memory. 4-bit quantisation reduces *memory*, not the
-  *parameter count*, which is what the budget limits.
-- **Local training instead of the cloud GPU (Modal) I used for ESC-50.** The cached features
-  make an epoch short on an M-series GPU, so a single machine handles training and
-  inference, there's nothing to deploy, and the hardware report is simple.
-- **Static HTML + FastAPI instead of Next.js.** One command starts everything.
-
-## Limitations
-
-- **Audio-only emotion on MELD is hard.** The audio is TV dialogue with laugh tracks, music
-  and crosstalk, and labels were assigned with the video and context visible. Expect modest
-  scores and a strong pull toward *neutral*. Rare classes (fear, disgust) are weak.
-- **Domain shift.** The model is trained on *Friends* audio and used on a live microphone.
-  Per-utterance normalisation helps, but live accuracy will differ from the MELD test numbers.
-- **No dialogue context in the classifier.** Each utterance is classified on its own. The
-  reply generator does see the last 3 turns.
-- **Prosody labels are heuristic.** Before 2 utterances have been heard, they use fixed
-  thresholds. After that, they are relative to the speaker's running median.
-- **Whisper errors** on emotional, shouted or overlapping speech feed straight into the reply.
-- **The LLM can misread the situation**, especially when the emotion reading is wrong. The
-  prompt tells it to treat low-confidence readings as hints.
-- **Single speaker, no barge-in, no TTS.** The reply is text that a robot would speak.
-- **Apple Silicon only** as shipped, because of MLX. The CNN and VAD run anywhere (CPU/CUDA).
-  Whisper and the LLM would need e.g. faster-whisper + llama.cpp elsewhere.
-
-## Done vs. intentionally left out
-
-Done:
-- MELD audio pipeline: extraction, a cached feature store, manifests and a prep report.
-- Local training with three loss/augmentation variants, dev-based selection, and a test
-  evaluation against a majority baseline with per-class F1 and confusion matrices.
-- Streaming runtime: VAD turn-taking, provisional and final structured state, transcript,
-  prosody tags, and a streamed LLM reply.
-- Browser UI (mic / MELD clip / file), a replay CLI with saved traces, and an offline
-  `/api/analyze` endpoint.
-- Parameter counting, latency and memory benchmark, and a logic test with fake models.
-
-Left out on purpose (timebox):
-- Vision and the three-modality fusion extension, and reinforcement learning.
-- Text-emotion classifier fused with the audio prediction. Planned as a stretch goal; the
-  per-clip predictions are saved in `results/test_*_predictions.csv` for exactly this.
-- Pretrained SER encoders, dialogue-context modelling, speaker diarisation, barge-in, TTS.
-
-## External components
-
-| component | used for | licence | notes |
-|---|---|---|---|
-| [MELD](https://affective-meld.github.io/) (Poria et al., 2019) | training/eval data, demo clips | GPL-3.0 | not redistributed; downloaded by the user |
-| [Silero VAD](https://github.com/snakers4/silero-vad) | speech start/end | MIT | used as-is |
-| [Whisper small](https://github.com/openai/whisper) via [mlx-whisper](https://github.com/ml-explore/mlx-examples) | transcript | MIT | used as-is, English, greedy decoding |
-| [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct) (4-bit MLX conversion) | reply text | Qwen Research License | **non-commercial**: for a product, swap to Qwen2.5-1.5B-Instruct (Apache-2.0) with `LLM_REPO=mlx-community/Qwen2.5-1.5B-Instruct-4bit` |
-| librosa, PyTorch, MLX, FastAPI | features, training, serving | ISC / BSD / MIT / MIT | |
-
-Mine: the emotion CNN and its training/evaluation, the streaming/turn-taking pipeline, the
-prosody features and labels, the prompt, the UI, and the benchmarks. I'm responsible for all
-results reported here. The pretrained components were not fine-tuned. Their behaviour
-(e.g. Whisper mishearing, LLM phrasing) is part of the measured system.
-
-**AI tools:** I used an AI coding assistant to help write and review code and this README.
-I made the design decisions, ran every experiment, and can explain and change any part of it.
-
-## Repository layout
-
-```
-model.py                 AudioCNN (ResNet-style, masked pooling)
-training/
-  prepare_meld.py        MELD.Raw → 16 kHz wav → log-mel cache + manifests
-  dataset.py             dataset, SpecAugment, padding collate
-  train.py               local training (MPS/CUDA/CPU), dev-F1 checkpointing
-  evaluate.py            metrics, confusion matrices, baseline, model promotion
-app/
-  config.py              shared constants + runtime settings (env-overridable)
-  features.py            audio loading + log-mel (shared by training and serving)
-  vad.py emotion.py asr.py prosody.py llm.py   components
-  pipeline.py            Engine (models + threads) and Session (streaming state machine)
-  server.py              FastAPI: UI, /ws, /api/analyze, /api/clips
-  replay.py              stream a file through the server from the terminal
-  static/                single-page UI + AudioWorklet resampler
-scripts/                 count_params.py, benchmark_latency.py
-tests/test_pipeline.py   turn-taking test with fake models
-results/                 metrics, confusion matrices, benchmark, example trace
-checkpoints/emotion_cnn.pt   the trained emotion model used by the demo
-```
+Limitations: largest-face selection can choose a non-speaker; emotion confidences are
+uncalibrated; TV dialogue differs from live users. Response quality and live microphone/
+webcam hardware have not been formally evaluated. RL, active-speaker detection, face
+fine-tuning, diarization, TTS, barge-in and production multi-user operation were left out.
