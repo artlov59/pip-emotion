@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python -m unittest *)",
+      "Bash(python -m tests.test_pipeline)",
+      "Bash(node tests/test_frontend.js)",
+      "Bash(python -m scripts.report_baselines)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "ask": [
+      "Bash(python -m training.evaluate test *)",
+      "Bash(python -m scripts.calibrate_agreement test *)",
+      "Bash(python -m training.train_text *test*)",
+      "Read(/data/meld/test.csv)",
+      "Read(/data/meld/whisper_test.csv)",
+      "Read(/data/meld/vision_test.csv)",
+      "Read(/data/meld/features/test.pkl)",
+      "Read(/data/meld/wav/test/**)",
+      "Read(/data/MELD.Raw/test_sent_emo.csv)",
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Edit(/results/retraining_20261023/final_test/**)",
+      "Edit(/results/submission_model_selection.json)",
+      "Edit(/data/MELD.Raw/**)"
+    ]
+  }
+}
