@@ -38,8 +38,8 @@ button.primary { background: var(--accent); color: var(--accent-ink); border-col
 button.primary.recording { background: var(--bad); border-color: var(--bad); color: #fff; }
 button.ghost { background: transparent; }
 
-main { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 20px; padding: 0 28px 40px; align-items: start; }
-@media (max-width: 860px) { main { grid-template-columns: 1fr; padding: 0 16px 32px; } header, .controls { padding-left: 16px; padding-right: 16px; } }
+main { display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 20px; padding: 0 28px 40px; align-items: start; }
+@media (max-width: 860px) { main { grid-template-columns: minmax(0, 1fr); padding: 0 16px 32px; } header, .controls { padding-left: 16px; padding-right: 16px; } }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
 .live { position: sticky; top: 16px; }
 .live-head, .turns-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
@@ -57,8 +57,9 @@ main { display: grid; grid-template-columns: minmax(300px, 380px) 1fr; gap: 20px
 .engine { margin-top: 16px; font-size: 12px; color: var(--muted); }
 pre { white-space: pre-wrap; word-break: break-word; font: 11.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; margin: 8px 0 0; }
 
+.turns { min-width: 0; }
 .turn { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--neutral);
-  border-radius: var(--radius); padding: 14px 16px; margin-bottom: 12px; }
+  border-radius: var(--radius); padding: 14px 16px; margin-bottom: 12px; min-width: 0; overflow-wrap: anywhere; }
 .turn-top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
 .turn-emo { font-weight: 700; text-transform: capitalize; }
 .said { margin: 8px 0; font-size: 16px; }
@@ -88,12 +89,13 @@ pre { white-space: pre-wrap; word-break: break-word; font: 11.5px/1.45 ui-monosp
 .mod-val { font-variant-numeric: tabular-nums; }
 .mod-val b { text-transform: capitalize; }
 .agree { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); }
+/* every badge has class "agree", so the green rule must come first and the kinds override it */
+.agree.agree { background: #e6f4ec; border-color: var(--ok); color: var(--ok); }
 .agree.conflict { background: #fde8e6; border-color: var(--bad); color: var(--bad); }
 .agree.tone_only, .agree.words_only, .agree.differ { background: #fff4dc; border-color: #d39b00; color: #8a6400; }
-.agree.agree { background: #e6f4ec; border-color: var(--ok); color: var(--ok); }
 @media (prefers-color-scheme: dark) {
-  .agree.conflict { background: #3a1d1a; } .agree.tone_only, .agree.words_only, .agree.differ { background: #3a2f12; color: #e8c15a; }
   .agree.agree { background: #15301f; }
+  .agree.conflict { background: #3a1d1a; } .agree.tone_only, .agree.words_only, .agree.differ { background: #3a2f12; color: #e8c15a; }
 }
 .modrow { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; margin: 6px 0 2px; color: var(--muted); }
 .modrow b { color: var(--ink); text-transform: capitalize; }
